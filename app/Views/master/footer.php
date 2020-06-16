@@ -93,8 +93,8 @@
         <div class="container">
             <div class="social-links">
             
-                <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-                <a href="" class="text-center"><i class="fa fa-facebook"></i><span>facebook</span></a>
+                <a href="https://www.instagram.com/crossxgame/?hl=en" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+                <a href="https://www.facebook.com/pages/category/Video-Game/Crossxgame-1960453150950707/" class="text-center"><i class="fa fa-facebook"></i><span>facebook</span></a>
                
             </div>
 

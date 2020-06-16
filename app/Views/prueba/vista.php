@@ -103,7 +103,6 @@
 </section>
 Features section end -->
 
-
 <!-- letest product section -->
 <section class="top-letest-product-section">
     <div class="container">
@@ -113,76 +112,172 @@ Features section end -->
             </div>
             <div class="card-body">
                 <div class="product-slider owl-carousel">
-                    <div class="product-item">
-                        <div class="pi-pic">
-                            <img src="public/crossxgame/img/product/i1.jpg" alt="">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-
+                    <div class="product-item" style="margin:0px;">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pi-text">
-                            <h6>$35.000</h6>
-                            <p>Juego 1 </p>
                         </div>
                     </div>
-
                     <div class="product-item">
-                        <div class="pi-pic">
-                            <!--<div class="tag-new">New</div>-->
-                            <img src="public/crossxgame/img/product/i2.jpg" alt="">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pi-text">
-                            <h6>$35.000</h6>
-                            <p>Juego 2</p>
                         </div>
                     </div>
-
                     <div class="product-item">
-                        <div class="pi-pic">
-                            <img src="public/crossxgame/img/product/i3.jpg" alt="">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
                             </div>
                         </div>
-                        <div class="pi-text">
-                            <h6>$35.000</h6>
-                            <p>Juego 3 </p>
-                        </div>
-
                     </div>
-
                     <div class="product-item">
-                        <div class="pi-pic">
-                            <img src="public/crossxgame/img/product/i4.jpg" alt="">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="pi-text">
-                            <h6>$35.000</h6>
-                            <p>Juego 4 </p>
-                        </div>
-
                     </div>
-
                     <div class="product-item">
-                        <div class="pi-pic">
-                            <img src="public/crossxgame/img/product/i6.jpg" alt="">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
                             </div>
                         </div>
-                        <div class="pi-text">
-                            <h6>$35.000</h6>
-                            <p>Juego 5 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h2 class="text-center">Productos Nintendo</h2>
+            </div>
+            <div class="card-body">
+                <div class="product-slider owl-carousel">
+                    <div class="product-item" style="margin:0px;">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h2 class="text-center">Productos Xbox</h2>
+            </div>
+            <div class="card-body">
+                <div class="product-slider owl-carousel">
+                    <div class="product-item" style="margin:0px;">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="card">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="card-footer">
+                                <div class="float-right">
+                                    <b>$35.000</b>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

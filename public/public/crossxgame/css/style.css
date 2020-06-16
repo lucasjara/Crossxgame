@@ -846,9 +846,9 @@ ol {
 	width: 100%;
 	position: absolute;
 	right: 0;
-	bottom: 18px;
+	bottom: 20%;
 	z-index: 9;
-	padding-right: 15px;
+	padding-right: 10px;
 	text-align: right;
 }
 

@@ -104,17 +104,20 @@
 Features section end -->
 
 <!-- letest product section -->
-<section class="top-letest-product-section">
+<section class="top-letest-product-section" style="background-color: #F8F8F8;">
     <div class="container">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h2 class="text-center">Productos Playstation</h2>
+                <h3 class="text-center">Productos Playstation</h3>
             </div>
             <div class="card-body">
                 <div class="product-slider owl-carousel">
                     <div class="product-item" style="margin:0px;">
                         <div class="card">
                             <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap" style="width: 100%;">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
                             <div class="card-footer">
                                 <div class="float-right">
                                     <b>$35.000</b>
@@ -165,9 +168,10 @@ Features section end -->
                 </div>
             </div>
         </div>
+        <br>
         <div class="card">
             <div class="card-header bg-danger text-white">
-                <h2 class="text-center">Productos Nintendo</h2>
+                <h3 class="text-center">Productos Nintendo</h3>
             </div>
             <div class="card-body">
                 <div class="product-slider owl-carousel">
@@ -224,9 +228,10 @@ Features section end -->
                 </div>
             </div>
         </div>
+        <br>
         <div class="card">
             <div class="card-header bg-success text-white">
-                <h2 class="text-center">Productos Xbox</h2>
+                <h3 class="text-center">Productos Xbox</h3>
             </div>
             <div class="card-body">
                 <div class="product-slider owl-carousel">

@@ -31,6 +31,7 @@
     <![endif]-->
 
 </head>
+
 <body>
     <!-- Header section -->
 <header class="header-section">

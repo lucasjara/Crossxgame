@@ -114,11 +114,14 @@ Features section end -->
                 <div class="product-slider owl-carousel">
                     <div class="product-item" style="margin:0px;">
                         <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap" style="width: 100%;">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap">
                             <div class="pi-links">
                                 <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
                             </div>
                             <div class="card-footer">
+                                <div class="float-left">
+                                    <small><b>Uncharted 4</b></small>
+                                </div>
                                 <div class="float-right">
                                     <b>$35.000</b>
                                 </div>
@@ -127,8 +130,14 @@ Features section end -->
                     </div>
                     <div class="product-item">
                         <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap" style="width: 100%;">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
                             <div class="card-footer">
+                                <div class="float-left">
+                                    <small><b>Mafia III</b></small>
+                                </div>
                                 <div class="float-right">
                                     <b>$35.000</b>
                                 </div>
@@ -137,8 +146,14 @@ Features section end -->
                     </div>
                     <div class="product-item">
                         <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap" style="width: 100%;">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
                             <div class="card-footer">
+                                <div class="float-left">
+                                    <small><b>Resident Evil 4</b></small>
+                                </div>
                                 <div class="float-right">
                                     <b>$35.000</b>
                                 </div>
@@ -147,8 +162,14 @@ Features section end -->
                     </div>
                     <div class="product-item">
                         <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap" style="width: 100%;">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
                             <div class="card-footer">
+                                <div class="float-left">
+                                    <small><b>God of War</b></small>
+                                </div>
                                 <div class="float-right">
                                     <b>$35.000</b>
                                 </div>
@@ -157,7 +178,10 @@ Features section end -->
                     </div>
                     <div class="product-item">
                         <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap" style="width: 100%;">
+                            <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
                             <div class="card-footer">
                                 <div class="float-right">
                                     <b>$35.000</b>
@@ -292,157 +316,11 @@ Features section end -->
 </section>
 <!-- letest product section end -->
 
-
-
-<!-- Product filter section
-<section class="product-filter-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>BROWSE TOP SELLING PRODUCTS</h2>
-        </div>
-        <ul class="product-filter-menu">
-            <li><a href="#">TOPS</a></li>
-            <li><a href="#">JUMPSUITS</a></li>
-            <li><a href="#">LINGERIE</a></li>
-            <li><a href="#">JEANS</a></li>
-            <li><a href="#">DRESSES</a></li>
-            <li><a href="#">COATS</a></li>
-            <li><a href="#">JUMPERS</a></li>
-            <li><a href="#">LEGGINGS</a></li>
-        </ul>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/5.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <div class="tag-sale">ON SALE</div>
-                        <img src="./img/product/6.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/7.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/8.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/9.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/10.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Black and White Stripes Dress</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/11.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-item">
-                    <div class="pi-pic">
-                        <img src="./img/product/12.jpg" alt="">
-                        <div class="pi-links">
-                            <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-                            <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="pi-text">
-                        <h6>$35,00</h6>
-                        <p>Flamboyant Pink Top </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center pt-5">
-            <button class="site-btn sb-line sb-dark">LOAD MORE</button>
-        </div>
-    </div>
-</section>
- Product filter section end -->
-
-
 <!-- Banner section -->
 <section class="banner-section">
+    <br>
+    <br>
+    <br>
     <div class="container">
         <div class="banner set-bg" data-setbg="public/crossxgame/img/banner.jpg">
             <div class="tag-new">Nuevo</div>

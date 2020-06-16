@@ -43,4 +43,8 @@ class BaseController extends Controller
 		// $this->session = \Config\Services::session();
 	}
 
+    public function vista($valor){
+        return view('master/head').view($valor).view('master/footer');
+    }
+
 }

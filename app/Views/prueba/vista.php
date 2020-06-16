@@ -107,82 +107,84 @@ Features section end -->
 <!-- letest product section -->
 <section class="top-letest-product-section">
     <div class="container">
-        <div class="section-title">
-            <h2>Productos Playstation</h2>
-        </div>
-
-
-        <div class="product-slider owl-carousel">
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="public/crossxgame/img/product/i1.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-
-                    </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35.000</h6>
-                    <p>Juego 1 </p>
-                </div>
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h2 class="text-center">Productos Playstation</h2>
             </div>
+            <div class="card-body">
+                <div class="product-slider owl-carousel">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="public/crossxgame/img/product/i1.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
 
-            <div class="product-item">
-                <div class="pi-pic">
-                    <!--<div class="tag-new">New</div>-->
-                    <img src="public/crossxgame/img/product/i2.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35.000</h6>
+                            <p>Juego 1 </p>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <!--<div class="tag-new">New</div>-->
+                            <img src="public/crossxgame/img/product/i2.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35.000</h6>
+                            <p>Juego 2</p>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="public/crossxgame/img/product/i3.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35.000</h6>
+                            <p>Juego 3 </p>
+                        </div>
 
                     </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35.000</h6>
-                    <p>Juego 2</p>
-                </div>
-            </div>
 
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="public/crossxgame/img/product/i3.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="public/crossxgame/img/product/i4.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
 
-                    </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35.000</h6>
-                    <p>Juego 3 </p>
-                </div>
+                            </div>
+                        </div>
 
-            </div>
-
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="public/crossxgame/img/product/i4.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                        <div class="pi-text">
+                            <h6>$35.000</h6>
+                            <p>Juego 4 </p>
+                        </div>
 
                     </div>
-                </div>
 
-                <div class="pi-text">
-                    <h6>$35.000</h6>
-                    <p>Juego 4 </p>
-                </div>
-
-            </div>
-
-            <div class="product-item">
-                <div class="pi-pic">
-                    <img src="public/crossxgame/img/product/i6.jpg" alt="">
-                    <div class="pi-links">
-                        <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img src="public/crossxgame/img/product/i6.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35.000</h6>
+                            <p>Juego 5 </p>
+                        </div>
                     </div>
-                </div>
-                <div class="pi-text">
-                    <h6>$35.000</h6>
-                    <p>Juego 5 </p>
                 </div>
             </div>
         </div>

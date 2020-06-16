@@ -55,13 +55,15 @@
                             <i class="flaticon-profile"></i>
                             <a href="#">Ingresar</a> o  <a href="#">Crear cuenta</a>
                         </div>
+                        <!--
                         <div class="up-item">
                             <div class="shopping-card">
                                 <i class="flaticon-bag"></i>
-                                <!--<span>0</span>-->
+                                <span>0</span>
                             </div>
                             <a href="#">Carrito</a>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>

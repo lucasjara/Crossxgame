@@ -321,14 +321,18 @@ Features section end -->
     <br>
     <br>
     <br>
-    <div class="container">
         <div class="banner set-bg" data-setbg="public/crossxgame/img/banner.jpg">
             <div class="tag-new">Nuevo</div>
-            <span class="text-white">Estreno del mes</span>
-            <h2 class="text-white">Solo en PS4</h2><span class="text-white">YA DISPONIBLE</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span class="text-white">YA DISPONIBLE</span>
             <a href="#" class="site-btn">Ver mas...</a>
-        </div>
-    </div>
+        </div>   
 </section>
 <!-- Banner section end  -->
 

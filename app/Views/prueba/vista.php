@@ -1,9 +1,4 @@
 <?php ?>
-
-
-
-
-
 <!-- Hero section -->
 <section class="hero-section">
 
@@ -17,7 +12,6 @@
                         <h2>The Last of Us Part II en PS4</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                         <a href="#" class="site-btn sb-line">Ver Más...</a>
-
                     </div>
                 </div>
                 <!--<div class="offer-card text-white">
@@ -335,6 +329,3 @@ Features section end -->
         </div>   
 </section>
 <!-- Banner section end  -->
-
-
-

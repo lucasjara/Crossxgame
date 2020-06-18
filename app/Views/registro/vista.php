@@ -1,6 +1,6 @@
 <?php ?>
 <div class="container">
-    <form style="align-content: center; margin-left: 20%; margin-right: 20% ;margin-top: 2%;">
+    <form style="align-content: center; margin-left: 20%; margin-right: 20% ;margin-top: 2%;" class="contact-form">
   	<h1 style="text-align: center; margin-top: 2%; font-size: 30px; margin-bottom: 3%">Registro
   	</h1>
   <div class="form-row">
@@ -25,14 +25,14 @@
   </div>
    <div class="form-group">
     <label for="inputAddress">Region</label>
-    <select id="selectRegion" class="form-control">
+    <select id="selectRegion" class="form-control" style="border-radius: 1em">
         <option selected="">Seleccione Region...</option>
         <option>...</option>
       </select>
   </div>
   <div class="form-group">
     <label for="inputAddress">Ciudad</label>
-    <select id="selectCiudad" class="form-control">
+    <select id="selectCiudad" class="form-control" style="border-radius: 1em">
         <option selected="">Seleccione Ciudad...</option>
         <option>...</option>
       </select>

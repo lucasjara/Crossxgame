@@ -74,7 +74,7 @@
         <div class="container">
             <!-- menu -->
             <ul class="main-menu">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="/Crossxgame/public/prueba">Inicio</a></li>
                 <li><a href="#">Consolas</a>
                   <ul class="sub-menu">
                         <li><a href="#">Consola PS4</a></li>
@@ -144,13 +144,19 @@
                 </li> 
                 <li><a href="#">Servicios Tecnicos</a>
                     <ul class="sub-menu">
-                        <li><a href="#">Sneakers</a></li>
-                        <li><a href="#">Sandals</a></li>
-                        <li><a href="#">Formal Shoes</a></li>
-                        <li><a href="#">Boots</a></li>
-                        <li><a href="#">Flip Flops</a></li>
+                        <li><a href="./product.html">Servicios PS4</a></li>
+                        <li><a href="./category.html">Servicios PS3</a></li>
+                        <li><a href="./cart.html">Servicios PSP</a></li>
+                        <li><a href="./checkout.html">Servicios PS Vita</a></li>
+                        <li><a href="./contact.html">Servicios Switch</a></li>
+                        <li><a href="./contact.html">Servicios Wii</a></li>
+                        <li><a href="./contact.html">Servicios Wii U</a></li>
+                        <li><a href="./contact.html">Servicios 3DS</a></li>
+                        <li><a href="./contact.html">Servicios DS</a></li>
+                        <li><a href="./contact.html">Servicios Xbox One</a></li>
+                        <li><a href="./contact.html">Servicios Xbox 360</a></li>
                     </ul>
-                    <li><a href="#">Contactanos</a>
+                    <li><a href="/Crossxgame/public/contacto">Contactanos</a>
                </li>    
             </ul>
         </div>

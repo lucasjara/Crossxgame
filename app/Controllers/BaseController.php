@@ -46,5 +46,6 @@ class BaseController extends Controller
     public function vista($valor){
         return view('master/head').view($valor).view('master/footer');
     }
+    
 
 }

@@ -46,7 +46,9 @@ class BaseController extends Controller
     public function vista($valor){
         return view('master/head').view($valor).view('master/footer');
     }
-
+    public function vista_administracion($valor){
+        return view('master/head_administracion').view($valor).view('master/footer_administracion');
+    }
 
 
 }

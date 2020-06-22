@@ -4,6 +4,6 @@ class Admin extends BaseController
 {
     public function index()
     {
-        return $this->vista('admin/vista');
+        return $this->vista_administracion('admin/vista');
     }
 }

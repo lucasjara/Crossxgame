@@ -23,8 +23,13 @@
     <link rel="stylesheet" href="public/crossxgame/css/owl.carousel.min.css"/>
     <link rel="stylesheet" href="public/crossxgame/css/animate.css"/>
     <link rel="stylesheet" href="public/crossxgame/css/style.css"/>
+    <!-- Stylesheets modal -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -55,9 +60,46 @@
                         <div class="up-item">
                             <i class="flaticon-profile"></i>
                            <!--aqui pon el modal mijo!!!!-->
-                            <a >Ingresar o Crear cuenta</a>
+                            <a data-toggle="modal" data-target="#ModalLogin" >Ingresar o Crear cuenta</a>
                         </div>
                         
+                <!-- Modal -->
+                <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container">
+                        <form>
+                              <div class="form-group">
+                                <label for="inputEmail4">Email</label>
+                                <input id="txtEmail" type="email" class="form-control" placeholder="Email">
+                              </div>
+                              <div class="form-group">
+                                <label for="inputPassword4">Contraseña</label>
+                                <input id="txtContraseña" type="password" class="form-control" placeholder="Contraseña">
+                              </div>  
+                                <div class="up-item">
+                                    <i class="breadcrumb-item">
+                                    <a href="#">Crear cuenta </a></i>
+                                </div>
+
+                            </form> 
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Ingresar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
 
                         <!-- carrito
                         <div class="up-item">

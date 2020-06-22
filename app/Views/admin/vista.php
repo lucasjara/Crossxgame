@@ -9,7 +9,7 @@
       <input class="form-control form-control-dark w-100" type="text" placeholder="Buscar Producto" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Cerrar Sesion</a>
+          <a class="nav-link" href="/Crossxgame/public/prueba">Cerrar Sesion</a>
         </li>
       </ul>
     </nav>

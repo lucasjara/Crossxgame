@@ -45,8 +45,8 @@
             <div class="row">
                 <div class="col-lg-2 text-center text-lg-left">
                     <!-- logo -->
-                    <a href="./index.html" class="site-logo">
-                        <img src="public/crossxgame/img/logo.png" alt="">
+                    <a href="/Crossxgame/public/admin" class="site-logo">
+                        <img src="public/crossxgame/img/logo.png" alt="" >
                     </a>
                 </div>
                 <div class="col-xl-6 col-lg-5">
@@ -111,7 +111,7 @@
                         </div>-->
 
 
-                        
+
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                 <li><a href="/Crossxgame/public/prueba">Inicio</a></li>
                 <li><a href="#">Consolas</a>
                   <ul class="sub-menu">
-                        <li><a href="#">Consola PS4</a></li>
+                        <li><a href="/Crossxgame/public/producto">Consola PS4</a></li>
                         <li><a href="#">Consola PS3</a></li>
                         <li><a href="#">Consola PSP</a></li>
                         <li><a href="#">Consola Switch</a></li>
@@ -136,48 +136,48 @@
                     </ul></li>
                     <li><a href="#">Accesorios</a>
                  <ul class="sub-menu">
-                        <li><a href="./product.html">Accesorios PS4</a></li>
-                        <li><a href="./category.html">Accesorios PS3</a></li>
-                        <li><a href="./cart.html">Accesorios PSP</a></li>
-                        <li><a href="./checkout.html">Accesorios PS Vita</a></li>
-                        <li><a href="./contact.html">Accesorios Switch</a></li>
-                        <li><a href="./contact.html">Accesorios Wii</a></li>
-                        <li><a href="./contact.html">Accesorios Wii U</a></li>
-                        <li><a href="./contact.html">Accesorios 3DS</a></li>
-                        <li><a href="./contact.html">Accesorios DS</a></li>
-                        <li><a href="./contact.html">Accesorios Xbox One</a></li>
-                        <li><a href="./contact.html">Accesorios Xbox 360</a></li>
+                        <li><a href="/Crossxgame/public/producto">Accesorios PS4</a></li>
+                        <li><a href="#">Accesorios PS3</a></li>
+                        <li><a href="#">Accesorios PSP</a></li>
+                        <li><a href="#">Accesorios PS Vita</a></li>
+                        <li><a href="#">Accesorios Switch</a></li>
+                        <li><a href="#">Accesorios Wii</a></li>
+                        <li><a href="#">Accesorios Wii U</a></li>
+                        <li><a href="#">Accesorios 3DS</a></li>
+                        <li><a href="#">Accesorios DS</a></li>
+                        <li><a href="#">Accesorios Xbox One</a></li>
+                        <li><a href="#">Accesorios Xbox 360</a></li>
                     </ul>
                 </li>
 
                 <li><a href="#">Juegos Nuevos</a>
                     <ul class="sub-menu">
-                        <li><a href="./product.html">Juegos PS4</a></li>
-                        <li><a href="./category.html">Juegos PS3</a></li>
-                        <li><a href="./cart.html">Juegos PSP</a></li>
-                        <li><a href="./checkout.html">Juegos PS Vita</a></li>
-                        <li><a href="./contact.html">Juegos Switch</a></li>
-                        <li><a href="./contact.html">Juegos Wii</a></li>
-                        <li><a href="./contact.html">Juegos Wii U</a></li>
-                        <li><a href="./contact.html">Juegos 3DS</a></li>
-                        <li><a href="./contact.html">Juegos DS</a></li>
-                        <li><a href="./contact.html">Juegos Xbox One</a></li>
-                        <li><a href="./contact.html">Juegos Xbox 360</a></li>
+                        <li><a href="/Crossxgame/public/producto">Juegos PS4</a></li>
+                        <li><a href="#">Juegos PS3</a></li>
+                        <li><a href="#">Juegos PSP</a></li>
+                        <li><a href="#">Juegos PS Vita</a></li>
+                        <li><a href="#">Juegos Switch</a></li>
+                        <li><a href="#">Juegos Wii</a></li>
+                        <li><a href="#">Juegos Wii U</a></li>
+                        <li><a href="#">Juegos 3DS</a></li>
+                        <li><a href="#">Juegos DS</a></li>
+                        <li><a href="#">Juegos Xbox One</a></li>
+                        <li><a href="#">Juegos Xbox 360</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Juegos usados</a>
                  <ul class="sub-menu">
-                        <li><a href="./product.html">Juegos PS4</a></li>
-                        <li><a href="./category.html">Juegos PS3</a></li>
-                        <li><a href="./cart.html">Juegos PSP</a></li>
-                        <li><a href="./checkout.html">Juegos PS Vita</a></li>
-                        <li><a href="./contact.html">Juegos Switch</a></li>
-                        <li><a href="./contact.html">Juegos Wii</a></li>
-                        <li><a href="./contact.html">Juegos Wii U</a></li>
-                        <li><a href="./contact.html">Juegos 3DS</a></li>
-                        <li><a href="./contact.html">Juegos DS</a></li>
-                        <li><a href="./contact.html">Juegos Xbox One</a></li>
-                        <li><a href="./contact.html">Juegos Xbox 360</a></li>
+                        <li><a href="/Crossxgame/public/producto">Juegos PS4</a></li>
+                        <li><a href="#">Juegos PS3</a></li>
+                        <li><a href="#">Juegos PSP</a></li>
+                        <li><a href="#">Juegos PS Vita</a></li>
+                        <li><a href="#">Juegos Switch</a></li>
+                        <li><a href="#">Juegos Wii</a></li>
+                        <li><a href="#">Juegos Wii U</a></li>
+                        <li><a href="#">Juegos 3DS</a></li>
+                        <li><a href="#">Juegos DS</a></li>
+                        <li><a href="#">Juegos Xbox One</a></li>
+                        <li><a href="#">Juegos Xbox 360</a></li>
                     </ul>
                 </li>
                   <li><a href="#">Figuras y otros <!--    <span class="new">New</span> --></a>
@@ -191,17 +191,17 @@
                 </li> 
                 <li><a href="#">Servicios Tecnicos</a>
                     <ul class="sub-menu">
-                        <li><a href="./product.html">Servicios PS4</a></li>
-                        <li><a href="./category.html">Servicios PS3</a></li>
-                        <li><a href="./cart.html">Servicios PSP</a></li>
-                        <li><a href="./checkout.html">Servicios PS Vita</a></li>
-                        <li><a href="./contact.html">Servicios Switch</a></li>
-                        <li><a href="./contact.html">Servicios Wii</a></li>
-                        <li><a href="./contact.html">Servicios Wii U</a></li>
-                        <li><a href="./contact.html">Servicios 3DS</a></li>
-                        <li><a href="./contact.html">Servicios DS</a></li>
-                        <li><a href="./contact.html">Servicios Xbox One</a></li>
-                        <li><a href="./contact.html">Servicios Xbox 360</a></li>
+                        <li><a href="#">Servicios PS4</a></li>
+                        <li><a href="#">Servicios PS3</a></li>
+                        <li><a href="#">Servicios PSP</a></li>
+                        <li><a href="#">Servicios PS Vita</a></li>
+                        <li><a href="#">Servicios Switch</a></li>
+                        <li><a href="#">Servicios Wii</a></li>
+                        <li><a href="#">Servicios Wii U</a></li>
+                        <li><a href="#">Servicios 3DS</a></li>
+                        <li><a href="#">Servicios DS</a></li>
+                        <li><a href="#">Servicios Xbox One</a></li>
+                        <li><a href="#">Servicios Xbox 360</a></li>
                     </ul>
                     <li><a href="/Crossxgame/public/contacto">Contactanos</a>
                </li>    

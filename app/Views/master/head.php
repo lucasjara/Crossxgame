@@ -54,17 +54,22 @@
                     <div class="user-panel">
                         <div class="up-item">
                             <i class="flaticon-profile"></i>
-                            <a href="#">Ingresar</a> o  <a href="#">Crear cuenta</a>
+                           <!--aqui pon el modal mijo!!!!-->
+                            <a >Ingresar o Crear cuenta</a>
                         </div>
-                        <!--
+                        
+
+                        <!-- carrito
                         <div class="up-item">
                             <div class="shopping-card">
                                 <i class="flaticon-bag"></i>
                                 <span>0</span>
                             </div>
                             <a href="#">Carrito</a>
-                        </div>
-                        -->
+                        </div>-->
+
+
+                        
                     </div>
                 </div>
             </div>

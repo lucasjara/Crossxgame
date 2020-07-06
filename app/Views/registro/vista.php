@@ -16,16 +16,6 @@
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input id="txtEmail" type="email" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword4">Rut</label>
-                                <input id="txtRut" type="text" class="form-control" placeholder="11111111-1">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nombre</label>
                                 <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese su Nombre...">
                             </div>
@@ -34,6 +24,16 @@
                                 <input id="txtApellido" type="text" class="form-control" placeholder="Ingrese su Apellido...">
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Rut</label>
+                                <input id="txtRut" type="text" class="form-control" placeholder="11111111-1">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input id="txtEmail" type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>                        
                         <div class="form-group">
                             <label for="inputAddress">Region</label>
                             <select id="selectRegion" class="form-control" style="border-radius: 1em">

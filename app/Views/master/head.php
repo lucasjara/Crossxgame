@@ -120,7 +120,7 @@
             <!-- menu -->
             <ul class="main-menu">
                 <li><a href="/Crossxgame/public/prueba">Inicio</a></li>
-                <li><a href="#">Consolas</a>
+                <li><a href="/Crossxgame/public/Categoria">Consolas</a>
                   <ul class="sub-menu">
                         <li><a href="/Crossxgame/public/producto">Consola PS4</a></li>
                         <li><a href="#">Consola PS3</a></li>
@@ -132,7 +132,7 @@
                         <li><a href="#">Consola Xbox One</a></li>
                         <li><a href="#">Consola Xbox 360</a></li>
                     </ul></li>
-                    <li><a href="#">Accesorios</a>
+                    <li><a href="/Crossxgame/public/Categoria">Accesorios</a>
                  <ul class="sub-menu">
                         <li><a href="/Crossxgame/public/producto">Accesorios PS4</a></li>
                         <li><a href="#">Accesorios PS3</a></li>
@@ -148,7 +148,7 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Juegos Nuevos</a>
+                <li><a href="/Crossxgame/public/Categoria">Juegos Nuevos</a>
                     <ul class="sub-menu">
                         <li><a href="/Crossxgame/public/producto">Juegos PS4</a></li>
                         <li><a href="#">Juegos PS3</a></li>
@@ -163,7 +163,7 @@
                         <li><a href="#">Juegos Xbox 360</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Juegos usados</a>
+                <li><a href="/Crossxgame/public/Categoria">Juegos usados</a>
                  <ul class="sub-menu">
                         <li><a href="/Crossxgame/public/producto">Juegos PS4</a></li>
                         <li><a href="#">Juegos PS3</a></li>
@@ -178,7 +178,7 @@
                         <li><a href="#">Juegos Xbox 360</a></li>
                     </ul>
                 </li>
-                  <li><a href="#">Figuras y otros <!--    <span class="new">New</span> --></a>
+                  <li><a href="/Crossxgame/public/Categoria">Figuras y otros <!--    <span class="new">New</span> --></a>
                       <ul class="sub-menu">
                         <li><a href="#">Funko Pop</a></li>
                         <li><a href="#">Mug</a></li>
@@ -187,7 +187,7 @@
                         <li><a href="#">Billeteras</a></li>
                     </ul>
                 </li> 
-                <li><a href="#">Servicios Tecnicos</a>
+                <li><a href="/Crossxgame/public/Categoria">Servicios Tecnicos</a>
                     <ul class="sub-menu">
                         <li><a href="#">Servicios PS4</a></li>
                         <li><a href="#">Servicios PS3</a></li>

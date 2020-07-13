@@ -24,7 +24,7 @@
 						<h2 class="fw-title">Ordenar</h2>
 						<div class="price-range-wrap" >
 							<h4>Precio</h4>
-                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="0" data-max="39990">
+                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="0" data-max="499990">
 								<div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div>
 								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;">
 								</span>

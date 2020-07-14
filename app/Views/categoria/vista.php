@@ -51,187 +51,31 @@
 
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
 					<div class="row">
-						<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
-							<div class="col-lg-4 col-sm-6">
-							<div class="product-item">
-								<div class="pi-pic">
-								<!--	<div class="tag-sale">ON SALE</div>-->
-									<img src="public/crossxgame/img/product/i1.jpg"alt="">
-									<div class="pi-links">
-										<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-									</div>
-								</div>
-								<div class="pi-text">
-									<h6>$35.000</h6>
-									<p>Uncharted 4</p>
-								</div>
-							</div>
-						</div>
+					
+<?php 
+foreach ($productos as $producto ) {
+
+
+						echo '<div class="col-lg-4 col-sm-6">';
+							echo'<div class="product-item">';
+								echo'<div class="pi-pic">';
+							
+									echo'<img src="public/crossxgame/img/product/'.$producto['img'].'">';
+									echo'<div class="pi-links">';
+									echo'	<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>';
+									echo'</div>';
+							echo'	</div>';
+								echo'<div class="pi-text">';
+									echo"<h6>".$producto['precio']."</h6>";
+								echo "<p>".$producto['nombre']."</p>";
+							echo'	</div>';
+						echo'	</div>';
+						echo'</div>';
+						
 				
+
+}
+?>
 						<div class="text-center w-100 pt-3">
 							<button class="site-btn sb-line sb-dark">Ver más</button>
 						</div>

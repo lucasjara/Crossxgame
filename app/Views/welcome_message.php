@@ -13,7 +13,6 @@
               </button>
             </div>
           </div>
-
           <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
 
           <h2>Productos</h2>

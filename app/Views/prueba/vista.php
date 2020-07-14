@@ -105,7 +105,8 @@ Features section end -->
                 <!--nuevos ps4-->
             <div class="card-body">
                 <div class="product-slider owl-carousel">
-                    <div class="product-item" style="margin:0px;">
+
+                    <div class="product-item" >
                         <div class="card">
                             <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap">
                             <div class="pi-links">
@@ -121,6 +122,7 @@ Features section end -->
                             </div>
                         </div>
                     </div>
+
                     <div class="product-item">
                         <div class="card">
                             <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap">
@@ -137,6 +139,7 @@ Features section end -->
                             </div>
                         </div>
                     </div>
+
                     <div class="product-item">
                         <div class="card">
                             <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap">
@@ -153,6 +156,7 @@ Features section end -->
                             </div>
                         </div>
                     </div>
+
                     <div class="product-item">
                         <div class="card">
                             <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap">
@@ -169,6 +173,7 @@ Features section end -->
                             </div>
                         </div>
                     </div>
+
                     <div class="product-item">
                         <div class="card">
                             <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap">
@@ -182,6 +187,8 @@ Features section end -->
                             </div>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
                 <!--fin nuevos ps4-->

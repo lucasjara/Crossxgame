@@ -10,7 +10,7 @@ class Model_productos extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre', 'precio', 'stock', 'descripcion', 'id_depto', 'img'];
+    protected $allowedFields = ['nombre', 'precio', 'stock', 'descripcion', 'id_depto','img'];
 
  
 

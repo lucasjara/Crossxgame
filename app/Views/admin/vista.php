@@ -30,15 +30,16 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                 <td>dato<?php echo $nombre; ?></td>
-                  <td>dato<?php echo $nombre; ?></td>
-                <td>dato<?php echo $nombre; ?></td>
-                  <td>dato<?php echo $nombre; ?></td>
-                 <td>dato<?php echo $nombre; ?></td>
-                </tr>
-
-               
+                     <?php 
+      foreach ($productos as $producto ) {
+      echo "<tr>";
+      echo "<td>".$producto['id']."</td>";
+      echo "<td>".$producto['nombre']."</td>";
+      echo "<td>".$producto['stock']."</td>";
+      echo "<td>".$producto['precio']."</td>";
+      echo "<td>".$producto['id_depto']."</td>";
+      echo "</tr>";
+    }?>  
               </tbody>
             </table>
           </div>

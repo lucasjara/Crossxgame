@@ -9,8 +9,9 @@ class Home extends BaseController
 	{	
 		$Model_productos = new Model_productos($db);
 		$productos = $Model_productos->findAll();
-		$productos = array('productos'=>$productos);		
-		return view('welcome_message',$productos);
+		$productos = array('productos'=>$productos);	
+		
+			return view('welcome_message',$productos);
 	}
 
 	//--------------------------------------------------------------------

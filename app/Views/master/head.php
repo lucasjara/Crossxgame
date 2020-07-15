@@ -76,11 +76,11 @@
                         <form>
                               <div class="form-group">
                                 <label for="inputEmail4">Email</label>
-                                <input id="txtEmail" type="email" class="form-control" placeholder="Email">
+                                <input id="txtEmailModal" type="email" class="form-control" placeholder="Email">
                               </div>
                               <div class="form-group">
                                 <label for="inputPassword4">Contraseña</label>
-                                <input id="txtContraseña" type="password" class="form-control" placeholder="Contraseña">
+                                <input id="txtContraseñaModal" type="password" class="form-control" placeholder="Contraseña">
                               </div>  
                                 <div class="up-item">
                                     <i class="breadcrumb-item">

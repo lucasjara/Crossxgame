@@ -8,7 +8,9 @@
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6" style="margin-bottom: 2%;margin-top: 2%;">
-            <form style="" class="contact-form">
+
+            <form method="POST" class="contact-form">
+                
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
                         <h2>Registro</h2>
@@ -17,21 +19,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nombre</label>
-                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese su Nombre...">
+                                <input id="txtNombre" name="nombre" type="text" class="form-control" placeholder="Ingrese su Nombre...">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Apellido</label>
-                                <input id="txtApellido" type="text" class="form-control" placeholder="Ingrese su Apellido...">
+                                <input id="txtApellido" name="apellido" type="text" class="form-control" placeholder="Ingrese su Apellido...">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Rut</label>
-                                <input id="txtRut" type="text" class="form-control" placeholder="11111111-1">
+                                <input id="txtRut" type="text" name="rut" class="form-control" placeholder="11111111-1">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
-                                <input id="txtEmail" type="email" class="form-control" placeholder="Email">
+                                <input id="txtEmail" name="email" type="email" class="form-control" placeholder="Email">
                             </div>
                         </div>                        
                         <div class="form-group">
@@ -79,12 +81,40 @@
                     </div>
                     <div class="card-footer">
                         <div class="float-right">
-                            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                            <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
                             <button type="reset" class="btn btn-success" id="btnLimpiar">Limpiar</button>
                         </div>
                     </div>
                 </div>
+
             </form>
+           
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function envia_ajax_servidor(url, data) {
+    var variable = $.ajax({
+        url: url,
+        method: 'POST',
+        data: data,
+        'dataSrc': 'data',
+        dataType: 'json'
+    })
+    return variable;
+    }
+
+    $("#btnRegistrar").on("click",function(){
+        var array = {
+            nombre: $("#txtNombre").val(),
+            apellido: $("#txtApellido").val(),
+            rut: $("#txtRut").val(),
+            email: $("#txtEmail").val()
+        };
+        var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
+        request.done(function (data){
+            console.log(data);
+        });
+    });
+    
+</script>

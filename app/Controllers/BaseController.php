@@ -50,6 +50,7 @@ class BaseController extends Controller
 
     public function vista2($valor,$array){
         return view('master/head').view($valor,$array).view('master/footer');
+        
     }
        public function vistaArray($valor,$array){
         return view('master/head_administracion').view($valor,$array).view('master/footer_administracion');

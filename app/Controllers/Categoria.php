@@ -5,9 +5,14 @@ use App\Models\Model_productos;
 
 class Categoria extends BaseController
 {
+
+
+
     public function index()
     {
+
     	$Model_productos = new Model_productos($db);
+		
 		$productos = $Model_productos->findAll();
 		$productos = array('productos'=>$productos);	
 		

@@ -2,20 +2,60 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h2 >Inicio</h2>
+     
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
-                
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                Esta semana
-              </button>
+              </div>      
             </div>
           </div>
 
-          <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
+        <form style="" class="contact-form">
+                <div class="card">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>Registro</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputname">Nombre</label>
+                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese Nombre del juego...">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputname">Stock</label>
+                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese Stock...">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputname">Precio</label>
+                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese precio...">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputname">Descripcion</label>
+                                <input id="txtNombre" type="textarea" class="form-control" placeholder="Ingrese Descripcion...">
+                            </div>
+                        </div>       
+                        <div class="form-row">               
+                          <div class="form-group col-md-6">
+                                <label for="inputAddress">Departamento</label>
+                                <select id="selectDepto" class="form-control" style="border-radius: 1em">
+                                <option selected="">Seleccione Departamento...</option>
+                                <option>...</option>
+                            </select>
+                           </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputAddress">imagen</label>
+                              <input type="file" id="myFile" class="form-control" name="filename">
+                          </div>
+                      </div>
+                    <div class="card-footer">
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                            <button type="reset" class="btn btn-success" id="btnLimpiar">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
           <h2>Productos</h2>
           <div class="table-responsive">

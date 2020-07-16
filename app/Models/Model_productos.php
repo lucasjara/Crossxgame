@@ -12,9 +12,9 @@ class Model_productos extends Model
 
     protected $allowedFields = ['nombre', 'precio', 'stock', 'descripcion', 'id_depto','img'];
 
- 	
-    protected $validationRules    = [''];
+ 	protected $createdField = 'created_at';
 
-    protected $validationMessages = [''];
-    protected $skipValidation     = true;
+    protected $validationRules    = [];
+    protected $validationMessages = [];
+    protected $skipValidation     = false;
 }

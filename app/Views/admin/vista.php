@@ -9,7 +9,7 @@
             </div>
           </div>
 
-        <form method="POST"  class="contact-form" id="myform">
+        <form class="contact-form" id="myForm">
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
                         <h2>Registro</h2>
@@ -18,7 +18,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputname">Nombre</label>
-                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese Nombre del juego...">
+                                <input id="txtnombre" type="text" class="form-control" placeholder="Ingrese Nombre del juego...">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputname">Stock</label>
@@ -40,6 +40,8 @@
                                 <label for="inputAddress">Departamento</label>
                                 <select id="selectDepto" class="form-control" style="border-radius: 1em">
                                 <option selected="">Seleccione Departamento...</option>
+                                <option value="1">juego ps4 Nuevo</option>
+
                                 <option>...</option>
                             </select>
                            </div>
@@ -47,7 +49,7 @@
                             <label for="inputAddress">imagen</label>
                             <div class="input-group">
                                   <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                    <input type="file" class="custom-file-input" value="nn.jpg" id="inputGroupFile01"
                                       aria-describedby="inputGroupFileAddon01">
                                     <label class="custom-file-label" for="inputGroupFile01">Seleccione Un archivo</label>
                                   </div>
@@ -56,7 +58,7 @@
                       </div>
                     <div class="card-footer">
                         <div class="float-right">
-                            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                            <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
                             <button type="reset" class="btn btn-success" id="btnLimpiar">Limpiar</button>
                         </div>
                     </div>
@@ -88,18 +90,18 @@
     }?>  
               </tbody>
             </table>
+     
           </div>
         </main>
       </div>
     </div>
-
+</body>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+  
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -117,27 +119,28 @@
         data: data,
         'dataSrc': 'data',
         dataType: 'json'
-    })
+    });
     return variable;
     }
 
     function limpiarFormulario() {
-    //document.getElementById("myForm").reset();
-    document.getElementById("tabla-producto").reset();
+    document.getElementById("myForm").reset();
+    //document.getElementById("tabla-producto").reset();
   }
 
 
     $("#btnRegistrar").on("click",function(){
         var array = {
-            nombre: $("#txtNombre").val(),
+            nombre: $("#txtnombre").val(),
             stock: $("#txtstock").val(),
             precio: $("#txtprecio").val(),
-           descripcion: $("#txtdescripcion").val()
+           descripcion: $("#txtdescripcion").val(),  
+           id_depto: $("#selectDepto").val()
         };
         
-        var request = envia_ajax_servidor('/Crossxgame/public/admin/guardar', array);
+        var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardar', array);
 
-        limpiarFormulario();
+       
 
         request.done(function (data){
             console.log(data);
@@ -148,4 +151,3 @@
 
     
 </script>
-</body>

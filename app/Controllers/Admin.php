@@ -4,30 +4,11 @@ use CodeIgniter\Controller;
 use App\Models\Model_productos; 
 
 class Admin extends BaseController
-{
+{ 
+  public function _constructor(){
+	helper('form');
+}
 
-	public function _construct(){
-		helper('form');
-
-
-	}
-	public function guardar(){
-		$request= \Config\Servicies::request();
-
-
-		$data=array(
-			'nombre'=>$request->getPostGet('nombre'),
-			'precio'=>$request->getPostGet('precio'),
-			'stock'=>$request->getPostGet('stock'),
-			'Descripcion'=>$request->getPostGet('descripcion'),
-			'id_depto'=>"1");
-			//,'id_depto'=>$request->getPostGet('id_depto'),
-		//	'img'=>$request->getPostGet('img')
-			 $Model_productos->insert($data);
-    	
-			   
-		
-	}
     public function index()
     {
  		$Model_productos = new Model_productos($db);
@@ -38,10 +19,31 @@ class Admin extends BaseController
 		//$Model_productos->delete([762,763,764]);
 		$productos = $Model_productos->findAll();
 		$productos = array('productos'=>$productos);	
+	
 
- 	return $this->vistaarray('admin/vista',$productos);
+
+ 		return $this->vistaarray('admin/vista',$productos);
     }
-    
+
+    public function guardar(){
+ 	
+		$request = \Config\Servicies::request();
+
+		$data=array(
+		'nombre'=>$request->getPostGet('nombre'),
+		'precio'=>$request->getPostGet('precio'),
+		'stock'=>$request->getPostGet('stock'),
+		'Descripcion'=>$request->getPostGet('descripcion'),
+		'id_depto'=>$request->getPostGet('id_depto')
+		//,'img'=>$request->getPostGet('img')
+		);
+		if($Model_productos->insert($data)===false){
+
+		}
+		return $this->vistaarray('admin/vista',$productos);
+ 	 	 
+	}
+		
 }
 
    

@@ -9,7 +9,7 @@
             </div>
           </div>
 
-        <form style="" class="contact-form">
+        <form method="POST"  class="contact-form" id="myform">
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
                         <h2>Registro</h2>
@@ -22,17 +22,17 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputname">Stock</label>
-                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese Stock...">
+                                <input id="txtstock" type="text" class="form-control" placeholder="Ingrese Stock...">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputname">Precio</label>
-                                <input id="txtNombre" type="text" class="form-control" placeholder="Ingrese precio...">
+                                <input id="txtprecio" type="text" class="form-control" placeholder="Ingrese precio...">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputname">Descripcion</label>
-                                <input id="txtNombre" type="textarea" class="form-control" placeholder="Ingrese Descripcion...">
+                                <input id="txtdescripcion" type="textarea" class="form-control" placeholder="Ingrese Descripcion...">
                             </div>
                         </div>       
                         <div class="form-row">               
@@ -45,8 +45,14 @@
                            </div>
                           <div class="form-group col-md-6">
                             <label for="inputAddress">imagen</label>
-                              <input type="file" id="myFile" class="form-control" name="filename">
-                          </div>
+                            <div class="input-group">
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                      aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Seleccione Un archivo</label>
+                                  </div>
+                            </div>
+                        </div>
                       </div>
                     <div class="card-footer">
                         <div class="float-right">
@@ -59,7 +65,7 @@
 
           <h2>Productos</h2>
           <div class="table-responsive">
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-sm" id="tabla-producto">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -101,35 +107,45 @@
       feather.replace()
     </script>
 
-    <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script>
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          datasets: [{
-            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#007bff',
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-  </body>
+
+
+<script type="text/javascript">
+    function envia_ajax_servidor(url, data) {
+    var variable = $.ajax({
+        url: url,
+        method: 'POST',
+        data: data,
+        'dataSrc': 'data',
+        dataType: 'json'
+    })
+    return variable;
+    }
+
+    function limpiarFormulario() {
+    //document.getElementById("myForm").reset();
+    document.getElementById("tabla-producto").reset();
+  }
+
+
+    $("#btnRegistrar").on("click",function(){
+        var array = {
+            nombre: $("#txtNombre").val(),
+            stock: $("#txtstock").val(),
+            precio: $("#txtprecio").val(),
+           descripcion: $("#txtdescripcion").val()
+        };
+        
+        var request = envia_ajax_servidor('/Crossxgame/public/admin/guardar', array);
+
+        limpiarFormulario();
+
+        request.done(function (data){
+            console.log(data);
+
+        });
+        
+    });
+
+    
+</script>
+</body>

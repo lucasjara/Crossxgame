@@ -9,7 +9,7 @@
         <div class="col-3"></div>
         <div class="col-6" style="margin-bottom: 2%;margin-top: 2%;">
 
-            <form method="POST" class="contact-form">
+            <form method="POST" class="contact-form" id="miForm">
                 
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
@@ -19,21 +19,26 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nombre</label>
-                                <input id="txtNombre" name="nombre" type="text" class="form-control" placeholder="Ingrese su Nombre...">
+                                <input id="txtNombre" name="nombre" type="text" class="form-control" minlength="3" required placeholder="Ingrese su Nombre...">
+                           
+                        
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Apellido</label>
-                                <input id="txtApellido" name="apellido" type="text" class="form-control" placeholder="Ingrese su Apellido...">
+                                <input id="txtApellido" name="apellido" type="text" class="form-control" required placeholder="Ingrese su Apellido...">
+                          
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Rut</label>
-                                <input id="txtRut" type="text" name="rut" class="form-control" placeholder="11111111-1">
+                                <input id="txtRut" type="text" name="rut"  class="form-control" placeholder="11111111-1">
+                                 <div class="valid-feedback">Valid.</div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
                                 <input id="txtEmail" name="email" type="email" class="form-control" placeholder="Email">
+                                <div class="valid-feedback">Valid.</div>
                             </div>
                         </div>                        
                         <div class="form-group">
@@ -104,17 +109,30 @@
     return variable;
     }
 
+    function limpiarFormulario() {
+    document.getElementById("miForm").reset();
+  }
+
+
     $("#btnRegistrar").on("click",function(){
         var array = {
             nombre: $("#txtNombre").val(),
             apellido: $("#txtApellido").val(),
             rut: $("#txtRut").val(),
             email: $("#txtEmail").val()
+           
         };
+        
         var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
+
+        limpiarFormulario();
+
         request.done(function (data){
             console.log(data);
+
         });
+        
     });
+
     
 </script>

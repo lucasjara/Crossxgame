@@ -42,6 +42,9 @@
                                 <option selected="">Seleccione Departamento...</option>
                                 <option value="1">juego ps4 Nuevo</option>
 
+
+
+
                                 <option>...</option>
                             </select>
                            </div>
@@ -49,7 +52,7 @@
                             <label for="inputAddress">imagen</label>
                             <div class="input-group">
                                   <div class="custom-file">
-                                    <input type="file" class="custom-file-input" value="nn.jpg" id="inputGroupFile01"
+                                    <input type="file" class="custom-file-input"  id="inputGroupFile01"
                                       aria-describedby="inputGroupFileAddon01">
                                     <label class="custom-file-label" for="inputGroupFile01">Seleccione Un archivo</label>
                                   </div>
@@ -58,13 +61,12 @@
                       </div>
                     <div class="card-footer">
                         <div class="float-right">
-                            <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
                             <button type="reset" class="btn btn-success" id="btnLimpiar">Limpiar</button>
                         </div>
                     </div>
                 </div>
             </form>
-
           <h2>Productos</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm" id="tabla-producto">
@@ -75,6 +77,7 @@
                   <th>Stock</th>
                   <th>Precio</th>
                   <th>Departamento</th>
+                   <th>Nombre Imagen</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,11 +89,11 @@
       echo "<td>".$producto['stock']."</td>";
       echo "<td>".$producto['precio']."</td>";
       echo "<td>".$producto['id_depto']."</td>";
+      echo "<td>".$producto['img']."</td>";
       echo "</tr>";
-    }?>  
+       }?>  
               </tbody>
-            </table>
-     
+            </table> 
           </div>
         </main>
       </div>
@@ -123,10 +126,10 @@
     return variable;
     }
 
-    function limpiarFormulario() {
-    document.getElementById("myForm").reset();
-    //document.getElementById("tabla-producto").reset();
-  }
+    //function limpiarFormulario() {
+    //document.getElementById("myForm").reset();
+   // document.getElementById("tabla-producto").reset();
+  //}
 
 
     $("#btnRegistrar").on("click",function(){
@@ -135,12 +138,14 @@
             stock: $("#txtstock").val(),
             precio: $("#txtprecio").val(),
             descripcion: $("#txtdescripcion").val(),  
-            id_depto: $("#selectDepto").val()
+            id_depto: $("#selectDepto").val(),  
+            img: $("#inputGroupFile01").val()
+
         };
         
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
 
-       limpiarFormulario();
+    //   limpiarFormulario();
 
         request.done(function (data){
             console.log(data);

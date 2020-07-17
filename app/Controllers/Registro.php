@@ -14,18 +14,18 @@ class Registro extends BaseController
     public function guardar()
     {
       $request = \Config\Services::request();
-     // echo $request->getPostGet('email');
-      $Model_registro = new Model_registro($db);
+      //echo $request->getPostGet('email');
+       $Model_registro = new Model_registro($db);
       
 
-       $data = array(
-           'nombre'=>$request->getPostGet('nombre'),
-           'apellido'=>$request->getPostGet('apellido'),
-           'rut'=>$request->getPostGet('rut'),
-           'email'=>$request->getPostGet('email')
-       );
-      //echo "llegamos";
-     $Model_registro->insert($data);
-     echo "llegamos";
+        $data = array(
+            'nombre'=>$request->getPostGet('nombre'),
+            'apellido'=>$request->getPostGet('apellido'),
+            'rut'=>$request->getPostGet('rut'),
+            'email'=>$request->getPostGet('email')
+        );
+     //echo ($data);
+      $Model_registro->insert($data);
+     
     }
 }

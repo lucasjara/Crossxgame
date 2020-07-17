@@ -11,7 +11,7 @@ class Admin extends BaseController
 
     public function index()
     {
- 		$Model_productos = new Model_productos($db);
+    	$Model_productos = new Model_productos($db);
  		//insertar datos automaticos
  		//$data=['nombre'=>"rssdasdd",'stock'=>"0",'precio'=>"28911",'Descripcion'=>"asldjhasidaslkas",'id_depto'=>"1"];
  		//	$Model_productos->insert($data);
@@ -23,27 +23,18 @@ class Admin extends BaseController
 
 
  		return $this->vistaarray('admin/vista',$productos);
+ 		
+    }
+    public function guardarProducto()
+    {
+    	$request = \Config\Services::request();
+
+    	$Model_productos = new Model_productos($db);
+
+    	$data = array('nombre'=>$request->getPostGet('nombre') );
+    	$Model_productos->insert($data);
     }
 
-    public function guardar(){
- 	
-		$request = \Config\Servicies::request();
-
-		$data=array(
-		'nombre'=>$request->getPostGet('nombre'),
-		'precio'=>$request->getPostGet('precio'),
-		'stock'=>$request->getPostGet('stock'),
-		'Descripcion'=>$request->getPostGet('descripcion'),
-		'id_depto'=>$request->getPostGet('id_depto')
-		//,'img'=>$request->getPostGet('img')
-		);
-		if($Model_productos->insert($data)===false){
-
-		}
-		return $this->vistaarray('admin/vista',$productos);
- 	 	 
-	}
-		
 }
 
    

@@ -9,7 +9,7 @@
             </div>
           </div>
 
-        <form class="contact-form" id="myForm">
+        <form  class="contact-form" id="myForm">
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
                         <h2>Registro</h2>
@@ -18,21 +18,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputname">Nombre</label>
-                                <input id="txtnombre" type="text" class="form-control" placeholder="Ingrese Nombre del juego...">
+                                <input id="txtnombre" name="nombre" type="text" class="form-control" placeholder="Ingrese Nombre del juego...">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputname">Stock</label>
-                                <input id="txtstock" type="text" class="form-control" placeholder="Ingrese Stock...">
+                                <input id="txtstock" name="stock" type="text" class="form-control" placeholder="Ingrese Stock...">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputname">Precio</label>
-                                <input id="txtprecio" type="text" class="form-control" placeholder="Ingrese precio...">
+                                <input id="txtprecio" name="precio" type="text" class="form-control" placeholder="Ingrese precio...">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputname">Descripcion</label>
-                                <input id="txtdescripcion" type="textarea" class="form-control" placeholder="Ingrese Descripcion...">
+                                <input id="txtdescripcion" name="descripcion" type="textarea" class="form-control" placeholder="Ingrese Descripcion...">
                             </div>
                         </div>       
                         <div class="form-row">               
@@ -111,7 +111,7 @@
 
 
 
-<script type="text/javascript">
+ <script type="text/javascript">
     function envia_ajax_servidor(url, data) {
     var variable = $.ajax({
         url: url,
@@ -132,15 +132,15 @@
     $("#btnRegistrar").on("click",function(){
         var array = {
             nombre: $("#txtnombre").val(),
-            stock: $("#txtstock").val(),
-            precio: $("#txtprecio").val(),
-           descripcion: $("#txtdescripcion").val(),  
-           id_depto: $("#selectDepto").val()
+           // stock: $("#txtstock").val(),
+           // precio: $("#txtprecio").val(),
+           //descripcion: $("#txtdescripcion").val(),  
+           //id_depto: $("#selectDepto").val()
         };
         
-        var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardar', array);
+        var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
 
-       
+       limpiarFormulario();
 
         request.done(function (data){
             console.log(data);

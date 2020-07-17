@@ -17,3 +17,4 @@ class Model_registro extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+}

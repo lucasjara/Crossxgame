@@ -9,7 +9,7 @@
         <div class="col-3"></div>
         <div class="col-6" style="margin-bottom: 2%;margin-top: 2%;">
 
-            <form method="POST" class="contact-form" id="miForm">
+            <form  class="contact-form" id="miForm">
                 
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">

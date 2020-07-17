@@ -31,7 +31,11 @@ class Admin extends BaseController
 
     	$Model_productos = new Model_productos($db);
 
-    	$data = array('nombre'=>$request->getPostGet('nombre') );
+   $data = array('nombre'=>$request->getPostGet('nombre'),
+  				 'stock'=>$request->getPostGet('stock'),
+   				 'precio'=>$request->getPostGet('precio'),
+   				 'descripcion'=>$request->getPostGet('descripcion'),
+   				 'id_depto'=>$request->getPostGet('id_depto'));
     	$Model_productos->insert($data);
     }
 

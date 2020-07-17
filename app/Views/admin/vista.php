@@ -132,10 +132,10 @@
     $("#btnRegistrar").on("click",function(){
         var array = {
             nombre: $("#txtnombre").val(),
-           // stock: $("#txtstock").val(),
-           // precio: $("#txtprecio").val(),
-           //descripcion: $("#txtdescripcion").val(),  
-           //id_depto: $("#selectDepto").val()
+            stock: $("#txtstock").val(),
+            precio: $("#txtprecio").val(),
+            descripcion: $("#txtdescripcion").val(),  
+            id_depto: $("#selectDepto").val()
         };
         
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);

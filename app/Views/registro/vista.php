@@ -44,8 +44,12 @@
                         <div class="form-group">
                             <label for="inputAddress">Region</label>
                             <select id="selectRegion" class="form-control" style="border-radius: 1em">
-                                <option selected="">Seleccione Region...</option>
-                                <option>...</option>
+                                <option value="0" selected>Seleccione Region...</option>
+                                <?php
+                                //print_r($arrProfesiones);
+                                foreach ($arrProfesiones as $i => $region_nombre)
+                                    echo '<option values="',$i,'">',$region_nombre,'</option>';
+                                ?>
                             </select>
                         </div>
                         <div class="form-group">

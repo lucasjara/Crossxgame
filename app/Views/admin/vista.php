@@ -40,12 +40,11 @@
                                 <label for="inputAddress">Departamento</label>
                                 <select id="selectDepto" class="form-control" style="border-radius: 1em">
                                 <option selected="">Seleccione Departamento...</option>
-                                <option value="1">juego ps4 Nuevo</option>
-
-
-
-
-                                <option>...</option>
+                                <option value="">juego ps4 Nuevo</option>
+                              <?php
+                                foreach ($arrayDepto as $i => $descripcion)
+                                  echo '<option values="',$i,'">',$descripcion,'</option>';
+                                ?>
                             </select>
                            </div>
                           <div class="form-group col-md-6">

@@ -16,7 +16,7 @@
 							
 									echo'<img src="public/crossxgame/img/product/'.$producto['img'].'">';
 									echo'<div class="pi-links">';
-									echo'	<a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>';
+									echo'	<a href="#" class="add-card"><i class="flaticon-bag"></i><span>Reservar</span></a>';
 									echo'</div>';
 							echo'	</div>';
 								echo'<div class="pi-text">';

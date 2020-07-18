@@ -18,12 +18,19 @@ class Admin extends BaseController
  		//	$Model_productos->insert($data);
  		//eliminar datos por id
 		//$Model_productos->delete([762,763,764]);
+    
+
 		$productos = $Model_productos->findAll();
-		$productos = array('productos'=>$productos);	
-	
 
+    $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
+    
+    $datos['productos'] = $productos;
 
- 		return $this->vistaarray('admin/vista',$productos);
+    $productos = array('productos'=>$productos);  
+
+    
+
+ 		return $this->vistaarray('admin/vista',$datos);
  		
     }
 

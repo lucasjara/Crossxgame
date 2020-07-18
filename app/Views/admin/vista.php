@@ -40,10 +40,11 @@
                                 <label for="inputAddress">Departamento</label>
                                 <select id="selectDepto" class="form-control" style="border-radius: 1em">
                                 <option selected="">Seleccione Departamento...</option>
-                                <option value="">juego ps4 Nuevo</option>
                               <?php
                                 foreach ($arrayDepto as $i => $descripcion)
-                                  echo '<option values="',$i,'">',$descripcion,'</option>';
+
+                                  echo '<option value="',$i,'">',$descripcion,'</option>';
+                                
                                 ?>
                             </select>
                            </div>
@@ -80,7 +81,7 @@
                 </tr>
               </thead>
               <tbody>
-                     <?php 
+<?php 
       foreach ($productos as $producto ) {
       echo "<tr>";
       echo "<td>".$producto['id']."</td>";
@@ -89,8 +90,8 @@
       echo "<td>".$producto['precio']."</td>";
       echo "<td>".$producto['id_depto']."</td>";
       echo "<td>".$producto['img']."</td>";
-      echo "</tr>";
-       }?>  
+      echo "</tr>";}
+?>  
               </tbody>
             </table> 
           </div>
@@ -139,9 +140,8 @@
             descripcion: $("#txtdescripcion").val(),  
             id_depto: $("#selectDepto").val(),  
             img: $("#inputGroupFile01").val()
-
         };
-        
+
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
 
     //   limpiarFormulario();

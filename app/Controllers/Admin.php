@@ -23,12 +23,10 @@ class Admin extends BaseController
 		$productos = $Model_productos->findAll();
 
     $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
-    
+
     $datos['productos'] = $productos;
 
     $productos = array('productos'=>$productos);  
-
-    
 
  		return $this->vistaarray('admin/vista',$datos);
  		

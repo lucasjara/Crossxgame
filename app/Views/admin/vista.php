@@ -78,6 +78,7 @@
                   <th>Precio</th>
                   <th>Departamento</th>
                    <th>Nombre Imagen</th>
+                    <th>Opciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -90,12 +91,8 @@
      echo "<td>".$producto->precio."</td>";
      echo "<td>".$producto->descripcion."</td>";
      echo "<td>".$producto->img."</td>";
-     // echo "<td>".$producto['id']."</td>";
-      //echo "<td>".$producto['nombre']."</td>";
-     // echo "<td>".$producto['stock']."</td>";
-      //echo "<td>".$producto['precio']."</td>";
-      //echo "<td>".$producto['id_depto']."</td>";
-      //echo "<td>".$producto['img']."</td>";
+     echo "<td> <button class='btn btn-danger'>Eliminar</button></td>";
+    
      echo "</tr>";
      }
 ?>  

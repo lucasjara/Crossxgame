@@ -9,7 +9,12 @@ class Registro extends BaseController
     {
         $modelo = new Model_registro($db);
 
+    
+
         $datos['arrProfesiones'] = $modelo->ObtenerRegiones();
+
+        $datos['arrComuna'] = $modelo->ObtenerComuna();
+
         return $this->vista2('registro/vista',$datos);
     }
     public function guardar()

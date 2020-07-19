@@ -1,5 +1,4 @@
 
-
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
      
@@ -9,7 +8,7 @@
             </div>
           </div>
 
-        <form  class="contact-form" id="myForm">
+        <form  class="contact-form" id="myForm" enctype="multipart/form-data" >
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
                         <h2>Registro</h2>
@@ -42,21 +41,18 @@
                                 <option selected="">Seleccione Departamento...</option>
                               <?php
                                 foreach ($arrayDepto as $i => $descripcion)
-
-                                  echo '<option value="',$i,'">',$descripcion,'</option>';
-                                
+                                  echo '<option value="',$i,'">',$descripcion,'</option>';    
                                 ?>
                             </select>
                            </div>
                           <div class="form-group col-md-6">
                             <label for="inputAddress">imagen</label>
-                            <div class="input-group">
+                           
                                   <div class="custom-file">
-                                    <input type="file" class="custom-file-input"  id="inputGroupFile01"
-                                      aria-describedby="inputGroupFileAddon01">
-                                    <label class="custom-file-label" for="inputGroupFile01">Seleccione Un archivo</label>
+                                  <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                                   <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                                   </div>
-                            </div>
+                            
                         </div>
                       </div>
                     <div class="card-footer">
@@ -92,10 +88,8 @@
      echo "<td>".$producto->descripcion."</td>";
      echo "<td>".$producto->img."</td>";
      echo "<td> <button class='btn btn-danger'>Eliminar</button></td>";
-    
      echo "</tr>";
-     }
-?>  
+}?>  
               </tbody>
             </table> 
           </div>

@@ -53,10 +53,14 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="inputAddress">Ciudad</label>
-                            <select id="selectCiudad" class="form-control" style="border-radius: 1em">
-                                <option selected="">Seleccione Ciudad...</option>
-                                <option>...</option>
+                            <label for="inputAddress">Comuna</label>
+                            <select id="selectComuna" class="form-control" style="border-radius: 1em">
+                                <option selected="">Seleccione Comuna...</option>
+                          <?php
+                                //print_r($arrProfesiones);
+                                foreach ($arrComuna as $i => $comuna_nombre)
+                                    echo '<option values="',$i,'">',$comuna_nombre,'</option>';
+                                ?>
                             </select>
                         </div>
                         <div class="form-group">

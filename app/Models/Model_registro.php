@@ -5,9 +5,11 @@ use CodeIgniter\Model;
 class Model_registro extends Model
 {
 	protected $table      = 'cliente';
+
     protected $primaryKey = 'id';
 
     protected $returnType     = 'array';
+    
     protected $useSoftDeletes = false;
 
     protected $allowedFields = ['nombre', 'apellido', 'rut', 'email'];
@@ -15,13 +17,15 @@ class Model_registro extends Model
  	protected $createdField = 'created_at';
 
     protected $validationRules    = [];
+
     protected $validationMessages = [];
+
     protected $skipValidation     = false;
 
     public function ObtenerRegiones()
     {
         // armamos la consulta
-        $query = $this->db->query('SELECT region_id, region_nombre FROM bd_local.regiones');
+        $query = $this->db->query('SELECT region_id, region_nombre FROM bd_local.region');
         $results = $query->getResult();
         // si hay resultados
         if (count($results) > 0) {
@@ -29,14 +33,23 @@ class Model_registro extends Model
             foreach($results as $row){
                 $arrDatos[htmlspecialchars($row->region_id, ENT_QUOTES)] = htmlspecialchars($row->region_nombre, ENT_QUOTES);
             }
-            // almacenamos en una matriz bidimensional
-            /*
-            foreach($query->result() as $row)
-                $arrDatos[htmlspecialchars($row->region_id, ENT_QUOTES)] =
-                    htmlspecialchars($row->region_nombre, ENT_QUOTES);
+            return $arrDatos;
+        }else{
+            return $arrDatos["datos"] = "sin datos";
+        }
+    }
 
-            $query->free_result();
-            */
+        public function ObtenerComuna()
+    {
+        // armamos la consulta
+        $query = $this->db->query('SELECT comuna_id, comuna_nombre FROM bd_local.comuna');
+        $results = $query->getResult();
+        // si hay resultados
+        if (count($results) > 0) {
+            //var_dump($results);
+            foreach($results as $row){
+                $arrDatos[htmlspecialchars($row->comuna_id, ENT_QUOTES)] = htmlspecialchars($row->comuna_nombre, ENT_QUOTES);
+            }
             return $arrDatos;
         }else{
             return $arrDatos["datos"] = "sin datos";

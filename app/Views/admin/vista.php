@@ -11,7 +11,7 @@
         <form  class="contact-form" id="myForm" enctype="multipart/form-data" >
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center">
-                        <h2>Registro</h2>
+                        <h2>Registro Product</h2>
                     </div>
                     <div class="card-body">
                         <div class="form-row">
@@ -87,7 +87,7 @@
      echo "<td>".$producto->precio."</td>";
      echo "<td>".$producto->descripcion."</td>";
      echo "<td>".$producto->img."</td>";
-     echo "<td> <button class='btn btn-danger'>Eliminar</button></td>";
+     echo "<td> <button type='submit' class='btn btn-danger' value=".$producto->id." id='btnEliminar'>Eliminar</button></td>";
      echo "</tr>";
 }?>  
               </tbody>
@@ -146,10 +146,25 @@
 
         request.done(function (data){
             console.log(data);
-
         });
         
     });
+
+
+ $("#btnEliminar").on("click",function(){
+  var array2 = {
+        id: $("#btnEliminar").val()
+           };
+
+
+        var request = envia_ajax_servidor('/Crossxgame/public/Admin/eliminarProducto', array2);
+
+        request.done(function (data){
+            console.log(data);
+        });
+        
+    });
+
 
     
 </script>

@@ -46,6 +46,17 @@ class Admin extends BaseController
     	$Model_productos->insert($data);
     }
 
+    public function eliminarProducto()
+    {
+      $request = \Config\Services::request();
+
+      $Model_productos = new Model_productos($db);
+
+   $data = array('id'=>$request->getPostGet('id'));+
+
+      $Model_productos->delete($data);
+    }
+
 }
 
    

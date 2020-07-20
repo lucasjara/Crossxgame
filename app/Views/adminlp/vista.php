@@ -9,58 +9,7 @@
           </div>
 
         <form  class="contact-form" id="myForm"  enctype="multipart/form-data" >
-                <div class="card">
-                    <div class="card-header bg-primary text-white text-center">
-                        <h2>Registro Producto</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputname">Nombre</label>
-                                <input id="txtnombre" name="nombre" type="text" class="form-control" placeholder="Ingrese Nombre del juego...">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputname">Stock</label>
-                                <input id="txtstock" name="stock" type="text" class="form-control" placeholder="Ingrese Stock...">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputname">Precio</label>
-                                <input id="txtprecio" name="precio" type="text" class="form-control" placeholder="Ingrese precio...">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputname">Descripcion</label>
-                                <input id="txtdescripcion" name="descripcion" type="textarea" class="form-control" placeholder="Ingrese Descripcion...">
-                            </div>
-                        </div>       
-                        <div class="form-row">               
-                          <div class="form-group col-md-6">
-                                <label for="inputAddress">Departamento</label>
-                                <select id="selectDepto" class="form-control" style="border-radius: 1em">
-                                <option selected="">Seleccione Departamento...</option>
-                              <?php
-                                foreach ($arrayDepto as $i => $descripcion)
-                                  echo '<option value="',$i,'">',$descripcion,'</option>';    
-                                ?>
-                            </select>
-                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputAddress">imagen</label>
-                           
-                                  <div class="custom-file">
-                                  <input type="file" class="custom-file-input"  id="customFileLang" lang="es">
-                                  <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                            </div>
-                        </div>
-                      </div>
-                    <div class="card-footer">
-                        <div class="float-right">
-                            <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
-                            <button type="reset" class="btn btn-success"  id="btnLimpiar">Limpiar</button>
-                        </div>
-                    </div>
-                </div>
+               
             </form>
           <h2>Productos</h2>
           <div class="table-responsive">

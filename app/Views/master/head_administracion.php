@@ -64,13 +64,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/Crossxgame/public/adminproducto">
                   <span data-feather="shopping-cart"></span>
                   Productos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Crossxgame/public/admin/admin_producto">
+                <a class="nav-link" href="/Crossxgame/public/admincliente">
                   <span data-feather="users"></span>
                   Clientes
                 </a>

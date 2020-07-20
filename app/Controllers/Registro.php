@@ -23,7 +23,11 @@ class Registro extends BaseController
             'nombre'=>$request->getPostGet('nombre'),
             'apellido'=>$request->getPostGet('apellido'),
             'rut'=>$request->getPostGet('rut'),
-            'email'=>$request->getPostGet('email')
+            'email'=>$request->getPostGet('email'),
+            'comuna_id'=>$request->getPostGet('comuna'),
+            'direccion'=>$request->getPostGet('direccion'),
+            'f_nacimiento'=>$request->getPostGet('fnacimiento'),
+            'contrasenia'=>$request->getPostGet('contrasenia')
         );
      //echo ($data);
       $Model_registro->insert($data); 

@@ -31,7 +31,7 @@
     </div>
     <div class="col-4">
     
-  <span class="" aria-hidden="true" ><a href="/Crossxgame/public/adminl"> Listar Productos
+  <span class="" aria-hidden="true" ><a href="/Crossxgame/public/adminlp"> Listar Productos
 </a></span>
     </div>
   </div>

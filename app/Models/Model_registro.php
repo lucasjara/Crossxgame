@@ -25,7 +25,7 @@ class Model_registro extends Model
     public function ObtenerRegiones()
     {
         // armamos la consulta
-        $query = $this->db->query('SELECT region_id, region_nombre FROM bd_local.region');
+        $query = $this->db->query('SELECT region_id, region_nombre FROM bd_local.region ORDER by region_id ASC');
         $results = $query->getResult();
         // si hay resultados
         if (count($results) > 0) {
@@ -38,21 +38,10 @@ class Model_registro extends Model
             return $arrDatos["datos"] = "sin datos";
         }
     }
-
-        public function ObtenerComuna()
+        public function ObtenerComuna($combo)
     {
-        // armamos la consulta
-        $query = $this->db->query('SELECT comuna_id, comuna_nombre FROM bd_local.comuna');
+        $query = $this->db->query("SELECT comuna_id, comuna_nombre FROM bd_local.comuna where region_id ='".$combo."'");
         $results = $query->getResult();
-        // si hay resultados
-        if (count($results) > 0) {
-            //var_dump($results);
-            foreach($results as $row){
-                $arrDatos[htmlspecialchars($row->comuna_id, ENT_QUOTES)] = htmlspecialchars($row->comuna_nombre, ENT_QUOTES);
-            }
-            return $arrDatos;
-        }else{
-            return $arrDatos["datos"] = "sin datos";
-        }
+        return $results;
     }
 }

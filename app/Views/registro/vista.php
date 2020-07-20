@@ -20,8 +20,6 @@
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nombre</label>
                                 <input id="txtNombre" name="nombre" type="text" class="form-control" minlength="3" required placeholder="Ingrese su Nombre...">
-                           
-                        
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Apellido</label>
@@ -42,8 +40,8 @@
                             </div>
                         </div>                        
                         <div class="form-group">
-                            <label for="inputAddress">Region</label>
-                            <select id="selectRegion" class="form-control" style="border-radius: 1em">
+                            <label for="inputAddress" >Region</label>
+                            <select id="selectRegion" onchange="ShowSelected();" class="form-control" style="border-radius: 1em">
                                 <option value="0" selected>Seleccione Region...</option>
                                 <?php
                                 //print_r($arrProfesiones);
@@ -56,11 +54,11 @@
                             <label for="inputAddress">Comuna</label>
                             <select id="selectComuna" class="form-control" style="border-radius: 1em">
                                 <option selected="">Seleccione Comuna...</option>
-                          <?php
+                                <!-- <?php
                                 //print_r($arrProfesiones);
-                                foreach ($arrComuna as $i => $comuna_nombre)
-                                    echo '<option values="',$i,'">',$comuna_nombre,'</option>';
-                                ?>
+                               // foreach ($arrComuna as $i => $comuna_nombre)
+                                 //   echo '<option values="',$i,'">',$comuna_nombre,'</option>';
+                                ?>  -->
                             </select>
                         </div>
                         <div class="form-group">
@@ -99,9 +97,7 @@
                         </div>
                     </div>
                 </div>
-
             </form>
-           
         </div>
     </div>
 </div>
@@ -116,31 +112,43 @@
     })
     return variable;
     }
-
     function limpiarFormulario() {
     document.getElementById("miForm").reset();
   }
-
-
     $("#btnRegistrar").on("click",function(){
         var array = {
             nombre: $("#txtNombre").val(),
             apellido: $("#txtApellido").val(),
             rut: $("#txtRut").val(),
-            email: $("#txtEmail").val()
-           
+            email: $("#txtEmail").val()      
         };
-        
         var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
-
         limpiarFormulario();
-
         request.done(function (data){
             console.log(data);
-
         });
-        
     });
-
-    
+</script>
+<script type="text/javascript">
+function ShowSelected(){
+    var combo = document.getElementById("selectRegion").selectedIndex; 
+    if(combo != ''){
+        $.ajax({
+            url:"/Crossxgame/public/Registro/ObtenerComuna",
+            method:"POST",
+            data:{combo:combo},
+            success:function(data){  
+                var comunas = "<option value='0'>Seleccionar comuna</option>";
+               for (var i = 0; i < data.length; i++) {
+                    var id = data[i].comuna_id;
+                    var nombre = data[i].comuna_nombre;
+                    comunas = comunas.concat("<option value='"+id+"'>"+nombre+"</option>");
+               }
+               $('#selectComuna').html(comunas);
+            }               
+        });
+    }else{
+        $('#selectComuna').html('<option value="">Select State</option>');
+    }    
+ }
 </script>

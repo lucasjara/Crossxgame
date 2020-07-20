@@ -5,16 +5,13 @@ use App\Models\Model_registro;
 
 class Registro extends BaseController
 {
+   
     public function index()
     {
+       
         $modelo = new Model_registro($db);
-
-    
-
         $datos['arrProfesiones'] = $modelo->ObtenerRegiones();
-
-        $datos['arrComuna'] = $modelo->ObtenerComuna();
-
+        //$datos['arrComuna'] = $modelo->ObtenerComuna();
         return $this->vista2('registro/vista',$datos);
     }
     public function guardar()
@@ -22,8 +19,6 @@ class Registro extends BaseController
       $request = \Config\Services::request();
       //echo $request->getPostGet('email');
        $Model_registro = new Model_registro($db);
-      
-
         $data = array(
             'nombre'=>$request->getPostGet('nombre'),
             'apellido'=>$request->getPostGet('apellido'),
@@ -31,7 +26,17 @@ class Registro extends BaseController
             'email'=>$request->getPostGet('email')
         );
      //echo ($data);
-      $Model_registro->insert($data);
-     
+      $Model_registro->insert($data); 
+    }
+    function ObtenerComuna(){
+      $request = \Config\Services::request();
+      if($request->getPostGet('combo')){
+        $modelo = new Model_registro($db);
+         
+        $mensaje = $modelo->ObtenerComuna($request->getPostGet('combo'));
+        $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode($mensaje));
+
+      }
     }
 }

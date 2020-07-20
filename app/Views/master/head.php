@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-lg-2 text-center text-lg-left">
                     <!-- logo -->
-                    <a href="/Crossxgame/public/admin" class="site-logo">
+                    <a href="/Crossxgame/public/adminproducto" class="site-logo">
                         <img src="public/crossxgame/img/logo.png" alt="" >
                     </a>
                 </div>

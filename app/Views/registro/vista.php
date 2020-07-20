@@ -54,25 +54,20 @@
                             <label for="inputAddress">Comuna</label>
                             <select id="selectComuna" class="form-control" style="border-radius: 1em">
                                 <option selected="">Seleccione Comuna...</option>
-                                <!-- <?php
-                                //print_r($arrProfesiones);
-                               // foreach ($arrComuna as $i => $comuna_nombre)
-                                 //   echo '<option values="',$i,'">',$comuna_nombre,'</option>';
-                                ?>  -->
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Direccion</label>
-                            <input id="txtDireccion" type="text" class="form-control" placeholder="Ingrese su Direccion">
+                            <input id="txtDireccion" name="direccion" type="text" class="form-control" placeholder="Ingrese su Direccion">
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Fecha de nacimiento</label>
-                            <input id="txtFechaNacimiento" type="text" class="form-control" placeholder="00/00/0000">
+                            <input id="txtFechaNacimiento" name="fnacimiento" type="date"  placeholder="00/00/0000" value="<?php echo date("Y-m-d");?>">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Contraseña</label>
-                                <input id="txtContraseña" type="password" class="form-control" placeholder="Contraseña">
+                                <input id="txtContraseña" name="contrasenia" type="password" class="form-control" placeholder="Contraseña">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Repita su Contraseña</label>
@@ -120,7 +115,11 @@
             nombre: $("#txtNombre").val(),
             apellido: $("#txtApellido").val(),
             rut: $("#txtRut").val(),
-            email: $("#txtEmail").val()      
+            email: $("#txtEmail").val(),
+            comuna: $("#selectComuna").val(),
+            direccion: $("#txtDireccion").val(),
+            fnacimiento: $("#txtFechaNacimiento").val(),
+            contrasenia: $("#txtContraseña").val()
         };
         var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
         limpiarFormulario();

@@ -33,8 +33,7 @@ class Adminlp extends BaseController
 
     	$Model_depto = new Model_depto($db);
 
-   $data = array('descripcion'=>$request->getPostGet('descripcion')
-   				 );
+   $data = array('descripcion'=>$request->getPostGet('descripcion'));
 
     	$Model_depto->insert($data);
     }

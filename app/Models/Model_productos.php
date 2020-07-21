@@ -43,6 +43,16 @@ class Model_productos extends Model
             return $arrDatos["datos"] = "sin datos";
         }
     }
+    public function obtenerUltimoProducto(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto ORDER BY a.id DESC LIMIT 2' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+    }
          public function obtenerProducto(){
         // armamos la consulta
         $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto' );

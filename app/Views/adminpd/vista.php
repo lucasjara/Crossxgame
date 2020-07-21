@@ -24,7 +24,7 @@
                       
                     <div class="card-footer">
                         <div class="float-right">
-                            <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar</button>
+                            <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrar</button>
                             <button type="reset" class="btn btn-success"  id="btnLimpiar">Limpiar</button>
                         </div>
                     </div>
@@ -50,9 +50,9 @@
           echo "<tr>";
           echo "<td>".$depto['id_depto']."</td>";
           echo "<td>".$depto['descripcion']."</td>";
-          echo "<td>  <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-danger'  id='btnEliminar'>Eliminar</button> </td>";  
+          echo "<td>  <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$depto['id_depto']."' class='btn btn-danger'  id='btnEliminar'>Eliminar</button> </td>";  
 
-       echo "<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+       echo "<div class='modal fade' id='exampleModalCenter".$depto['id_depto']."' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
         <div class='modal-header'>
@@ -65,7 +65,7 @@
         ...
       </div>
       <div class='modal-footer'>
-        <button type='button' id='btnConfirmar'  value=".$depto['id_depto']." class='btn btn-primary'>Confirmar</button>
+        <button type='submit' id='btnConfirmar'  value='26' class='btn btn-primary'>Confirmar</button>
         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
         
       </div>
@@ -119,10 +119,11 @@
 
         var request = envia_ajax_servidor('/Crossxgame/public/Adminpd/guardarDepto', array);
 
-    //   limpiarFormulario();
+    
 
         request.done(function (data){
             console.log(data);
+
         });
         
     });
@@ -132,12 +133,12 @@
  
   var array2 = {
       
-        id: $("#btnConfirmar").val()
+        id_depto: $("#btnConfirmar").val()
         
 
            };
 
-        var request = envia_ajax_servidor('/Crossxgame/public/Admin/eliminarProducto', array2);
+        var request = envia_ajax_servidor('/Crossxgame/public/Adminpd/eliminarProducto', array2);
 
         request.done(function (data){
             console.log(data);

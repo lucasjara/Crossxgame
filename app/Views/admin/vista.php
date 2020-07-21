@@ -86,33 +86,30 @@
         echo "<td>".$producto->precio."</td>";
         echo "<td>".$producto->descripcion."</td>";
         echo "<td>".$producto->img."</td>";
-        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-danger'  id='btnEliminar'>Eliminar</button></td>";
+        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-success'  id='btnEliminar'>Actualizar</button></td>";
 
 
         echo "<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
         <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLongTitle'>¿Desea eliminar el producto?</h5>
+        <h5 class='modal-title' id='exampleModalLongTitle'>Actualizar datos</h5>
         <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
       <div class='modal-body'>
-        ...
+        
       </div>
       <div class='modal-footer'>
-        <button type='button' id='btnConfirmar'  value=".$producto->id." class='btn btn-primary'>Confirmar</button>
+        <button type='button' id='btnConfirmar'   class='btn btn-primary'>Confirmar</button>
         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
         
       </div>
     </div>
   </div>
 </div>";
-
-
-
-     echo "</tr>";
+echo "</tr>";
 }?>  
               </tbody>
             </table> 

@@ -24,13 +24,7 @@
       <span class="" aria-hidden="true" ><a href="/Crossxgame/public/adminpd"> Administrar Departamentos
 </a></span>
     </div>
-        <div class="w-100"></div>
-           <div class="col-4">
-             <span class="" aria-hidden="true" ><a href="/Crossxgame/public/adminb"> buscar Productos
-</a></span>
-    </div>
     <div class="col-4">
-    
   <span class="" aria-hidden="true" ><a href="/Crossxgame/public/adminlp"> Listar Productos
 </a></span>
     </div>

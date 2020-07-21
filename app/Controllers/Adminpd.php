@@ -6,8 +6,6 @@ use App\Models\Model_depto;
 class Adminpd extends BaseController
 {
 
-
-
     public function index()
     {
  		//insertar datos automaticos
@@ -34,6 +32,7 @@ class Adminpd extends BaseController
     	$Model_depto->insert($data);
     }
 
+
     public function eliminarProducto()
     {
       $request = \Config\Services::request();
@@ -45,6 +44,24 @@ class Adminpd extends BaseController
 
 
       $Model_depto->delete($data);
+
     }
+
+    public function updateProducto()
+    {
+      $request = \Config\Services::request();
+
+      $Model_depto = new Model_depto($db);
+
+    $data = array('id_depto'=>$request->getPostGet('id_depto'),
+      'descripcion'=>$request->getPostGet('descripcion'));
+
+
+
+      $Model_depto->update($data);
+    }
+
+
+
 
 }

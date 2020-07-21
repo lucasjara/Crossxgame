@@ -16,7 +16,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputname">Nombre Departamento</label>
-                                <input id="txtnombre" name="nombre" type="text" class="form-control" placeholder="Consola Ps4 ...">
+                                <input id="txtdeptonombre" name="nombre" type="text" class="form-control" placeholder="Consola Ps4 ...">
                             </div>
                          
                         </div>
@@ -50,22 +50,34 @@
           echo "<tr>";
           echo "<td>".$depto['id_depto']."</td>";
           echo "<td>".$depto['descripcion']."</td>";
-          echo "<td>  <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$depto['id_depto']."' class='btn btn-danger'  id='btnEliminar'>Eliminar</button> </td>";  
+          echo "<td>  <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$depto['id_depto']."' class='btn btn-success'  id='btnEliminar'>Actualizar</button> </td>";  
 
        echo "<div class='modal fade' id='exampleModalCenter".$depto['id_depto']."' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
         <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLongTitle'>¿Desea eliminar el producto?</h5>
+        <h5 class='modal-title' id='exampleModalLongTitle'>Actualizar Datos</h5>
         <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
       <div class='modal-body'>
-        ...
+           <form  class='contact-form'   enctype='multipart/form-data' >
+                <div class='card'>
+                   
+                    <div class='card-body'>
+                        <div class='form-row'>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Nombre Departamento</label>
+                                <input id='btnactualizar'  type='text' class='form-control' placeholder='".$depto['descripcion']."'>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </form>
       </div>
       <div class='modal-footer'>
-        <button type='submit' id='btnConfirmar'  value='26' class='btn btn-primary'>Confirmar</button>
+        <button type='submit' onclick='ActualizarDatos(".$depto['id_depto'].")' class='btn btn-primary'>Confirmar</button>
         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
         
       </div>
@@ -114,7 +126,7 @@
 
     $("#btnRegistrar").on("click",function(){
         var array = {
-            descripcion: $("#txtnombre").val()           
+            descripcion: $("#txtdeptonombre").val()           
         };
 
         var request = envia_ajax_servidor('/Crossxgame/public/Adminpd/guardarDepto', array);
@@ -129,12 +141,12 @@
     });
 
 
- $("#btnConfirmar").on("click",function(){
- 
-  var array2 = {
+
+function Eliminardatos($data) {
+    
+var array2 = {
       
-        id_depto: $("#btnConfirmar").val()
-        
+        id_depto: $data       
 
            };
 
@@ -144,6 +156,32 @@
             console.log(data);
         });
       
-    });
+
+
+
+    }
+
+function ActualizarDatos($data) {
+    
+var array2 = {
+      
+        id_depto: $data ,  
+       descripcion: $("#btnactualizar").val()    
+
+           };
+
+        var request = envia_ajax_servidor('/Crossxgame/public/Adminpd/updateProducto', array2);
+
+        request.done(function (data){
+            console.log(data);
+        });
+      
+
+
+
+    }
+
+
+ 
  
 </script>

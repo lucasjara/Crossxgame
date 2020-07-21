@@ -56,5 +56,5 @@ class Model_registro extends Model
 
        return $results;
 
-}
+    }
 }

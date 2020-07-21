@@ -122,8 +122,9 @@
             contrasenia: $("#txtContraseña").val()
         };
         var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
-        limpiarFormulario();
+       
         request.done(function (data){
+             limpiarFormulario();
             console.log(data);
         });
     });

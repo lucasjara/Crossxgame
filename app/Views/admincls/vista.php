@@ -34,8 +34,8 @@
         echo "<td>".$cl->id."</td>";
         echo "<td>".$cl->nombre."</td>";
         echo "<td>".$cl->apellido."</td>";
-         echo "<td>".$cl->email."</td>";
         echo "<td>".$cl->rut."</td>";
+        echo "<td>".$cl->email."</td>";
         echo "<td>".$cl->comuna_nombre."</td>";   
         echo "<td>".$cl->direccion."</td>";
         echo "<td>".$cl->f_nacimiento."</td>"; 

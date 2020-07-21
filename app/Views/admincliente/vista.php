@@ -16,21 +16,21 @@
   <div class="row lign-items-start">
     <div class="col-4">
 
-  <span class="" aria-hidden="true" ><a href="/Crossxgame/public/admin"> Administrar Clientes
+  <span class="" aria-hidden="true" ><a href="/Crossxgame/public/admincl"> Administrar Clientes
 </a></span>
 
     </div>
     <div class="col-4">
-      <span class="" aria-hidden="true" ><a href="/Crossxgame/public/admind"> Listar Clientes
+      <span class="" aria-hidden="true" ><a href="/Crossxgame/public/admincls"> Listar Clientes
 </a></span>
     </div>
  
     </div>
   </div>
             <div class="container">
-            	<br><br><br><br><br><br>
-            	  	<br><br><br><br><br><br>
-  	<br><br><br><br><br><br>
+             <br><br><br><br><br><br>
+            	   <br><br><br><br><br><br>
+  	             <br><br><br><br><br><br>
 
 
             </div>

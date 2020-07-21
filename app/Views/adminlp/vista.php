@@ -35,24 +35,25 @@
         echo "<td>".$producto->precio."</td>";
         echo "<td>".$producto->descripcion."</td>";
         echo "<td>".$producto->img."</td>";
-        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-danger'  id='btnEliminar'>Eliminar</button></td>";
+        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-default'  id='btnEliminar'>Ver</button></td>";
 
 
         echo "<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
         <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLongTitle'>¿Desea eliminar el producto?</h5>
+        <h5 class='modal-title' id='exampleModalLongTitle'>Datos del producto</h5>
+
         <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
       <div class='modal-body'>
-        ...
+      <img class='card-img-top' src='public/crossxgame/img/product/".$producto->img."' alt='Card image cap'>
       </div>
       <div class='modal-footer'>
-        <button type='button' id='btnConfirmar'  value=".$producto->id." class='btn btn-primary'>Confirmar</button>
-        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
+
+        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Volver</button>
         
       </div>
     </div>

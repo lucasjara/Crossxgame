@@ -38,10 +38,23 @@ class Model_registro extends Model
             return $arrDatos["datos"] = "sin datos";
         }
     }
+
         public function ObtenerComuna($combo)
     {
         $query = $this->db->query("SELECT comuna_id, comuna_nombre FROM bd_local.comuna where region_id ='".$combo."'");
         $results = $query->getResult();
         return $results;
     }
+        
+        public function obtenerCliente(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+
+}
 }

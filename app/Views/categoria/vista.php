@@ -39,14 +39,6 @@
                             </div>
                         </div>
 					</div>
-					<div class="filter-widget">
-						<h2 class="fw-title">Marca</h2>
-						<ul class="category-menu">
-							<li><a href="#">Sony<span>(4)</span></a></li>
-							<li><a href="#">Microsoft<span>(1)</span></a></li>
-							<li><a href="#">Nintendo<span>(3)</span></a></li>
-						</ul>
-					</div>
 				</div>
 
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
@@ -66,7 +58,7 @@ foreach ($productos as $producto ) {
 									echo'</div>';
 							echo'	</div>';
 								echo'<div class="pi-text">';
-									echo"<h6>".$producto['precio']."</h6>";
+									echo"<h6>$".$producto['precio']."</h6>";
 								echo "<p>".$producto['nombre']."</p>";
 							echo'	</div>';
 						echo'	</div>';

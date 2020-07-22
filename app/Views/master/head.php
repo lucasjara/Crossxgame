@@ -60,7 +60,7 @@
                            <!--aqui pon el modal mijo!!!!-->
                             <a data-toggle="modal" data-target="#ModalLogin" >Ingresar o Crear cuenta</a>
                         </div>
-
+            <form class="contact-form" id="miFormLogin">
                 <!-- Modal -->
                 <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
@@ -76,11 +76,11 @@
                         <form>
                               <div class="form-group">
                                 <label for="inputEmail4">Email</label>
-                                <input id="txtEmailModal" type="email" class="form-control" placeholder="Email">
+                                <input id="txtEmailModal" name="emailLogin" type="email" class="form-control" placeholder="Email">
                               </div>
                               <div class="form-group">
                                 <label for="inputPassword4">Contraseña</label>
-                                <input id="txtContraseñaModal" type="password" class="form-control" placeholder="Contraseña">
+                                <input id="txtContraseñaModal" name="contraseñaLogin" type="password" class="form-control" placeholder="Contraseña">
                               </div>  
                                 <div class="up-item">
                                     <i class="breadcrumb-item">
@@ -91,13 +91,13 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Ingresar</button>
+                        <button type="button" id="btnIngresar" name="btnIngresar" class="btn btn-primary">Ingresar</button>
+                      </div>
                       </div>
                     </div>
                   </div>
                 </div>
-            </div>
-
+             </form>
 
                         <!-- carrito
                         <div class="up-item">
@@ -208,3 +208,29 @@
     </nav>
 </header>
 <!-- Header section end -->
+<script type="text/javascript">
+    function envia_ajax_servidor(url, data) {
+    var variable = $.ajax({
+        url: url,
+        method: 'POST',
+        data: data,
+        'dataSrc': 'data',
+        dataType: 'json'
+    })
+    return variable;
+    }
+    function limpiarFormulario() {
+    document.getElementById("miFormLogin").reset();
+  }
+    $("#btnIngresar").on("click",function(){
+        var array = {
+            emailLogin: $("#txtEmailModal").val(),
+            contraseñaLogin: $("#txtContraseñaModal").val()  
+        };
+        var request = envia_ajax_servidor('/Crossxgame/public/Login/index', array);
+        request.done(function (data){
+             limpiarFormulario();
+            console.log(data);
+        });
+    });
+</script>

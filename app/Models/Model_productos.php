@@ -63,4 +63,58 @@ class Model_productos extends Model
 
        return $results;
     }
+
+        //bloque carga datos pagina principal 
+         public function NuevosPs4(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT id,nombre,precio, img FROM bd_local.producto WHERE id_depto="1" ORDER BY id DESC LIMIT 5' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+    }
+         public function Nuevosxbox(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT id,nombre,precio, img FROM bd_local.producto WHERE id_depto="7" ORDER BY id DESC LIMIT 5' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+    }
+
+     public function NuevosSwitch(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT id,nombre,precio, img FROM bd_local.producto WHERE id_depto="5" ORDER BY id DESC LIMIT 5' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+    }
+         public function NuevosAccesorios(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT id,nombre,precio, img FROM bd_local.producto WHERE id_depto in ("28","30","32") ORDER BY id DESC LIMIT 5' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+    }
+          public function NuevosFiguras(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT id,nombre,precio, img FROM bd_local.producto WHERE id_depto in ("21","34") ORDER BY id DESC LIMIT 5' );
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+
+       return $results;
+    }
+
 }

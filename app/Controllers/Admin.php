@@ -5,9 +5,7 @@ use App\Models\Model_productos;
 
 class Admin extends BaseController
 { 
-  public function _constructor(){
-	helper('form');
-}
+
 
     public function index()
     {

@@ -62,38 +62,7 @@
 
 
 
-<!-- Features section
-<section class="features-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 p-0 feature">
-                <div class="feature-inner">
-                    <div class="feature-icon">
-                        <img src="img/icons/1.png" alt="#">
-                    </div>
-                    <h2>Fast Secure Payments</h2>
-                </div>
-            </div>
-            <div class="col-md-4 p-0 feature">
-                <div class="feature-inner">
-                    <div class="feature-icon">
-                        <img src="img/icons/2.png" alt="#">
-                    </div>
-                    <h2>Premium Products</h2>
-                </div>
-            </div>
-            <div class="col-md-4 p-0 feature">
-                <div class="feature-inner">
-                    <div class="feature-icon">
-                        <img src="img/icons/3.png" alt="#">
-                    </div>
-                    <h2>Free & fast Delivery</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-Features section end -->
+
 
 <!-- letest product section -->
 <section class="top-letest-product-section" style="background-color: #F8F8F8;">
@@ -106,259 +75,91 @@ Features section end -->
             <div class="card-body">
                 <div class="product-slider owl-carousel">
 
-                    <div class="product-item" >
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i1.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Uncharted 4</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i2.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Mafia III</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i3.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Resident Evil 4</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <?php 
+                foreach ($prodps4 as $ps4 ) {
 
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i4.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>God of War</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/i6.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 echo    "<div class='product-item'style='margin:0px;' > <div
+                 class='card'> <img class='card-img-top'
+                 src='public/crossxgame/img/product/".$ps4->img."' alt='Card
+                 image cap'>"; echo          "<div class='pi-links'>"; echo   
+                       "<a href='#'' class='add-card'><i
+                 class='flaticon-bag'></i><span>Reservar</span></a> </div>";
+                 echo      "<div class='card-footer'> <div
+                 class='float-left'>"; echo       
+                 "<small><b>".$ps4->nombre."</b></small> </div> <div
+                 class='float-right'>"; echo          
+                 "<b>$".$ps4->precio."</b> </div> </div> </div> </div>";
 
-                    
-                </div>
+
+        }?>
+          </div>
             </div>
-                <!--fin nuevos ps4-->
-              <!--nuevos nintendo-->
+            <!--fin nuevos ps4-->
+
+
+
+            <!--nuevos nintendo-->
              <div class="card-body">
                 <div class="product-slider owl-carousel">
-                    <div class="product-item" style="margin:0px;">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/n1.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>mario teninis Aces</b></small>
+                   
+                   
+        <?php 
+                foreach ($prodswitch as $switch ) {
+
+
+                 echo    "<div class='product-item'style='margin:0px;' >
+                        <div class='card'>
+                            <img class='card-img-top' src='public/crossxgame/img/product/".$switch->img."' alt='Card image cap'>";
+                 echo          "<div class='pi-links'>";
+                 echo          "<a href='#'' class='add-card'><i class='flaticon-bag'></i><span>Reservar</span></a>
+                            </div>";
+                 echo      "<div class='card-footer'>
+                             <div class='float-left'>";
+                 echo        "<small><b maxlength='2' >".$switch->nombre."</b></small>
                                 </div>
-                                <div class="float-right">
-                                    <b>$45.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/n2.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>mario & sonic </b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$42.000</b>
+                                <div class='float-right'>";
+                 echo           "<b>$".$switch->precio."</b>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/n3.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Jumanji el videojuego</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/n4.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Crash team racing </b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/n6.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Zelda Breath of the wild</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$55.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>";
+
+
+        }?>
+
+
                 </div>
             </div>
                 <!--fin nuevos nintendo-->
                   <!--nuevos Xbox-->
              <div class="card-body">
                 <div class="product-slider owl-carousel">
-                    <div class="product-item" style="margin:0px;">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/m1.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Uncharted 4</b></small>
+
+        <?php 
+                foreach ($prodxbox as $xbox ) {
+
+
+                 echo    "<div class='product-item'style='margin:0px;' >
+                        <div class='card'>
+                            <img class='card-img-top' src='public/crossxgame/img/product/".$xbox->img."' alt='Card image cap'>";
+                 echo          "<div class='pi-links'>";
+                 echo          "<a href='#'' class='add-card'><i class='flaticon-bag'></i><span>Reservar</span></a>
+                            </div>";
+                 echo      "<div class='card-footer'>
+                             <div class='float-left'>";
+                 echo        "<small><b maxlength='2' >".$xbox->nombre."</b></small>
                                 </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/m2.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Mafia III</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
+                                <div class='float-right'>";
+                 echo           "<b>$".$xbox->precio."</b>
                                 </div>
                             </div>
                         </div>
+                    </div>";
+        }?>
                     </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/m3.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>Resident Evil 4</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/m4.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-left">
-                                    <small><b>God of War</b></small>
-                                </div>
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/m6.jpg" alt="Card image cap">
-                            <div class="pi-links">
-                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>AL CARRO</span></a>
-                            </div>
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
            <!--fin nuevos xbox-->
         </div>
@@ -386,58 +187,36 @@ Features section end -->
             <div class="card-header bg-danger text-white">
                 <h3 class="text-center">Accesorios</h3>
             </div>
+
             <div class="card-body">
+
                 <div class="product-slider owl-carousel">
-                    <div class="product-item" style="margin:0px;">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/p1.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
+
+
+
+                    <?php 
+                foreach ($prodAcc as $Acc ) {
+
+
+                 echo    "<div class='product-item'style='margin:0px;' >
+                        <div class='card'>
+                            <img class='card-img-top' src='public/crossxgame/img/product/".$Acc->img."' alt='Card image cap'>";
+                 echo          "<div class='pi-links'>";
+                 echo          "<a href='#'' class='add-card'><i class='flaticon-bag'></i><span>Reservar</span></a>
+                            </div>";
+                 echo      "<div class='card-footer'>
+                             <div class='float-left'>";
+                 echo        "<small><b maxlength='2' >".$Acc->nombre."</b></small>
+                                </div>
+                                <div class='float-right'>";
+                 echo           "<b>$".$Acc->precio."</b>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/p3.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/p2.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/p4.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/p5.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>";
+        }?>
+
+
                 </div>
             </div>
         </div>
@@ -467,56 +246,34 @@ Features section end -->
             </div>
             <div class="card-body">
                 <div class="product-slider owl-carousel">
-                    <div class="product-item" style="margin:0px;">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/f1.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
+
+
+          <?php 
+                foreach ($prodfiguras as $figuras ) {
+
+
+                 echo    "<div class='product-item'style='margin:0px;' >
+                        <div class='card'>
+                            <img class='card-img-top' src='public/crossxgame/img/product/".$figuras->img."' alt='Card image cap'>";
+                 echo          "<div class='pi-links'>";
+                 echo          "<a href='#'' class='add-card'><i class='flaticon-bag'></i><span>Reservar</span></a>
+                            </div>";
+                 echo      "<div class='card-footer'>
+                             <div class='float-left'>";
+                 echo        "<small><b maxlength='2' >".$figuras->nombre."</b></small>
+                                </div>
+                                <div class='float-right'>";
+                 echo           "<b>$".$figuras->precio."</b>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/f3.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/f2.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/f4.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="card">
-                            <img class="card-img-top" src="public/crossxgame/img/product/f6.jpg" alt="Card image cap" style="width: 100%;">
-                            <div class="card-footer">
-                                <div class="float-right">
-                                    <b>$35.000</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>";
+        }?>
+              
+
+
+
+
                 </div>
             </div>
         </div>
@@ -542,4 +299,3 @@ Features section end -->
             <a href="#" class="site-btn">Ver mas...</a>
         </div>   
 </section>
-<!-- Banner section foot end  -->

@@ -1,7 +1,7 @@
 <?php ?>
 
-<!-- Hero section -->
 
+<!-- Hero section -->
 <section class="hero-section">
     <div class="hero-slider owl-carousel">
         <div class="hs-item set-bg" data-setbg="public/crossxgame/img/bg.jpg">
@@ -39,6 +39,8 @@
     </div>
 </section>
 <!-- Hero section end -->
+
+
 
 
 <!-- letest product section -->

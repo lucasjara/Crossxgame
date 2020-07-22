@@ -2,21 +2,12 @@
 
 <section class="product-section">
 		<div class="container">
-			<div class="back-link">
-				<a href="./category.html"> &lt;&lt; Back to Category</a>
-			</div>
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="product-pic-zoom">
 						<img class="product-big-img" src="public/crossxgame/img/single-product/p1.jpg" alt="">
 					</div>
 					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
-						<!--<div class="product-thumbs-track">
-							<div class="pt active" data-imgbigurl="img/single-product/p1.jpg"><img src="img/single-product/thumb-p1.jpg" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/p2.jpg"><img src="img/single-product/thumb-p2.jpg" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/p3.jpg"><img src="img/single-product/thumb-p3.jpg" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/p4.jpg"><img src="img/single-product/thumb-p4.jpg" alt=""></div>
-						</div>-->
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
@@ -24,22 +15,37 @@
 					<h2 class="p-price">$45.000</h2>
 					<h4 class="p-stock">Disponibilidad: <span>Sin Stock</span></h4>
 
-				   		<!--<div class="p-rating">
-						<i class="fa fa-star-o"></i>
-						<i class="fa fa-star-o"></i>
-						<i class="fa fa-star-o"></i>
-						<i class="fa fa-star-o"></i>
-						<i class="fa fa-star-o fa-fade"></i>
-					</div>
-					<div class="p-review">
-						<a href="">3 reviews</a>|<a href="">Add your review</a>
-					</div>-->
+				 
 				
 					<div class="quantity">
 						<p>Cantidad</p>
                         <div class="pro-qty"> <input type="text" value="0"></div>
                     </div>
-					<a href="#" class="site-btn">Reservar</a>
+
+			<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="exampleModalLabel">¿Desea reservar el producto?</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        La reserva del producto estara habilitada por 24 hrs a partir desde ahora, Reserva Disponible hasta el día<a id="demo" class="modal-body"></a>Para mas Informacion valla al apartado "Detalles de reserva".
+						      </div>
+						      <div class="modal-footer">
+						       <button type="button" class="btn btn-primary">Reservar Producto</button>
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					
+						      </div>
+						    </div>
+						  </div>
+						</div>
+			<!--end Modal-->
+					<a href="#"  data-toggle="modal" data-target="#exampleModal" class="site-btn">Reservar</a>
+
 					<div id="accordion" class="accordion-area">
 						<div class="panel">
 							<div class="panel-header" id="headingOne">
@@ -78,3 +84,10 @@
 			</div>
 		</div>
 	</section>
+
+<script>
+
+ var f = new Date();
+  document.getElementById("demo").innerHTML = (f.getDate()+1)+ "/" + (f.getMonth() +1) + "/" + f.getFullYear()+" a las "+f.getHours()+"hrs,";
+
+</script>

@@ -57,7 +57,7 @@
                 foreach ($prodps4 as $ps4 ) {
 
                  echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='producto?id=".$ps4->id."'><img class='card-img-top'
+                 class='card'> <a href='producto?id=".$ps4->id."&nombre=".$ps4->nombre."&precio=".$ps4->precio."&stock=".$ps4->stock."&img=".$ps4->img."'><img class='card-img-top'
                  src='public/crossxgame/img/product/".$ps4->img."' alt='Card
                  image cap'></a>"; 
                 

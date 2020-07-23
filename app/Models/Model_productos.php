@@ -67,7 +67,7 @@ class Model_productos extends Model
         //bloque carga datos pagina principal 
          public function NuevosPs4(){
         // armamos la consulta
-        $query = $this->db->query('SELECT id,nombre,precio, img FROM bd_local.producto WHERE id_depto="1" AND stock>0 ORDER BY id DESC LIMIT 5' );
+        $query = $this->db->query('SELECT * FROM bd_local.producto WHERE id_depto="1" AND stock>0 ORDER BY id DESC LIMIT 5' );
        
         $results = $query->getResult();
         // si hay resultados
@@ -116,5 +116,18 @@ class Model_productos extends Model
 
        return $results;
     }
+
+
+     public function IDProducto($id){
+        // armamos la consulta
+        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto AND a.id=$id');
+       
+        $results = $query->getResult();
+        // si hay resultados
+      
+var_dump($results); 
+       return $results;
+    }
+
 
 }

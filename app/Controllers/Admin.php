@@ -44,6 +44,8 @@ class Admin extends BaseController
     	$Model_productos->insert($data);
     }
 
+
+
     public function eliminarProducto()
     {
       $request = \Config\Services::request();

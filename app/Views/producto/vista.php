@@ -1,25 +1,33 @@
-<?php ?>
+<?php
+
+  $id=$_GET["id"];
+  $name=$_GET["nombre"];
+ $precio=  $_GET["precio"];
+ $stock=  $_GET["stock"];
+$img=  $_GET["img"];
+ ?>
 
 <section class="product-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="product-pic-zoom">
-						<img class="product-big-img" src="public/crossxgame/img/single-product/p1.jpg" alt="">
+						<?php echo "<img class='product-big-img' src='public/crossxgame/img/product/".$img."'>";?>
 					</div>
 					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
-					<h1 class="p-title">Funko Pop</h1>
-					<h2 class="p-price">$45.000</h2>
+					<h1 class="p-title"><?php echo $name; ?></h1>
+					<h2 class="p-price"><?php echo $precio; ?></h2>
 					<h4 class="p-stock">Disponibilidad: <span>Sin Stock</span></h4>
 
 				 
 				
 					<div class="quantity">
 						<p>Cantidad</p>
-                        <div class="pro-qty"> <input type="text" value="0"></div>
+						<?php 
+                        echo "<div class='pro-qty'> <input type='text' value='".$stock."'></div>" ?>
                     </div>
 
 			<!-- Modal -->

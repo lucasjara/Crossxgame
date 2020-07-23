@@ -21,18 +21,21 @@ class Login extends BaseController
 
     	$correo = $request->getPostGet('emailLogin') ;
     	$contraseña = $request->getPostGet('contraseñaLogin');
+    	
 		$Model_registro->Login($correo, $contraseña); 
 
 		
 
-		$valor = $Model_registro->Login($correo, $contraseña);
-		if($valor != null){
-			echo "paso";
-			// $session->set($valor);
+		//$valor = $Model_registro->Login($correo, $contraseña);
+		//if($valor != null){
+			//echo "paso";
+			//var_dump($valor);
+			//$session->set($correo, $contraseña);
+			//var_dump($correo, $contraseña);
 			// redirect('/prueba/vista', 'refresh');
-		}else{
-			echo "cago";
-		}
+		//}else{
+			//echo "cago de nuevo por la puta";
+//		}
 
 
     }

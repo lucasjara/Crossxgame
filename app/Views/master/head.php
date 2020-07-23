@@ -230,7 +230,7 @@
         var request = envia_ajax_servidor('/Crossxgame/public/Login/index', array);
         request.done(function (data){
              limpiarFormulario();
-            console.log(data);
+            //console.log(data);
         });
     });
 </script>

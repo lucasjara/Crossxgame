@@ -52,14 +52,17 @@ class Model_registro extends Model
        
         $results = $query->getResult();
         // si hay resultados
-      
-
        return $results;
 
     }
     public function Login($correo, $contraseña){
-        $query= $this->db->query("SELECT * FROM bd_local.cliente where email ='".$correo."' and contrasenia ='".$contraseña."'");
+
+        $contraseña2= sha1($contraseña);
+        $query= $this->db->query("SELECT * FROM bd_local.cliente where email ='".$correo."' and contrasenia='".$contraseña2."'");
         $results= $query->getResult();
+        //var_dump($contraseña);
+        var_dump($results);
+        //echo ($contraseña);
         return $results;
     }
 }

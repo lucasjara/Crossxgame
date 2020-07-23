@@ -227,10 +227,10 @@
             emailLogin: $("#txtEmailModal").val(),
             contraseñaLogin: $("#txtContraseñaModal").val()  
         };
-        var request = envia_ajax_servidor('/Crossxgame/public/Login/index', array);
+        var request = envia_ajax_servidor('/Crossxgame/public/Login/login', array);
         request.done(function (data){
              limpiarFormulario();
-            //console.log(data);
+            console.log(data);
         });
     });
 </script>

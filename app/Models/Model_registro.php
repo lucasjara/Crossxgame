@@ -57,30 +57,29 @@ class Model_registro extends Model
     }
     public function Login($correo, $contraseña){
 
-        //$contraseñaCifrada= password_hash($contraseña, PASSWORD_DEFAULT, array("cost"=>12));
         $query= $this->db->query("SELECT * FROM bd_local.cliente where email ='".$correo."'");
         $results= $query->getResult();
 
-        //if (count($results) > 0) {
+        if (count($results) > 0) {
             //var_dump($results);
-                foreach($results as $row){
-               //$row->contrasenia;
-                    $arrDatos=$row->contrasenia;
-                }
+            foreach($results as $row){
+              //$row->contrasenia;
+                $arrDatos=$row->contrasenia;
+            }
                 if (password_verify($contraseña, $arrDatos)){
-                    var_dump($results);
-                    return $results;  
-
+            //var_dump($results);
+                    
+                    return $results;     
                 }else{
-                    echo "error";
-                }
-
+                        echo "error";
+                 }
             //return $arrDatos;
             //var_dump($arrDatos);
-       // }else{
+        }else{
          //   return $arrDatos["datos"] = "sin datos";
             //var_dump($arrDatos);
-        //}
+        }
+
     }
 }
 

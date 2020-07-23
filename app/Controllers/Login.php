@@ -13,30 +13,32 @@ class Login extends BaseController
 	}
     public function index()
     {
-    	//$session = \Config\Services::session($config);
-    	$request = \Config\Services::request();
-    	$session = \Config\Services::session();
+    	$session = \Config\Services::session($config);
+    	//$session = \Config\Services::session();
     	
     	$Model_registro = new Model_registro($db); 
+    	$datos = $Model_registro->Login();
+		$datos = array('cliente'=>$datos);	
+		//$valor = $Model_registro->Login();
 
-    	$correo = $request->getPostGet('emailLogin') ;
-    	$contraseña = $request->getPostGet('contraseñaLogin');
-    	
-		$Model_registro->Login($correo, $contraseña); 
-
-		
-
-		//$valor = $Model_registro->Login($correo, $contraseña);
-		//if($valor != null){
-			//echo "paso";
-			//var_dump($valor);
+		//var_dump($valor);
+		if($datos != null){
+			echo "paso";
+			var_dump($datos);
 			//$session->set($correo, $contraseña);
 			//var_dump($correo, $contraseña);
 			// redirect('/prueba/vista', 'refresh');
-		//}else{
-			//echo "cago de nuevo por la puta";
-//		}
-
-
+		}else{
+			echo "cago de nuevo por la puta";
+		}
     }
+    public function login(){
+    	$request = \Config\Services::request();
+
+    	$Model_registro = new Model_registro($db); 
+    	$correo = $request->getPostGet('emailLogin') ;
+    	$contraseña = $request->getPostGet('contraseñaLogin');
+		$Model_registro->Login($correo, $contraseña); 
+    }
+
 }

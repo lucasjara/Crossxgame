@@ -79,7 +79,7 @@
         <?php 
                 foreach ($prodswitch as $switch ) {
                  echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='".$switch->id."'><img class='card-img-top'
+                 class='card'> <a href='producto?id=".$switch->id."&nombre=".$switch->nombre."&precio=".$switch->precio."&stock=".$switch->stock."&img=".$switch->img."'><img class='card-img-top'
                  src='public/crossxgame/img/product/".$switch->img."' alt='Card
                  image cap'></a>"; 
                 
@@ -103,7 +103,7 @@
         <?php 
                 foreach ($prodxbox as $xbox ) {  
                  echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='".$xbox->id."'><img class='card-img-top'
+                 class='card'> <a href='producto?id=".$xbox->id."&nombre=".$xbox->nombre."&precio=".$xbox->precio."&stock=".$xbox->stock."&img=".$xbox->img."'><img class='card-img-top'
                  src='public/crossxgame/img/product/".$xbox->img."' alt='Card
                  image cap'></a>"; 
                 
@@ -156,7 +156,7 @@
                 foreach ($prodAcc as $Acc ) {
 
                  echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='".$Acc->id."'><img class='card-img-top'
+                 class='card'> <a href='producto?id=".$Acc->id."&nombre=".$Acc->nombre."&precio=".$Acc->precio."&stock=".$Acc->stock."&img=".$Acc->img."'><img class='card-img-top'
                  src='public/crossxgame/img/product/".$Acc->img."' alt='Card
                  image cap'></a>"; 
                 
@@ -201,7 +201,7 @@
         <?php 
                 foreach ($prodfiguras as $figuras ) {
                 echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='".$figuras->id."'><img class='card-img-top'
+                 class='card'> <a href='producto?id=".$figuras->id."&nombre=".$figuras->nombre."&precio=".$figuras->precio."&stock=".$figuras->stock."&img=".$figuras->img."'><img class='card-img-top'
                  src='public/crossxgame/img/product/".$figuras->img."' alt='Card
                  image cap'></a>"; 
                  echo "<div class='card-footer'> <div

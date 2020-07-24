@@ -38,6 +38,16 @@
 <body>
     <!-- Header section -->
 <header class="header-section">
+    
+        <!-- <?php 
+        //$codigo = $this->session->userdata('Codigo');
+        //$nombre = $this->session->userdata('Nombre');
+          //  echo 'Datos del usuario';
+          //  echo 'Código: '.$codigo;
+          //  echo 'Nombre: '.$nombre;
+        ?> -->
+    
+
     <div class="header-top">
         <div class="container">
             <div class="row">

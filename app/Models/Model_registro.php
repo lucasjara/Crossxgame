@@ -1,85 +1,85 @@
-<?php namespace App\Models;
+<?php
+namespace App\Models;
 
 use CodeIgniter\Model;
 
 class Model_registro extends Model
 {
-	protected $table      = 'cliente';
-
+    protected $table = 'cliente';
+    
     protected $primaryKey = 'id';
-
-    protected $returnType     = 'array';
+    
+    protected $returnType = 'array';
     
     protected $useSoftDeletes = false;
-
+    
     protected $allowedFields = ['nombre', 'apellido', 'rut', 'email', 'comuna_id', 'direccion', 'f_nacimiento', 'contrasenia'];
 
- 	protected $createdField = 'created_at';
+    protected $createdField = 'created_at';
 
     protected $validationRules    = [];
 
     protected $validationMessages = [];
-
-    protected $skipValidation     = false;
-
+    
+    protected $skipValidation = false;
+    
     public function ObtenerRegiones()
     {
         // armamos la consulta
-        $query = $this->db->query('SELECT region_id, region_nombre FROM bd_local.region ORDER by region_id ASC');
+        $query   = $this->db->query('SELECT region_id, region_nombre FROM bd_local.region ORDER by region_id ASC');
         $results = $query->getResult();
         // si hay resultados
         if (count($results) > 0) {
             //var_dump($results);
-            foreach($results as $row){
+            foreach ($results as $row) {
                 $arrDatos[htmlspecialchars($row->region_id, ENT_QUOTES)] = htmlspecialchars($row->region_nombre, ENT_QUOTES);
             }
             return $arrDatos;
-        }else{
+        } else {
             return $arrDatos["datos"] = "sin datos";
         }
     }
-
-        public function ObtenerComuna($combo)
+    
+    public function ObtenerComuna($combo)
     {
-        $query = $this->db->query("SELECT comuna_id, comuna_nombre FROM bd_local.comuna where region_id ='".$combo."'");
+        $query   = $this->db->query("SELECT comuna_id, comuna_nombre FROM bd_local.comuna where region_id ='" . $combo . "'");
         $results = $query->getResult();
         return $results;
     }
-        
-        public function obtenerCliente(){
+    
+    public function obtenerCliente()
+    {
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id' );
-       
+        $query = $this->db->query('SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id');
+        
         $results = $query->getResult();
         // si hay resultados
-       return $results;
-
+        return $results;
+        
     }
-    public function Login($correo, $contraseña){
-
-        $query= $this->db->query("SELECT * FROM bd_local.cliente where email ='".$correo."'");
-        $results= $query->getResult();
-
+    public function Login($correo, $password)
+    {
+        
+        $query   = $this->db->query("SELECT * FROM bd_local.cliente where email ='" . $correo . "'");
+        $results = $query->getResult();
+        
         if (count($results) > 0) {
-            //var_dump($results);
-            foreach($results as $row){
-              //$row->contrasenia;
-                $arrDatos=$row->contrasenia;
+            
+            foreach ($results as $row) {
+                
+                $arrDatos = $row->contrasenia;
             }
-                if (password_verify($contraseña, $arrDatos)){
-            //var_dump($results);
-                    
-                    return $results;     
-                }else{
-                        echo "error";
-                 }
-            //return $arrDatos;
-            //var_dump($arrDatos);
-        }else{
-         //   return $arrDatos["datos"] = "sin datos";
-            //var_dump($arrDatos);
+            if (password_verify($password, $arrDatos)) {
+                
+            } else {
+                $results = "N";
+            }
+            
+        } else {
+            
+            $results = "N";
+            
         }
-
+        return $results;
     }
 }
-

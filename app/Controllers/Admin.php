@@ -52,7 +52,7 @@ class Admin extends BaseController
 
       $Model_productos = new Model_productos($db);
 
-   $data = array('id'=>$request->getPostGet('id'));
+      $data = array('id'=>$request->getPostGet('id'));
 
 
 

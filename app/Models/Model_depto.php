@@ -10,7 +10,7 @@ class Model_depto extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = [ 'descripcion'];
+    protected $allowedFields = [ 'descripcion_depto'];
 
  	protected $createdField = 'created_at';
 
@@ -22,13 +22,13 @@ class Model_depto extends Model
 
      public function ObtenerDepto(){
         // armamos la consulta
-        $query = $this->db->query('SELECT id_depto, descripcion FROM bd_local.departamento');
+        $query = $this->db->query('SELECT id_depto, descripcion_depto FROM bd_local.departamento');
         $results = $query->getResult();
         // si hay resultados
         if (count($results) > 0) {
           
             foreach($results as $row){
-                $arrDatos[htmlspecialchars($row->id_depto, ENT_QUOTES)] = htmlspecialchars($row->descripcion, ENT_QUOTES);
+                $arrDatos[htmlspecialchars($row->id_depto, ENT_QUOTES)] = htmlspecialchars($row->descripcion_depto, ENT_QUOTES);
             }
             // almacenamos en una matriz bidimensional
             /*
@@ -45,7 +45,7 @@ class Model_depto extends Model
     }
          public function obtenerProducto(){
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto' );
+        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto' );
        
         $results = $query->getResult();
         // si hay resultados

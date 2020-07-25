@@ -22,22 +22,15 @@ class Model_productos extends Model
 
      public function ObtenerDepto(){
         // armamos la consulta
-        $query = $this->db->query('SELECT id_depto, descripcion FROM bd_local.departamento');
+        $query = $this->db->query('SELECT id_depto, descripcion_depto FROM bd_local.departamento');
         $results = $query->getResult();
         // si hay resultados
         if (count($results) > 0) {
           
             foreach($results as $row){
-                $arrDatos[htmlspecialchars($row->id_depto, ENT_QUOTES)] = htmlspecialchars($row->descripcion, ENT_QUOTES);
+                $arrDatos[htmlspecialchars($row->id_depto, ENT_QUOTES)] = htmlspecialchars($row->descripcion_depto, ENT_QUOTES);
             }
-            // almacenamos en una matriz bidimensional
-            /*
-            foreach($query->result() as $row)
-                $arrDatos[htmlspecialchars($row->region_id, ENT_QUOTES)] =
-                    htmlspecialchars($row->region_nombre, ENT_QUOTES);
-
-            $query->free_result();
-            */
+           
             return $arrDatos;
         }else{
             return $arrDatos["datos"] = "sin datos";
@@ -45,7 +38,7 @@ class Model_productos extends Model
     }
     public function obtenerUltimoProducto(){
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto ORDER BY a.id DESC LIMIT 2' );
+        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto ORDER BY a.id DESC LIMIT 2' );
        
         $results = $query->getResult();
         // si hay resultados
@@ -55,7 +48,7 @@ class Model_productos extends Model
     }
          public function obtenerProducto(){
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto' );
+        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto' );
        
         $results = $query->getResult();
         // si hay resultados
@@ -109,25 +102,18 @@ class Model_productos extends Model
           public function NuevosFiguras(){
         // armamos la consulta
         $query = $this->db->query('SELECT * FROM bd_local.producto WHERE id_depto in ("21","34") AND stock>0 ORDER BY id DESC LIMIT 5' );
-       
         $results = $query->getResult();
-        // si hay resultados
-      
+        // si hay resultado 
 
        return $results;
     }
-
 
      public function IDProducto($id){
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto AND a.id=$id');
-       
+        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto AND a.id='.$id.'');
         $results = $query->getResult();
-        // si hay resultados
-      
-var_dump($results); 
+        
        return $results;
     }
-
 
 }

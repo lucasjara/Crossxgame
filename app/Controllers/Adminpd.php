@@ -26,42 +26,23 @@ class Adminpd extends BaseController
 
     	$Model_depto = new Model_depto($db);
 
-   $data = array('descripcion'=>$request->getPostGet('descripcion')
+   $data = array('descripcion_depto'=>$request->getPostGet('descripcion_depto')
    				 );
 
     	$Model_depto->insert($data);
     }
 
 
-    public function eliminarProducto()
+    public function updateDepto()
     {
       $request = \Config\Services::request();
 
       $Model_depto = new Model_depto($db);
-
- 	  $data = array('id_depto'=>$request->getPostGet('id_depto'));
-
-
-
-      $Model_depto->delete($data);
-
+    
+    $data = array(
+    'descripcion_depto'=>$request->getPostGet('descripcion_depto'));
+   
+      $Model_depto->update($request->getPostGet('id_depto'),$data);
     }
-
-    public function updateProducto()
-    {
-      $request = \Config\Services::request();
-
-      $Model_depto = new Model_depto($db);
-
-    $data = array('id_depto'=>$request->getPostGet('id_depto'),
-      'descripcion'=>$request->getPostGet('descripcion'));
-
-
-
-      $Model_depto->update($data);
-    }
-
-
-
 
 }

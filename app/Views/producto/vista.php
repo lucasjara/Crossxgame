@@ -1,33 +1,53 @@
 <?php
 
-  $id=$_GET["id"];
-  $name=$_GET["nombre"];
- $precio=  $_GET["precio"];
- $stock=  $_GET["stock"];
-$img=  $_GET["img"];
- ?>
+$id=base64_decode($_GET["id"]);
 
-<section class="product-section">
+?>
+ 
+ <script type="text/javascript">
+
+    function buscarid( data) {
+    var variable = $.ajax({
+        url: "/Crossxgame/public/producto/traerId",
+        method: 'POST',
+        data: data,
+        'dataSrc': 'data',
+        dataType: 'json'
+    })
+    console.log(variable);
+    return variable;
+    }
+
+$("#body").on("onload",function(){
+        var array = { id: $id};
+        var request = buscarid(array);
+        request.done(function (data){
+        });
+    });
+    
+</script>
+
+<body id="body">
+<section   class="product-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="product-pic-zoom">
-						<?php echo "<img class='product-big-img' src='public/crossxgame/img/product/".$img."'>";?>
+						<img class='product-big-img' src='public/crossxgame/img/product/nn.jpg'>
 					</div>
 					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
-					<h1 class="p-title"><?php echo $name; ?></h1>
-					<h2 class="p-price"><?php echo $precio; ?></h2>
+					<h1 class="p-title"><?php echo "nombre id=".$id; ?></h1>
+					<h2 class="p-price"><?php echo "precio"; ?></h2>
 					<h4 class="p-stock">Disponibilidad: <span>Sin Stock</span></h4>
 
 				 
 				
 					<div class="quantity">
 						<p>Cantidad</p>
-						<?php 
-                        echo "<div class='pro-qty'> <input type='text' value='".$stock."'></div>" ?>
+						<div class='pro-qty'> <input type='text' value='0'></div>
                     </div>
 
 			<!-- Modal -->
@@ -61,10 +81,7 @@ $img=  $_GET["img"];
 							</div>
 							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="panel-body">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
-									<p>Approx length 66cm/26" (Based on a UK size 8 sample)</p>
-									<p>Mixed fibres</p>
-									<p>The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"</p>
+								<?php echo "esto es una descripcion"; ?>
 								</div>
 							</div>
 						</div>
@@ -74,7 +91,7 @@ $img=  $_GET["img"];
 							</div>
 							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 								<div class="panel-body">
-									<img src="./img/cards.png" alt="">
+									
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
 								</div>
 							</div>
@@ -92,6 +109,7 @@ $img=  $_GET["img"];
 			</div>
 		</div>
 	</section>
+	</body>
 
 <script>
 

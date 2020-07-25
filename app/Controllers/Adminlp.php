@@ -27,28 +27,30 @@ class Adminlp extends BaseController
        
     }
 	
-	public function guardarDepto()
-    {
-    	$request = \Config\Services::request();
-
-    	$Model_depto = new Model_depto($db);
-
-   $data = array('descripcion'=>$request->getPostGet('descripcion'));
-
-    	$Model_depto->insert($data);
-    }
 
     public function eliminarProducto()
     {
       $request = \Config\Services::request();
 
-      $Model_depto = new Model_depto($db);
+    $Model_productos = new Model_productos($db);
 
- 	  $data = array('id_depto'=>$request->getPostGet('id_depto'));
+ 	  $data = array('id'=>$request->getPostGet('id'));
 
 
+    $Model_productos->delete($data);;
+    }
 
-      $Model_depto->delete($data);
+    public function BuscarProducto()    {
+    $request = \Config\Services::request();
+ 
+      if($request->getPostGet('producto')){
+
+        $Model_productos = new Model_productos($db);
+
+        $mensaje = $Model_productos->buscadorP($request->getPostGet('producto'));
+        $this->response->setContentType('Content-Type: application/json');
+        var_dump($mensaje);     
+      }
     }
 
 }

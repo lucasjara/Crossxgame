@@ -29,13 +29,15 @@ class Registro extends BaseController
             'f_nacimiento'=>$request->getPostGet('fnacimiento'),
             'contrasenia'=>password_hash($request->getPostGet('contrasenia'), PASSWORD_DEFAULT, array("cost"=>12))
         );
-     //echo ($data);
+ 
       $Model_registro->insert($data); 
     }
+    
     function ObtenerComuna(){
       $request = \Config\Services::request();
       if($request->getPostGet('combo')){
         $modelo = new Model_registro($db);
+         
          
         $mensaje = $modelo->ObtenerComuna($request->getPostGet('combo'));
         $this->response->setContentType('Content-Type: application/json');

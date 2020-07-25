@@ -107,9 +107,13 @@
     })
     return variable;
     }
+
+
     function limpiarFormulario() {
     document.getElementById("miForm").reset();
   }
+
+  
     $("#btnRegistrar").on("click",function(){
         var array = {
             nombre: $("#txtNombre").val(),
@@ -129,6 +133,8 @@
         });
     });
 </script>
+
+
 <script type="text/javascript">
 function ShowSelected(){
     var combo = document.getElementById("selectRegion").selectedIndex; 

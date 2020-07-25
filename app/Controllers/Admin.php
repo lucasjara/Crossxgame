@@ -44,8 +44,6 @@ class Admin extends BaseController
     	$Model_productos->insert($data);
     }
 
-
-
     public function eliminarProducto()
     {
       $request = \Config\Services::request();
@@ -59,6 +57,24 @@ class Admin extends BaseController
       $Model_productos->delete($data);
     }
 
+    public function updateProducto()
+    {
+      $request = \Config\Services::request();
+
+      
+      $Model_productos = new Model_productos($db);
+    
+      $data = array('nombre'=>$request->getPostGet('nombre'),
+           'stock'=>$request->getPostGet('stock'),
+           'precio'=>$request->getPostGet('precio'),
+           'descripcion'=>$request->getPostGet('descripcion'),
+           'id_depto'=>$request->getPostGet('id_depto'),
+           'img'=>"nn.jpg");
+
+      
+      $Model_productos->update($request->getPostGet('id'),$data);
+      
+    }
 }
 
    

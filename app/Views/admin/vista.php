@@ -84,7 +84,7 @@
         echo "<td>".$producto->nombre."</td>";
         echo "<td>".$producto->stock."</td>";
         echo "<td>".$producto->precio."</td>";
-        echo "<td>".$producto->descripcion."</td>";
+        echo "<td>".$producto->descripcion_depto."</td>";
         echo "<td>".$producto->img."</td>";
         echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-success'  id='btnEliminar'>Actualizar</button></td>";
 
@@ -99,10 +99,60 @@
         </button>
       </div>
       <div class='modal-body'>
+      
+       <form  class='contact-form' id='myForm'  enctype='multipart/form-data'>
+                <div class='card'>
+                  <div class='card-body'>
+                        <div class='form-row'>
+                            <div class='form-group col-md-6'>
+                                <label for=inputname'>Nombre</label>
+                                <input id='txtnombre".$producto->id."' value='".$producto->nombre."' name='nombre' type='text' class='form-control' placeholder='Ingrese Nombre del juego...'>
+                            </div>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Stock</label>
+                                <input id='txtstock".$producto->id."' name='stock' value='".$producto->stock."' type='text' class='form-control' placeholder='Ingrese Stock...''>
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Precio</label>
+                                <input id='txtprecio".$producto->id."' name='precio' type='text' value='".$producto->precio."' class='form-control' placeholder='Ingrese precio...''>
+                            </div>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Descripcion</label>
+                                <input id='txtdescripcion".$producto->id."' name='descripcion' type='textarea' value='".$producto->descripcion."' class='form-control' placeholder='Ingrese Descripcion...'>
+                            </div>
+                        </div>       
+                        <div class='form-row'>               
+                          <div class='form-group col-md-6'>
+                                <label for='inputAddress'>Departamento</label>
+                                <select id='selectDepto".$producto->id."' class='form-control' style='border-radius: 1em'>
+                                <option selected=''>Seleccione Departamento...</option>
+                             ";
+                                foreach ($arrayDepto as $i => $des){
+                                  echo '<option value="',$i,'">',$des,'</option>';    
+                                }
+                             echo "
+                            </select>
+                           </div>
+                          <div class='form-group col-md-6'>
+                            <label for='inputAddress'>imagen</label>
+                           
+                                  <div class='custom-file'>
+                                  <input type='file' class='custom-file-input'  id='customFileLang' lang='es'>
+                                  <label class='custom-file-label' for='customFileLang'>Seleccionar Archivo</label>
+                            </div>
+                        </div>
+                      </div>
+                    <div class='card-footer'>
+                        
+                    </div>
+                </div>
+            </form>
         
       </div>
       <div class='modal-footer'>
-        <button type='button' id='btnConfirmar'   class='btn btn-primary'>Confirmar</button>
+        <button type='button' id='btnConfirmar' onclick='ActualizarDatos(".$producto->id.")' class='btn btn-primary'>Confirmar</button>
         <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
         
       </div>
@@ -156,32 +206,34 @@ echo "</tr>";
         };
 
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
-
     //   limpiarFormulario();
-
         request.done(function (data){
             console.log(data);
         });
-        
     });
-
-
- $("#btnConfirmar").on("click",function(){
- 
-  var array2 = 
-          {
-      
-        id: $("#btnConfirmar").val()
-        
-
-          };
-
-        var request = envia_ajax_servidor('/Crossxgame/public/Admin/eliminarProducto', array2);
-
-        request.done(function (data){
+ // $("#btnConfirmar").on("click",function(){
+ //  var array2 = 
+ //          {   
+ //        id: $("#btnConfirmar").val()
+ //          };
+ //        var request = envia_ajax_servidor('/Crossxgame/public/Admin/eliminarProducto', array2);
+ //        request.done(function (data){
+ //            console.log(data);
+ //        });
+ //    });
+ function ActualizarDatos($data) {    
+var array2 = {     
+        id: $data , 
+            nombre: $("#txtnombre"+$data).val(),
+            stock: $("#txtstock"+$data).val(),
+            precio: $("#txtprecio"+$data).val(),
+            descripcion: $("#txtdescripcion"+$data).val(),  
+            id_depto: $("#selectDepto"+$data).val(),  
+            img: $("#inputGroupFile01"+$data).val() 
+           };
+        var request = envia_ajax_servidor('/Crossxgame/public/Admin/updateProducto', array2);
+            request.done(function (data){
             console.log(data);
         });
-      
-    });
- 
+    }
 </script>

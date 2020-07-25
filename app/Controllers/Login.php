@@ -6,39 +6,44 @@ use App\Models\Model_registro;
 class Login extends BaseController
 {  
 
-	public function __constructor(){
-
-		parent::__construct();
-		
-	}
     public function index()
     {
-    	$session = \Config\Services::session($config);
-    	//$session = \Config\Services::session();
-    	
-    	$Model_registro = new Model_registro($db); 
-    	$datos = $Model_registro->Login();
-		$datos = array('cliente'=>$datos);	
-		//$valor = $Model_registro->Login();
-
-		//var_dump($valor);
-		if($datos != null){
-			echo "paso";
-			var_dump($datos);
-			//$session->set($correo, $contraseña);
-			//var_dump($correo, $contraseña);
-			// redirect('/prueba/vista', 'refresh');
-		}else{
-			echo "cago de nuevo por la puta";
-		}
-    }
-    public function login(){
+    	$session = \Config\Services::session();
     	$request = \Config\Services::request();
 
     	$Model_registro = new Model_registro($db); 
     	$correo = $request->getPostGet('emailLogin') ;
-    	$contraseña = $request->getPostGet('contraseñaLogin');
-		$Model_registro->Login($correo, $contraseña); 
-    }
+    	$password = $request->getPostGet('contraseñaLogin');
+		//$Model_registro->Login($correo, $password);
+		$resultado= $Model_registro->Login($correo, $password);
+		//echo $resultado;
+		if($resultado!='N'){
+			foreach ($resultado as $row) {
+                $clientes = array(
+                'Codigo' => $row->id,
+                'Nombre' => $row->nombre,
+                'logged_in' => TRUE
+               );
+            
+            $session->set($clientes);
+			//var_dump($clientes);
+			//$this->$session->set();
+			//var_dump($session);
+            //echo $this->session->get("id_usuario");
+			$this->response->setContentType('Content-Type: application/json');
+            echo (json_encode($session->get('Nombre')));
 
+        }
+        //return $this->vista2('master/head',$session);
+        echo "aqui";
+        //$this->vista2('master/head',$session);
+        return TRUE;
+    	}else{
+            echo "cago";
+        return false;
+        
+    	}
+
+    }
+    
 }

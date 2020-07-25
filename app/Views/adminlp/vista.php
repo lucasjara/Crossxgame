@@ -28,7 +28,7 @@
               </thead>
               <tbody>
     <?php 
-        foreach ($productos as $producto ) {
+          foreach ($productos as $producto ) {
         echo "<tr>";
         echo "<td>".$producto->id."</td>";
         echo "<td>".$producto->nombre."</td>";
@@ -36,60 +36,80 @@
         echo "<td>".$producto->precio."</td>";
         echo "<td>".$producto->descripcion_depto."</td>";
         echo "<td>".$producto->img."</td>";
-        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$producto->id."' class='btn btn-success'  id='btnEliminar'>Ver imagen</button> ";
+        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$producto->id."' class='btn btn-success'  id='btnEliminar'>Actualizar</button></td>";
 
-          echo " <button type='button' data-toggle='modal' data-target='#exampleModalCenter1".$producto->id."' class='btn btn-danger'  >Eliminar</button></td>";
-
-        echo "<div class='modal fade' id='exampleModalCenter1".$producto->id."' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
-        <div class='modal-dialog modal-dialog-centered' role='document'>
-        <div class='modal-content'>
-        <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLongTitle'>Eliminar Producto</h5>
-
-        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-          <span aria-hidden='true'>&times;</span>
-        </button>
-      </div>
-      <div class='modal-body'>
-        Desea eliminar el producto: <br>
-        Id:<h3>".$producto->id."</h3>
-        nombre: <h3>".$producto->nombre."</h3>
-        Departamento: <h3>".$producto->descripcion_depto."</h3>
-
-      </div>
-      <div class='modal-footer'>
-    <button type='button' class='btn btn-danger' onclick='eliminar(".$producto->id.")' data-dismiss='modal'>Confirmar</button>
-        <button type='button' class='btn btn-secondary'  data-dismiss='modal'>Volver</button>
-        
-      </div>
-    </div>
-  </div>
-</div>";
-     echo "</tr>";
 
         echo "<div class='modal fade' id='exampleModalCenter".$producto->id."' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
         <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLongTitle'>Datos del producto</h5>
-
+        <h5 class='modal-title' id='exampleModalLongTitle'>Actualizar datos</h5>
         <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
       <div class='modal-body'>
-      <img class='card-img-top' src='public/crossxgame/img/product/".$producto->img."' alt='Card image cap'>
+      
+       <form  class='contact-form' id='myForm'  enctype='multipart/form-data'>
+                <div class='card'>
+                  <div class='card-body'>
+                        <div class='form-row'>
+                            <div class='form-group col-md-6'>
+                                <label for=inputname'>Nombre</label>
+                                <input id='txtnombre".$producto->id."' value='".$producto->nombre."' name='nombre' type='text' class='form-control' placeholder='Ingrese Nombre del juego...'>
+                            </div>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Stock</label>
+                                <input id='txtstock".$producto->id."' name='stock' value='".$producto->stock."' type='text' class='form-control' placeholder='Ingrese Stock...''>
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Precio</label>
+                                <input id='txtprecio".$producto->id."' name='precio' type='text' value='".$producto->precio."' class='form-control' placeholder='Ingrese precio...''>
+                            </div>
+                            <div class='form-group col-md-6'>
+                                <label for='inputname'>Descripcion</label>
+                                <input id='txtdescripcion".$producto->id."' name='descripcion' type='textarea' value='".$producto->descripcion."' class='form-control' placeholder='Ingrese Descripcion...'>
+                            </div>
+                        </div>       
+                        <div class='form-row'>               
+                          <div class='form-group col-md-6'>
+                                <label for='inputAddress'>Departamento</label>
+                                <select id='selectDepto".$producto->id."' class='form-control' style='border-radius: 1em'>
+                                <option selected=''>Seleccione Departamento...</option>
+                             ";
+                                foreach ($arrayDepto as $i => $des){
+                                  echo '<option value="',$i,'">',$des,'</option>';    
+                                }
+                             echo "
+                            </select>
+                           </div>
+                          <div class='form-group col-md-6'>
+                            <label for='inputAddress'>imagen</label>
+                           
+                                  <div class='custom-file'>
+                                  <input type='file' class='custom-file-input'  id='customFileLang' lang='es'>
+                                  <label class='custom-file-label' for='customFileLang'>Seleccionar Archivo</label>
+                            </div>
+                        </div>
+                      </div>
+                    <div class='card-footer'>
+                        
+                    </div>
+                </div>
+            </form>
+        
       </div>
       <div class='modal-footer'>
-
-        <button type='button' class='btn btn-secondary'  data-dismiss='modal'>Volver</button>
+        <button type='button' id='btnConfirmar' onclick='ActualizarDatos(".$producto->id.")' class='btn btn-primary'>Confirmar</button>
+        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
         
       </div>
     </div>
   </div>
 </div>";
-     echo "</tr>";
-
+echo "</tr>";
 }?>  
               </tbody>
             </table> 
@@ -143,70 +163,25 @@ function eliminar($iddata) {
      console.log(data);
         });
     }
-
-    function Buscador() { 
-
-
-  if($("#txtbuscar").val()!=""){
-  var combo =
-          {
-        nombre :$("#txtbuscar").val(),
-          };
-       $.ajax({
-            url:"/Crossxgame/public/Registro/BuscarProducto",
-            method:"POST",
-            data:{combo:combo}, 
-            success:function(data){  
-                var producto = "";s
-               for (var i = 0; i < data.length; i++) {
-                    var id = data[i].id;
-                    var nombre = data[i].nombre;
-                    producto= producto.concat("<option value='"+nombre+"</option>");
-               }
-              alert(producto);
-               $('#').html(producto);
-            }   
-
-        });
-
-      }else{
-          alert("no hay datos");
-
-      }
-    }
-
-function Buscadors() { 
-
-
-  if($("#txtbuscar").val()!=""){
-
-  var array2 = 
-          {
-        nombre :$("#txtbuscar").val(),
-          };
-
-        var request = envia_ajax_servidor('/Crossxgame/public/Adminlp/BuscarProducto', array2);
-
-        request.done(function (data){ 
-        
-        });
-
-
-      }else{
-
-
-
-          alert("no hay datos");
-
-      }
-    }
-
-
-
-  $("#txtbuscar").on("keyup",function(){
+$("#txtbuscar").on("keyup",function(){
 
     Buscador();
 
  });
+function ActualizarDatos($data) {    
+var array2 = {     
+        id: $data , 
+            nombre: $("#txtnombre"+$data).val(),
+            stock: $("#txtstock"+$data).val(),
+            precio: $("#txtprecio"+$data).val(),
+            descripcion: $("#txtdescripcion"+$data).val(),  
+            id_depto: $("#selectDepto"+$data).val(),  
+            img: $("#inputGroupFile01"+$data).val() 
+           };
+        var request = envia_ajax_servidor('/Crossxgame/public/Admin/updateProducto', array2);
+            request.done(function (data){
+            console.log(data);
+        });
+    }
 
 </script>

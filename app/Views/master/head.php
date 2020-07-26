@@ -70,9 +70,12 @@
                                 <i class="flaticon-profile"></i>
                                 <!--aqui pon el modal mijo!!!!-->
                                 <?php
+
                                 if (isset($id) && $id != "") {
                                 ?>
-                                    <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">Cerrar Sesión</a>
+                                   <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
+                                   <a type="button" id="btnMiCuenta" name="btnMiCuenta">--Mi cuenta</a>
+                                   <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
                                 <?php
                                 } else {
                                 ?>

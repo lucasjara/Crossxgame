@@ -42,34 +42,38 @@
         echo "<td>";  if($cl->estado=='1'){ 
           echo"Habilitada " ;
         }elseif($cl->estado=='0'){ echo "Deshabilitada";}               
-        echo "</td>";   
-        echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-danger'  id='btnEliminar'>Eliminar</button></td>";
-
-
-        echo "<div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+        echo "</td>"; 
+        if($cl->estado=='1'){     
+    echo"<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$cl->estado."' class='btn btn-danger'  id='btnEliminar'>Habilitada</button></td>";
+      }elseif($cl->estado=='0'){
+    echo"<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter".$cl->estado."' class='btn btn-danger' id='btnEliminar'>Deshabilitada</button></td>";}
+        echo "<div class='modal fade' id='exampleModalCenter".$cl->estado."' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
         <div class='modal-dialog modal-dialog-centered' role='document'>
         <div class='modal-content'>
         <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLongTitle'>¿Desea eliminar el producto?</h5>
+        <h5 class='modal-title' id='exampleModalLongTitle'>¿Desea";
+        if($cl->estado=='1'){
+        echo " Deshabilitar ";
+        }
+        elseif($cl->estado=='0'){
+        echo   " Habilitar " ;
+        } 
+        echo  "Esta cuenta?</h5>
         <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
           <span aria-hidden='true'>&times;</span>
         </button>
       </div>
       <div class='modal-body'>
-        ...
+       ¿Esta seguro que desea Realizar esta Accion?
       </div>
       <div class='modal-footer'>
         <button type='button' id='btnConfirmar'  value=".$cl->id." class='btn btn-primary'>Confirmar</button>
-        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>
-        
-      </div>
-    </div>
-  </div>
-</div>";
-
-
-
-     echo "</tr>";
+        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Cancelar</button>  
+              </div>
+            </div>
+          </div>
+        </div>";
+echo "</tr>";
 }?>  
               </tbody>
             </table> 

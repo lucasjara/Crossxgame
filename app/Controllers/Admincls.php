@@ -21,11 +21,20 @@ class Admincls extends BaseController
     $cliente = array('cliente'=>$cliente);  
 
 
-
-    
  		return $this->vistaarray('Admincls/vista',$datos);	
 	}
 
 	
+ public function cambiarEstado()
+    {
+      $request = \Config\Services::request();
 
+      
+	$Model_registro = new Model_registro($db);
+    
+      $data = array('estado'=>$request->getPostGet('estado'));
+          
+     $Model_registro->update($request->getPostGet('id'),$data);
+      
+    }
 }

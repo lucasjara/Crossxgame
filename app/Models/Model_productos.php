@@ -110,7 +110,7 @@ class Model_productos extends Model
 
      public function IDProducto($id){
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto AND a.id='.$id.'');
+        $query = $this->db->query("SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b WHERE a.id_depto=b.id_depto AND a.id='".$id."'");
         $results = $query->getResult();
         
        return $results;

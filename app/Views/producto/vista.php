@@ -1,29 +1,8 @@
 <?php
-
-$id=base64_decode($_GET["id"]);
-
+$idP=base64_decode($_GET["id"]);
 ?>
- 
- <script type="text/javascript">
 
-    function buscarid( data) {
-    var variable = $.ajax({
-        url: "/Crossxgame/public/producto/traerId",
-        method: 'POST',
-        data: data,
-        'dataSrc': 'data',
-        dataType: 'json'
-    })
-    console.log(variable);
-    return variable;
-    }
-
-$("#body").on("onload",function(){
-        var array = { id: $id};
-        var request = buscarid(array);
-        request.done(function (data){
-        });
-    });
+<script type="text/javascript">
     
 </script>
 
@@ -39,7 +18,7 @@ $("#body").on("onload",function(){
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
-					<h1 class="p-title"><?php echo "nombre id=".$id; ?></h1>
+					<h1 class="p-title"><?php echo "nombre ".$nombre; ?></h1>
 					<h2 class="p-price"><?php echo "precio"; ?></h2>
 					<h4 class="p-stock">Disponibilidad: <span>Sin Stock</span></h4>
 

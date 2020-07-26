@@ -4,6 +4,7 @@ class Contacto extends BaseController
 {
     public function index()
     {
-        return $this->vista('Contacto/vista');
+    	$datos['datos']= "";
+        return $this->vista2('Contacto/vista', $datos);
     }
 }

@@ -72,7 +72,7 @@
                                 <?php
                                 if (isset($id) && $id != "") {
                                 ?>
-                                    <a href="/Crossxgame/public/Login/CerrarSistema">Cerrar Sesión</a>
+                                    <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">Cerrar Sesión</a>
                                 <?php
                                 } else {
                                 ?>
@@ -119,17 +119,6 @@
                                     </div>
                                 </div>
                             </form>
-
-                            <!-- carrito
-                        <div class="up-item">
-                            <div class="shopping-card">
-                                <i class="flaticon-bag"></i>
-                                <span>0</span>
-                            </div>
-                            <a href="#">Carrito</a>
-                        </div>-->
-
-
 
                         </div>
                     </div>
@@ -256,6 +245,18 @@
                 //limpiarFormulario();
                 console.log(data);
                 //Recargar la pagina cuando hace el login
+                location.reload();
+            });
+        });
+
+        $("#btnCerrarSesion").on("click", function() {
+            
+            var request = envia_ajax_servidor('/Crossxgame/public/Login/CerrarSistema');
+            request.done(function(data) {
+                //limpiarFormulario();
+                console.log(data);
+                //Recargar la pagina cuando hace el login
+                location.reload();
             });
         });
     </script>

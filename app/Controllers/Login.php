@@ -45,4 +45,10 @@ class Login extends BaseController
         $this->response->setContentType('Content-Type: application/json');
         echo (json_encode($session->get('Codigo')));
     }
+     public function CerrarSistema(){
+        session()->set('Codigo', '');
+        $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode(session()->get('Codigo')));
+          
+     }
 }

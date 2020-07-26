@@ -54,6 +54,7 @@ class BaseController extends Controller
         $id_session = $session->get('Codigo');
         if($id_session != "" && $id_session != null){
             $array['id']=$session->get('Codigo');
+            
         }else{
             $array['id']=null;
         }

@@ -1,5 +1,5 @@
 <?php
-$idP=base64_decode($_GET["id"]);
+//$idP=base64_decode($_GET["id"]);
 ?>
 
 <script type="text/javascript">

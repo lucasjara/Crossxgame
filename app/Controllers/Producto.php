@@ -14,6 +14,11 @@ class Producto extends BaseController
       $respuesta = $modelo->IDProducto($idP);
       foreach ($respuesta as $row) {
         $datos['nombre'] = $row->nombre;
+        $datos['precio'] = $row->precio;
+        $datos['stock'] = $row->stock; 
+        $datos['descripcion'] = $row->descripcion; 
+        $datos['descripcion_depto'] = $row->descripcion_depto; 
+        $datos['img'] = $row->img;  
       }
       $datos['producto'] = $respuesta;
       return $this->vista2('producto/vista', $datos);

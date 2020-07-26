@@ -12,15 +12,15 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="product-pic-zoom">
-						<img class='product-big-img' src='public/crossxgame/img/product/nn.jpg'>
+						<img class='product-big-img' src=<?php echo "public/crossxgame/img/product/".$img;?> >
 					</div>
 					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
 					<h1 class="p-title"><?php echo "nombre ".$nombre; ?></h1>
-					<h2 class="p-price"><?php echo "precio"; ?></h2>
-					<h4 class="p-stock">Disponibilidad: <span>Sin Stock</span></h4>
+					<h2 class="p-price"><?php echo "precio ".$precio; ?></h2>
+					<h4 class="p-stock">Disponibilidad: <span> <?php echo "".$stock; ?></span></h4>
 
 				 
 				
@@ -60,7 +60,7 @@
 							</div>
 							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="panel-body">
-								<?php echo "esto es una descripcion"; ?>
+								<?php echo "".$descripcion; ?>
 								</div>
 							</div>
 						</div>

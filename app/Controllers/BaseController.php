@@ -50,7 +50,14 @@ class BaseController extends Controller
     }
 
     public function vista2($valor,$array){
-        return view('master/head').view($valor,$array).view('master/footer');
+		$session = \Config\Services::session();
+        $id_session = $session->get('Codigo');
+        if($id_session != "" && $id_session != null){
+            $array['id']=$session->get('Codigo');
+        }else{
+            $array['id']=null;
+        }
+        return view('master/head',$array).view($valor,$array).view('master/footer');
         
     }
        public function vistaArray($valor,$array){

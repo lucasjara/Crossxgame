@@ -23,7 +23,6 @@ class Prueba extends BaseController
   		 $datos['prodps4'] = $productos;
 
 		$productos = array('prodps4'=>$productos);	 
-
  		return $this->vista2('prueba/vista',$datos);
     }
 }

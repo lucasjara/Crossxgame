@@ -13,7 +13,7 @@ class Model_registro extends Model
     
     protected $useSoftDeletes = false;
     
-    protected $allowedFields = ['nombre', 'apellido', 'rut', 'email', 'comuna_id', 'direccion', 'f_nacimiento', 'contrasenia'];
+    protected $allowedFields = ['nombre', 'apellido', 'rut', 'email', 'comuna_id', 'direccion', 'f_nacimiento', 'contrasenia','estado'];
 
     protected $createdField = 'created_at';
 
@@ -50,7 +50,7 @@ class Model_registro extends Model
     public function obtenerCliente()
     {
         // armamos la consulta
-        $query = $this->db->query('SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id');
+        $query = $this->db->query('SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia, a.estado FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id');
         
         $results = $query->getResult();
         // si hay resultados

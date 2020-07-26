@@ -27,8 +27,9 @@ class Registro extends BaseController
             'comuna_id'=>$request->getPostGet('comuna'),
             'direccion'=>$request->getPostGet('direccion'),
             'f_nacimiento'=>$request->getPostGet('fnacimiento'),
-            'contrasenia'=>password_hash($request->getPostGet('contrasenia'), PASSWORD_DEFAULT, array("cost"=>12))
-        );
+            'contrasenia'=>password_hash($request->getPostGet('contrasenia'), PASSWORD_DEFAULT, array("cost"=>12)),
+            'estado'=>'1' 
+                   );
  
       $Model_registro->insert($data); 
     }

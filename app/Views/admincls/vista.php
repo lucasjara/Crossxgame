@@ -23,7 +23,7 @@
                   <th>Comuna</th>
                   <th>Dirreción</th>
                   <th>Fecha de nacimiento</th>
-                  <th>Contraseña</th>
+                  <th>Estado</th>
                   <th>Opciones</th>
                 </tr>
               </thead>
@@ -38,8 +38,11 @@
         echo "<td>".$cl->email."</td>";
         echo "<td>".$cl->comuna_nombre."</td>";   
         echo "<td>".$cl->direccion."</td>";
-        echo "<td>".$cl->f_nacimiento."</td>"; 
-        echo "<td>".$cl->contrasenia."</td>";    
+        echo "<td>".$cl->f_nacimiento."</td>";  
+        echo "<td>";  if($cl->estado=='1'){ 
+          echo"Habilitada " ;
+        }elseif($cl->estado=='0'){ echo "Deshabilitada";}               
+        echo "</td>";   
         echo "<td> <button type='button' data-toggle='modal' data-target='#exampleModalCenter' class='btn btn-danger'  id='btnEliminar'>Eliminar</button></td>";
 
 

@@ -49,10 +49,6 @@ class Producto extends BaseController
 
     $Model_productos->update($id,$data2);
 
-
-
-
-
   }
 
 }

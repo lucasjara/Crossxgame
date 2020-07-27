@@ -30,14 +30,7 @@ class Model_depto extends Model
             foreach($results as $row){
                 $arrDatos[htmlspecialchars($row->id_depto, ENT_QUOTES)] = htmlspecialchars($row->descripcion_depto, ENT_QUOTES);
             }
-            // almacenamos en una matriz bidimensional
-            /*
-            foreach($query->result() as $row)
-                $arrDatos[htmlspecialchars($row->region_id, ENT_QUOTES)] =
-                    htmlspecialchars($row->region_nombre, ENT_QUOTES);
 
-            $query->free_result();
-            */
             return $arrDatos;
         }else{
             return $arrDatos["datos"] = "sin datos";

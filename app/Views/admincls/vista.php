@@ -122,9 +122,9 @@
         };
         var request = envia_ajax_servidor('/Crossxgame/public/Admincls/cambiarEstado', array2);
         request.done(function (data){
-          console.log(data);
+         location.reload(true);
         });
 
-        location.reload();
+        
       }
     </script>

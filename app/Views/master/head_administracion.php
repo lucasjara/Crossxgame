@@ -52,13 +52,13 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active" href="/Crossxgame/public/adminindex">
                   <span data-feather="home"></span>
                   Inicio <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/Crossxgame/public/adminordenes">
                   <span data-feather="file"></span>
                   Ordenes
                 </a>

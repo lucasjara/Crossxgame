@@ -18,7 +18,7 @@ class Resultado extends BaseController
 			$datos['productos']= $productos;
 
 			$productos = array('productos'=>$productos);	
-			var_dump($datos);
+			//var_dump($datos);
         	return $this->vista2('resultado/vista',$datos);
         	
 		}else{

@@ -10,7 +10,7 @@
         <form  class="contact-form" id="myForm"  enctype="multipart/form-data" >
 
         </form>
-        <h2>Clientes</h2>
+        <h2>Ordenes</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm" id="tabla-producto">
             <thead>

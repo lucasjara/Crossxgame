@@ -8,12 +8,8 @@ class Admincls extends BaseController
 	public function index()
 	{	
 	$Model_registro = new Model_registro($db);
-	 		//insertar datos automaticos
- 		//$data=['nombre'=>"rssdasdd",'stock'=>"0",'precio'=>"28911",'Descripcion'=>"asldjhasidaslkas",'id_depto'=>"1"];
- 		//	$Model_productos->insert($data);
- 		//eliminar datos por id
-    $cliente = $Model_registro->obtenerCliente();
 
+    $cliente = $Model_registro->obtenerCliente();
 
 
     $datos['cliente'] = $cliente;
@@ -23,18 +19,16 @@ class Admincls extends BaseController
 
  		return $this->vistaarray('Admincls/vista',$datos);	
 	}
-
 	
- public function cambiarEstado()
+   public function cambiarEstado()
     {
       $request = \Config\Services::request();
-
       
-	$Model_registro = new Model_registro($db);
+    	$Model_registro = new Model_registro($db);
     
       $data = array('estado'=>$request->getPostGet('estado'));
           
-     $Model_registro->update($request->getPostGet('id'),$data);
+      $Model_registro->update($request->getPostGet('id'),$data);
       
     }
 }

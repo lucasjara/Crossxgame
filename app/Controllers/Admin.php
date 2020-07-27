@@ -18,8 +18,15 @@ class Admin extends BaseController
  		//eliminar datos por id
 		//$Model_productos->delete([762,763,764]);
     $productos = $Model_productos->obtenerUltimoProducto();
+<<<<<<< HEAD
  		
 		$productos = $Model_productos->obtenerUltimoProducto();
+=======
+
+ 		
+		$productos = $Model_productos->obtenerUltimoProducto();
+
+>>>>>>> 38e016dd140249743220c54effda936dfe4edb5b
 
     $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
 

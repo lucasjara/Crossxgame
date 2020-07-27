@@ -152,8 +152,6 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 
 		}else if($("#cantidad").val()>($("#stock").val()+1)){
 
-
-
 			alert("No puede Reservar más de "+$("#stock").val()+" Productos.");
 
 		}else{
@@ -168,7 +166,6 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 				stock:$("#stock").val()-$("#cantidad").val()
 			};
 
-			
 			var request = envia_ajax_servidor('/Crossxgame/public/producto/ReservarProducto', array);
 			alert("Usted a reservado  "+$("#cantidad").val()+" Productos.");
   		  request.done(function (data){

@@ -29,6 +29,8 @@ class Admincls extends BaseController
       $data = array('estado'=>$request->getPostGet('estado'));
           
       $Model_registro->update($request->getPostGet('id'),$data);
+      $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));  
       
     }
 }

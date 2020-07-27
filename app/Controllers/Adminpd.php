@@ -8,10 +8,6 @@ class Adminpd extends BaseController
 
     public function index()
     {
- 		//insertar datos automaticos
- 		//$data=['nombre'=>"rssdasdd",'stock'=>"0",'precio'=>"28911",'Descripcion'=>"asldjhasidaslkas",'id_depto'=>"1"];
- 		//	$Model_productos->insert($data);
- 		//eliminar datos por id
 		$Model_depto = new Model_depto($db);
 		$datos = $Model_depto->findAll();
 		$datos = array('departamento'=>$datos);	

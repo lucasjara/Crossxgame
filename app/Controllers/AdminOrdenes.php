@@ -20,4 +20,22 @@ class AdminOrdenes extends BaseController
   }
 
 
+
+    public function ActualizarEstado()
+    {
+      $request = \Config\Services::request();
+
+      $Model_reserva = new Model_reserva($db);
+    
+   	 $data = array(
+    'reserva_estado'=>$request->getPostGet('reserva_estado'));
+
+    $Model_reserva->update($request->getPostGet('reserva_id'),$data);
+
+     $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));  
+
+    }
+
+
 }

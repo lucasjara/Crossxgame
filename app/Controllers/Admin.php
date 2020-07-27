@@ -11,11 +11,7 @@ class Admin extends BaseController
     {
     
     $Model_productos = new Model_productos($db);
- 		//insertar datos automaticos
- 		//$data=['nombre'=>"rssdasdd",'stock'=>"0",'precio'=>"28911",'Descripcion'=>"asldjhasidaslkas",'id_depto'=>"1"];
- 		//	$Model_productos->insert($data);
- 		//eliminar datos por id
-		//$Model_productos->delete([762,763,764]);
+ 		
 		$productos = $Model_productos->obtenerUltimoProducto();
 
     $datos['arrayDepto'] = $Model_productos->ObtenerDepto();

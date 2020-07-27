@@ -139,7 +139,7 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 	}
 
 
-	$cliente="60";
+	$cliente=<?php echo session()->get('Codigo');?>;
 	$fecha = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()) );
 	$fechal = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()+2) );
 

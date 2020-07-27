@@ -35,7 +35,8 @@ class Login extends BaseController
                     'Codigo' => $row->id,
                     'Nombre' => $row->nombre,
                     'Email' => $row->email,
-                    'Estado'=> $row->estado
+                    'Estado'=> $row->estado,
+                    'Rol' = > $row->rol
                 );
                 $session->set($clientes);
             }

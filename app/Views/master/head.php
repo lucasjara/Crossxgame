@@ -63,13 +63,7 @@
 
                                     if (isset($id) && $id != "") {
                                     ?>
-                                       <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
-                                    <?php
-                                    if (session()->get('Email') == "crossxgame@gmail.com") {
-                                    ?>
-                                       <a type="button" id="btnMiCuenta" name="btnMiCuenta" href="/Crossxgame/public/adminproducto">--Mi cuenta</a>
-                                    <?php }else{ ?> 
-
+                                        <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
                                         <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente">--Mi cuenta</a>    
                                     <?php } ?>     
                                        <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
@@ -249,7 +243,6 @@
                 }else{
                     alert("Usuario no encontrado");
                 }
-                console.log(data);
             });
         });
 

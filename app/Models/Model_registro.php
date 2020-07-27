@@ -14,7 +14,7 @@ class Model_registro extends Model
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre', 'apellido', 'rut', 'email', 'comuna_id', 'direccion', 'f_nacimiento', 'contrasenia', 'estado'];
+    protected $allowedFields = ['nombre', 'apellido', 'rut', 'email', 'comuna_id', 'direccion', 'f_nacimiento', 'contrasenia', 'estado', 'rol'];
 
     protected $createdField = 'created_at';
 

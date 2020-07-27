@@ -53,7 +53,7 @@ class BaseController extends Controller
 		$session = \Config\Services::session();
         $id_session = $session->get('Codigo');
         $estado = $session->get('Estado');
-        if($id_session != "" && $id_session != null && $estado != "0"){
+        if($id_session != "" && $id_session != null ){
             $array['id']=$session->get('Codigo');
             
         }else{
@@ -75,7 +75,14 @@ class BaseController extends Controller
     }
     
     public function vista_administracion($valor){
-        return view('master/head_administracion').view($valor).view('master/footer_administracion');
+        $session = \Config\Services::session();
+        $id_session = $session->get('Codigo');
+        if($id_session != "" && $id_session != null){
+            $array['id']=$session->get('Codigo');
+        }else{
+            $array['id']=null;
+        }
+        return view('master/head_administracion',$array).view($valor).view('master/footer_administracion');
     }
 
 

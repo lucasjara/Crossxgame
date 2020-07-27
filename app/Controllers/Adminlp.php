@@ -24,8 +24,7 @@ class Adminlp extends BaseController
 
         return $this->vistaarray('adminlp/vista',$datos);
    
-      }else
-      {
+      }else{
         $Model_productos = new Model_productos($db);
 
         $productos = $Model_productos->obtenerProducto();
@@ -38,9 +37,6 @@ class Adminlp extends BaseController
     
         return $this->vistaarray('adminlp/vista',$datos);
       }
- 		    
-    
-       
     }
 	
 
@@ -59,5 +55,4 @@ class Adminlp extends BaseController
     public function BuscarProducto()    {
     
     }
-
 }

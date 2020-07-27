@@ -8,10 +8,12 @@ class Registro extends BaseController
    
     public function index()
     {
-       
+        $request = \Config\Services::request();
+        $rol = $request->getPostGet('rol'); 
         $modelo = new Model_registro($db);
+
         $datos['arrProfesiones'] = $modelo->ObtenerRegiones();
-        //$datos['arrComuna'] = $modelo->ObtenerComuna();
+        $datos['rol'] = $rol;
         return $this->vista2('registro/vista',$datos);
     }
     public function guardar()
@@ -28,7 +30,8 @@ class Registro extends BaseController
             'direccion'=>$request->getPostGet('direccion'),
             'f_nacimiento'=>$request->getPostGet('fnacimiento'),
             'contrasenia'=>password_hash($request->getPostGet('contrasenia'), PASSWORD_DEFAULT, array("cost"=>12)),
-            'estado'=>'1' 
+            'estado'=>'1',
+            'rol'=> $request->getPostGet('rol') 
                    );
  
       $Model_registro->insert($data); 

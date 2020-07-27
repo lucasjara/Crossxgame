@@ -74,6 +74,21 @@
                                 <input id="txtRepetirContraseña" type="password" class="form-control" placeholder="Contraseña">
                             </div>
                         </div>
+                        <?php if($rol){ ?>
+                        <div class="form-group">
+                            <label for="inputAddress">Rol</label>
+                            <select id="selectRol" class="form-control" style="border-radius: 1em">
+                                <option value="cliente">cliente</option>
+                                <option value="admin">admin</option>
+                            </select>
+                        </div>
+                        <?php }else{?>
+                            <div hidden="" class="form-group">
+                                <select hidden="" id="selectRol" class="form-control" style="border-radius: 1em">
+                                <option value="cliente">cliente</option>
+                                </select>
+                            </div>
+                        <?php } ?>    
                         <div class="form-check">
                             <div class="row">
                                 <div class="col-1">
@@ -113,8 +128,9 @@
     document.getElementById("miForm").reset();
   }
 
-  
+    
     $("#btnRegistrar").on("click",function(){
+        var rol = $("#selectRol").val();
         var array = {
             nombre: $("#txtNombre").val(),
             apellido: $("#txtApellido").val(),
@@ -123,13 +139,15 @@
             comuna: $("#selectComuna").val(),
             direccion: $("#txtDireccion").val(),
             fnacimiento: $("#txtFechaNacimiento").val(),
-            contrasenia: $("#txtContraseña").val()
+            contrasenia: $("#txtContraseña").val(),
+            estado: "1",
+            rol: rol,
         };
         var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
        
         request.done(function (data){
              limpiarFormulario();
-            console.log(data);
+            
         });
     });
 </script>

@@ -21,7 +21,7 @@
 							echo'	</div>';
 						echo'	</div>';
 					echo'</div>';
-				}
+				};
 			?>
 						<div class="text-center w-100 pt-3">
 							<button class="site-btn sb-line sb-dark">Ver más</button>

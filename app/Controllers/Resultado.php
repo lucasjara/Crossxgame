@@ -18,22 +18,12 @@ class Resultado extends BaseController
 			$datos['productos']= $productos;
 
 			$productos = array('productos'=>$productos);	
-			
+			//var_dump($productos);
         	return $this->vista2('resultado/vista',$datos);
+        	
 		}else{
 			echo "murio";
 		}
-		// foreach ($productos as $row) {
-		// 		$producto['id']= $row->id;
-		// 		$producto['nombre']=$row->nombre;
-		// 		$producto['precio']=$row->precio;
-		// 		$producto['stock']=$row->stock;
-		// 		$producto['descripcion']=$row->descripcion;
-		// 		$producto['id_depto']=$row->id_depto;
-		// 		$producto['img']=$row->img;
-		// }
-		
-		//$productos = $Model_productos->findAll();
 		
     }
 }

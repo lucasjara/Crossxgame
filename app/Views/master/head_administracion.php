@@ -34,39 +34,18 @@
 
 
       <body>
-     <!-- <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"> 
                   <img src="public/crossxgame/img/logo.png" alt="">
                </a>
       
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="/Crossxgame/public/prueba">Cerrar Sesion</a>
+          <a class="nav-link" type="button" href="/Crossxgame/public/prueba">Cerrar Sesion</a>
         </li>
       </ul>
-    </nav> -->
-      <nav class="navbar navbar-ligth sticky-top bg-primary flex-md-nowrap p-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"> 
-              <img src="public/crossxgame/img/logo.png" alt="">
-        </a>
-        <div class="up-item">
-         <i class="flaticon-profile"></i>
-        <!--aqui pon el modal mijo!!!!-->
-            <?php
-               if (isset($id) && $id != "") {
-            ?>
-              <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
-              
-              <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
-            <?php
-               } else {
-            ?>
-              <a  style="margin-right: 2%">nada</a>
-            <?php
-               }
-            ?>
-        </div>
-      </nav>
+    </nav>
+     
     <div class="container-fluid">
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
@@ -127,3 +106,4 @@
             </ul>
           </div>
         </nav>
+        

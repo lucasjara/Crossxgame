@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-2 text-center text-lg-left">
                         <!-- logo -->
-                        <a href="/Crossxgame/public/adminproducto" class="site-logo">
+                        <a href="/Crossxgame/public/prueba" class="site-logo">
                             <img src="public/crossxgame/img/logo.png" alt="">
                         </a>
                     </div>
@@ -64,7 +64,14 @@
                                     if (isset($id) && $id != "") {
                                     ?>
                                        <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
-                                       <a type="button" id="btnMiCuenta" name="btnMiCuenta">--Mi cuenta</a>
+                                    <?php
+                                    if (session()->get('Email') == "crossxgame@gmail.com") {
+                                    ?>
+                                       <a type="button" id="btnMiCuenta" name="btnMiCuenta" href="/Crossxgame/public/adminproducto">--Mi cuenta</a>
+                                    <?php }else{ ?> 
+
+                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente">--Mi cuenta</a>    
+                                    <?php } ?>     
                                        <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
                                     <?php
                                     } else {
@@ -260,10 +267,12 @@
 
             request.done(function(data) {
                 //limpiarFormulario();
+                //location.replace("/Crossxgame/public/resultado");
                 console.log(data);
                 //Recargar la pagina cuando hace el login
                 //location.reload();
             });
         });
+        
 
     </script>

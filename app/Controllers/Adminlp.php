@@ -8,18 +8,38 @@ class Adminlp extends BaseController
 
     public function index()
     {
- 		    
-    $Model_productos = new Model_productos($db);
+    $request = \Config\Services::request();
 
-    $productos = $Model_productos->obtenerProducto();
+    $nombre = $request->getPostGet('nombre');
 
-    $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
-
-    $datos['productos'] = $productos;
-
-    $productos = array('productos'=>$productos);  
     
-    return $this->vistaarray('adminlp/vista',$datos);
+
+    if($nombre !="" && $nombre !=null){
+        $Model_productos = new Model_productos($db);
+
+        $productos = $Model_productos->BuscarProducto($nombre);
+        $datos['productos']= $productos;
+
+        $productos = array('productos'=>$productos); 
+
+        return $this->vistaarray('adminlp/vista',$datos);
+   
+      }else
+      {
+        $Model_productos = new Model_productos($db);
+
+        $productos = $Model_productos->obtenerProducto();
+
+        $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
+
+        $datos['productos'] = $productos;
+
+        $productos = array('productos'=>$productos);  
+    
+        return $this->vistaarray('adminlp/vista',$datos);
+      }
+ 		    
+    
        
     }
 	
@@ -37,16 +57,7 @@ class Adminlp extends BaseController
     }
 
     public function BuscarProducto()    {
-    $request = \Config\Services::request();
- 
-      if($request->getPostGet('producto')){
-
-        $Model_productos = new Model_productos($db);
-
-        $mensaje = $Model_productos->buscadorP($request->getPostGet('producto'));
-        $this->response->setContentType('Content-Type: application/json');
-        var_dump($mensaje);     
-      }
+    
     }
 
 }

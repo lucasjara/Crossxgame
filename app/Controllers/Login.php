@@ -13,7 +13,7 @@ class Login extends BaseController
         $session = \Config\Services::session();
         $id_session = $session->get('Codigo');
         $estado = $session->get('Estado');
-        if ($id_session != "" && $id_session != null && $estado != "0") {
+        if ($id_session != "" && $id_session != null ) {
             echo "Conectados";
         } else {
             echo "Desconectados";
@@ -41,12 +41,13 @@ class Login extends BaseController
             }
         } else {
             $clientes = array(
-                'Codigo' => ""
+                'Codigo' => "",
+                'Estado' => ""
             );
             $session->set($clientes);
         }
         $this->response->setContentType('Content-Type: application/json');
-        echo (json_encode($session->get('Codigo')));
+        echo (json_encode($session->get('Estado')));
     }
      public function CerrarSistema(){
         session()->set('Codigo', '');

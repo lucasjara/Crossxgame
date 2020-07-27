@@ -11,17 +11,15 @@ class Admin extends BaseController
   {
 
     $Model_productos = new Model_productos($db);
-<<<<<<< HEAD
+
  		//insertar datos automaticos
  		//$data=['nombre'=>"rssdasdd",'stock'=>"0",'precio'=>"28911",'Descripcion'=>"asldjhasidaslkas",'id_depto'=>"1"];
  		//	$Model_productos->insert($data);
  		//eliminar datos por id
 		//$Model_productos->delete([762,763,764]);
     $productos = $Model_productos->obtenerUltimoProducto();
-=======
  		
 		$productos = $Model_productos->obtenerUltimoProducto();
->>>>>>> 56a70bec2540fbcc1f8478a470d1ec47d8106b5b
 
     $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
 
@@ -72,7 +70,6 @@ public function updateProducto()
    'descripcion'=>$request->getPostGet('descripcion'),
    'id_depto'=>$request->getPostGet('id_depto'),
    'img'=>"nn.jpg");
-
 
   $Model_productos->update($request->getPostGet('id'),$data);
   }

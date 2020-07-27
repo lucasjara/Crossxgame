@@ -242,10 +242,14 @@
             };
             var request = envia_ajax_servidor('/Crossxgame/public/Login/LoginSistema', array);
             request.done(function(data) {
-                //limpiarFormulario();
+                if(data == "1"){
+                    location.reload();
+                }else if(data == "0"){
+                    alert("Su cuenta esta deshabilitada");
+                }else{
+                    alert("Usuario no encontrado");
+                }
                 console.log(data);
-                //Recargar la pagina cuando hace el login
-                location.reload();
             });
         });
 

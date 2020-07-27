@@ -58,6 +58,7 @@ class BaseController extends Controller
             
         }else{
             $array['id']=null;
+            
         }
         return view('master/head',$array).view($valor,$array).view('master/footer');   
     }

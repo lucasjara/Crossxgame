@@ -16,14 +16,14 @@
 
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/flaticon.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/slicknav.min.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/jquery-ui.min.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/animate.css" />
-    <link rel="stylesheet" href="/public/public/Crossxgame/css/style.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/flaticon.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/slicknav.min.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/animate.css" />
+    <link rel="stylesheet" href="public/crossxgame/css/style.css" />
 
     <!-- JS modal -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -49,7 +49,7 @@
                         </a>
                     </div>
                     <div class="col-xl-6 col-lg-5">
-                        <form id="formBusqueda" target="_blank" class="header-search-form" method="POST">
+                        <form id="formBusqueda" class="header-search-form" method="POST">
                             <input type="text" name="txtBuscador" id="txtBuscador" placeholder="Busca un articulo....">
                             <button type="button" id="btnBuscar" name="btnBuscar"><i class="flaticon-search"></i></button>
                         </form>
@@ -260,7 +260,7 @@
         });
 
          $("#btnBuscar").on("click", function(){
-              $("#formBusqueda").attr("action", "/Crossxgame/public/Resultado/index" + "?nombre="+$("#txtBuscador").val());
+              $("#formBusqueda").attr("action", "resultado" + "?nombre="+$("#txtBuscador").val());
              
                $("#formBusqueda").submit(); 
          });

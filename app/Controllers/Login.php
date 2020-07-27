@@ -12,7 +12,8 @@ class Login extends BaseController
     {
         $session = \Config\Services::session();
         $id_session = $session->get('Codigo');
-        if ($id_session != "" && $id_session != null) {
+        $estado = $session->get('Estado');
+        if ($id_session != "" && $id_session != null && $estado != "0") {
             echo "Conectados";
         } else {
             echo "Desconectados";
@@ -33,7 +34,8 @@ class Login extends BaseController
                 $clientes = array(
                     'Codigo' => $row->id,
                     'Nombre' => $row->nombre,
-                    'Email' => $row->email
+                    'Email' => $row->email,
+                    'Estado'=> $row->estado
                 );
                 $session->set($clientes);
             }

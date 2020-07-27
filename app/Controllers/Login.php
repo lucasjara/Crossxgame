@@ -12,7 +12,7 @@ class Login extends BaseController
     {
         $session = \Config\Services::session();
         $id_session = $session->get('Codigo');
-        $estado = $session->get('Estado');
+        
         if ($id_session != "" && $id_session != null ) {
             echo "Conectados";
         } else {
@@ -36,7 +36,7 @@ class Login extends BaseController
                     'Nombre' => $row->nombre,
                     'Email' => $row->email,
                     'Estado'=> $row->estado,
-                    'Rol' = > $row->rol
+                    'Rol' => $row->rol
                 );
                 $session->set($clientes);
             }
@@ -48,7 +48,7 @@ class Login extends BaseController
             $session->set($clientes);
         }
         $this->response->setContentType('Content-Type: application/json');
-        echo (json_encode($session->get('Estado')));
+        echo (json_encode($clientes));
     }
      public function CerrarSistema(){
         session()->set('Codigo', '');

@@ -51,8 +51,4 @@ class Adminlp extends BaseController
 
     $Model_productos->delete($data);;
     }
-
-    public function BuscarProducto()    {
-    
-    }
 }

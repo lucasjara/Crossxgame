@@ -52,7 +52,7 @@ class BaseController extends Controller
     public function vista2($valor,$array){
 		$session = \Config\Services::session();
         $id_session = $session->get('Codigo');
-        $estado = $session->get('Estado');
+        
         if($id_session != "" && $id_session != null ){
             $array['id']=$session->get('Codigo');
             

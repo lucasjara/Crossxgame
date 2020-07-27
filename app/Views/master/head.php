@@ -60,12 +60,10 @@
                                     <i class="flaticon-profile"></i>
                                     <!--aqui pon el modal mijo!!!!-->
                                     <?php
-
                                     if (isset($id) && $id != "") {
                                     ?>
                                         <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
-                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente">--Mi cuenta</a>    
-                                    <?php } ?>     
+                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente">--Mi cuenta</a>        
                                        <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
                                     <?php
                                     } else {
@@ -236,9 +234,14 @@
             };
             var request = envia_ajax_servidor('/Crossxgame/public/Login/LoginSistema', array);
             request.done(function(data) {
-                if(data == "1"){
-                    location.reload();
-                }else if(data == "0"){
+               console.log(data.Estado);
+                if(data.Estado == "1"){
+                    if(data.Rol =="admin"){
+                    window.location = "/Crossxgame/public/Admin";
+                    }else{
+                        location.reload();
+                    }
+                }else if(data.Estado == "0"){
                     alert("Su cuenta esta deshabilitada");
                 }else{
                     alert("Usuario no encontrado");
@@ -255,12 +258,9 @@
                 location.reload();
             });
         });
-
          $("#btnBuscar").on("click", function(){
               $("#formBusqueda").attr("action", "resultado" + "?nombre="+$("#txtBuscador").val());
              
                $("#formBusqueda").submit(); 
          });
-        
-
     </script>

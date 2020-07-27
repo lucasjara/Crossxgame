@@ -1,4 +1,3 @@
-<?php ?>
 
 <!-- Hero section -->
 <section class="hero-section">
@@ -56,14 +55,14 @@
                     foreach ($prodps4 as $ps4) {
 
                         echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='producto?id=" . base64_encode($ps4->id) . "'><img class='card-img-top'
-                 src='public/crossxgame/img/product/" . $ps4->img . "' alt='Card
-                 image cap'></a>";
+                        class='card'> <a href='producto?id=" . base64_encode($ps4->id) . "'><img class='card-img-top'
+                        src='public/crossxgame/img/product/" . $ps4->img . "' alt='Card
+                        image cap'></a>";
 
                         echo "<div class='card-footer'> <div
-                 class='float-left'>";
+                        class='float-left'>";
                         echo "<small><b href='asdas' >" . $ps4->nombre . "</b></small> </div> <div
-                 class='float-right'>";
+                        class='float-right'>";
                         echo  "<b>$" . $ps4->precio . "</b> </div> </div> </div> </div>";
                     } ?>
                 </div>
@@ -78,14 +77,14 @@
                     <?php
                     foreach ($prodswitch as $switch) {
                         echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='producto?id=" . base64_encode($switch->id) . "'><img class='card-img-top'
-                 src='public/crossxgame/img/product/" . $switch->img . "' alt='Card
-                 image cap'></a>";
+                        class='card'> <a href='producto?id=" . base64_encode($switch->id) . "'><img class='card-img-top'
+                        src='public/crossxgame/img/product/" . $switch->img . "' alt='Card
+                        image cap'></a>";
 
                         echo "<div class='card-footer'> <div
-                 class='float-left'>";
-                        echo "<small><b href='asdas' >" . $switch->nombre . "</b></small> </div> <div
-                 class='float-right'>";
+                        class='float-left'>";
+                        echo "<small><b>".$switch->nombre."</b></small> </div> <div
+                        class='float-right'>";
                         echo  "<b>$" . $switch->precio . "</b> </div> </div> </div> </div>";
                     } ?>
                 </div>
@@ -102,14 +101,14 @@
                     <?php
                     foreach ($prodxbox as $xbox) {
                         echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='producto?id=" . base64_encode($xbox->id) . "'><img class='card-img-top'
-                 src='public/crossxgame/img/product/" . $xbox->img . "' alt='Card
-                 image cap'></a>";
+                        class='card'> <a href='producto?id=" . base64_encode($xbox->id) . "'><img class='card-img-top'
+                        src='public/crossxgame/img/product/" . $xbox->img . "' alt='Card
+                        image cap'></a>";
 
                         echo "<div class='card-footer'> <div
-                 class='float-left'>";
-                        echo "<small><b href='asdas' >" . $xbox->nombre . "</b></small> </div> <div
-                 class='float-right'>";
+                        class='float-left'>";
+                        echo "<small><b >" . $xbox->nombre . "</b></small> </div> <div
+                        class='float-right'>";
                         echo  "<b>$" . $xbox->precio . "</b> </div> </div> </div> </div>";
                     } ?>
                 </div>
@@ -155,14 +154,14 @@
                     foreach ($prodAcc as $Acc) {
 
                         echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='producto?id=" . base64_encode($Acc->id) . "'><img class='card-img-top'
-                 src='public/crossxgame/img/product/" . $Acc->img . "' alt='Card
-                 image cap'></a>";
+                        class='card'> <a href='producto?id=" . base64_encode($Acc->id) . "'><img class='card-img-top'
+                        src='public/crossxgame/img/product/" . $Acc->img . "' alt='Card
+                        image cap'></a>";
 
                         echo "<div class='card-footer'> <div
-                 class='float-left'>";
+                        class='float-left'>";
                         echo "<small><b href='asdas' >" . $Acc->nombre . "</b></small> </div> <div
-                 class='float-right'>";
+                        class='float-right'>";
                         echo  "<b>$" . $Acc->precio . "</b> </div> </div> </div> </div>";
                     } ?>
 
@@ -200,13 +199,13 @@
                     <?php
                     foreach ($prodfiguras as $figuras) {
                         echo "<div class='product-item'style='margin:0px;'> <div
-                 class='card'> <a href='producto?id=" . base64_encode($figuras->id) . "'><img class='card-img-top'
-                 src='public/crossxgame/img/product/" . $figuras->img . "' alt='Card
-                 image cap'></a>";
+                        class='card'> <a href='producto?id=" . base64_encode($figuras->id) . "'><img class='card-img-top'
+                        src='public/crossxgame/img/product/" . $figuras->img . "' alt='Card
+                        image cap'></a>";
                         echo "<div class='card-footer'> <div
-                 class='float-left'>";
+                        class='float-left'>";
                         echo "<small><b href='asdas' >" . $figuras->nombre . "</b></small> </div> <div
-                 class='float-right'>";
+                        class='float-right'>";
                         echo  "<b>$" . $figuras->precio . "</b> </div> </div> </div> </div>";
                     } ?>
                 </div>

@@ -39,51 +39,48 @@
 <body>
     <!-- Header section -->
     <header class="header-section">
-
-        <!-- <?php
-                //$codigo = $this->session->userdata('Codigo');
-                //$nombre = $this->session->userdata('Nombre');
-                //  echo 'Datos del usuario';
-                //  echo 'Código: '.$codigo;
-                //  echo 'Nombre: '.$nombre;
-                ?> -->
-
-
         <div class="header-top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2 text-center text-lg-left">
                         <!-- logo -->
-                        <a href="/Crossxgame/public/adminproducto" class="site-logo">
+                        <a href="/Crossxgame/public/prueba" class="site-logo">
                             <img src="public/crossxgame/img/logo.png" alt="">
                         </a>
                     </div>
                     <div class="col-xl-6 col-lg-5">
                         <form class="header-search-form">
-                            <input type="text" placeholder="Busca un articulo....">
-                            <button><i class="flaticon-search"></i></button>
+                            <input type="text" name="txtBuscador" id="txtBuscador" placeholder="Busca un articulo....">
+                            <button type="button" id="btnBuscar" name="btnBuscar"><i class="flaticon-search"></i></button>
                         </form>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="user-panel">
-                            <div class="up-item">
-                                <i class="flaticon-profile"></i>
-                                <!--aqui pon el modal mijo!!!!-->
-                                <?php
+                                <div class="up-item">
+                                    <i class="flaticon-profile"></i>
+                                    <!--aqui pon el modal mijo!!!!-->
+                                    <?php
 
-                                if (isset($id) && $id != "") {
-                                ?>
-                                   <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
-                                   <a type="button" id="btnMiCuenta" name="btnMiCuenta">--Mi cuenta</a>
-                                   <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
-                                <?php
-                                } else {
-                                ?>
-                                    <a data-toggle="modal" data-target="#ModalLogin">Ingresar o Crear cuenta</a>
-                                <?php
-                                }
-                                ?>
-                            </div>
+                                    if (isset($id) && $id != "") {
+                                    ?>
+                                       <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
+                                    <?php
+                                    if (session()->get('Email') == "crossxgame@gmail.com") {
+                                    ?>
+                                       <a type="button" id="btnMiCuenta" name="btnMiCuenta" href="/Crossxgame/public/adminproducto">--Mi cuenta</a>
+                                    <?php }else{ ?> 
+
+                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente">--Mi cuenta</a>    
+                                    <?php } ?>     
+                                       <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <a data-toggle="modal" data-target="#ModalLogin">Ingresar o Crear cuenta</a>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
                             <form class="contact-form" id="miFormLogin">
                                 <!-- Modal -->
                                 <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -253,7 +250,6 @@
         });
 
         $("#btnCerrarSesion").on("click", function() {
-            
             var request = envia_ajax_servidor('/Crossxgame/public/Login/CerrarSistema');
             request.done(function(data) {
                 //limpiarFormulario();
@@ -262,4 +258,21 @@
                 location.reload();
             });
         });
+
+        $("#btnBuscar").on("click", function(){
+            var array= {
+                nombre: $("#txtBuscador").val()
+            }; 
+            var request = envia_ajax_servidor('/Crossxgame/public/Resultado/index', array);
+
+            request.done(function(data) {
+                //limpiarFormulario();
+                //location.replace("/Crossxgame/public/resultado");
+                console.log(data);
+                //Recargar la pagina cuando hace el login
+                //location.reload();
+            });
+        });
+        
+
     </script>

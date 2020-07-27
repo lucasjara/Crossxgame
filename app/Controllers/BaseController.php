@@ -45,33 +45,33 @@ class BaseController extends Controller
 		// $this->session = \Config\Services::session();
 	}
 
-    public function vista($valor){
-    	$session = \Config\Services::session();
-        $id_session = $session->get('Codigo');
-        if($id_session != "" && $id_session != null){
-            $array['id']=$session->get('Codigo');
-            
-        }else{
-            $array['id']=null;
-        }
-        return view('master/head').view($valor).view('master/footer');
-    }
+     public function vista($valor){
+         return view('master/head').view($valor).view('master/footer');
+     }
 
     public function vista2($valor,$array){
 		$session = \Config\Services::session();
         $id_session = $session->get('Codigo');
-        if($id_session != "" && $id_session != null){
+        if($id_session != "" && $id_session != null ){
             $array['id']=$session->get('Codigo');
             
         }else{
             $array['id']=null;
         }
-        return view('master/head',$array).view($valor,$array).view('master/footer');
-        
+        return view('master/head',$array).view($valor,$array).view('master/footer');   
     }
-       public function vistaArray($valor,$array){
-        return view('master/head_administracion').view($valor,$array).view('master/footer_administracion');
+
+    public function vistaArray($valor,$array){
+       	$session = \Config\Services::session();
+        $id_session = $session->get('Codigo');
+        if($id_session != "" && $id_session != null){
+            $array['id']=$session->get('Codigo');
+        }else{
+            $array['id']=null;
+        }
+        return view('master/head_administracion',$array).view($valor,$array).view('master/footer_administracion');
     }
+    
     public function vista_administracion($valor){
         return view('master/head_administracion').view($valor).view('master/footer_administracion');
     }

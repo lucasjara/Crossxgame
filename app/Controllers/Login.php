@@ -32,7 +32,8 @@ class Login extends BaseController
             foreach ($resultado as $row) {
                 $clientes = array(
                     'Codigo' => $row->id,
-                    'Nombre' => $row->nombre
+                    'Nombre' => $row->nombre,
+                    'Email' => $row->email
                 );
                 $session->set($clientes);
             }
@@ -48,7 +49,6 @@ class Login extends BaseController
      public function CerrarSistema(){
         session()->set('Codigo', '');
         $this->response->setContentType('Content-Type: application/json');
-        echo (json_encode(session()->get('Codigo')));
-          
+        echo (json_encode(session()->get('Codigo')));  
      }
 }

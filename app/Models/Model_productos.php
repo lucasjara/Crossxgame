@@ -116,4 +116,11 @@ class Model_productos extends Model
        return $results;
     }
 
+     public function BuscarProducto($nombre){
+       $query = $this->db->query("SELECT * FROM producto where nombre LIKE '%".$nombre."%'");
+       $results = $query->getResult();
+       //var_dump($results);
+       return $results;
+     }
+
 }

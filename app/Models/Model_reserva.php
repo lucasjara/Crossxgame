@@ -22,7 +22,7 @@ class Model_reserva extends Model
     public function obtenerReserva()
     {
 
-        $query = $this->db->query('SELECT a.reserva_id, a.fecha_reserva,a.id_prod, b.nombre as nombreprod ,  a.cantidad,a.id_cli,c.rut,c.nombre , a.fecha_limite,a.reserva_estado FROM bd_local.reserva a, bd_local.producto b, bd_local.cliente c WHERE a.id_cli=c.id and a.id_prod=b.id');
+        $query = $this->db->query('SELECT a.reserva_id, a.fecha_reserva,a.id_prod, b.nombre as nombreprod ,  a.cantidad,a.id_cli,c.rut,c.nombre , a.fecha_limite,a.reserva_estado FROM bd_local.reserva a, bd_local.producto b, bd_local.cliente c WHERE a.id_cli=c.id and a.id_prod=b.id ORDER BY a.reserva_id DESC');
 
         $results = $query->getResult();
         // si hay resultados
@@ -31,7 +31,7 @@ class Model_reserva extends Model
     public function obtenerReservacliente($id_session)
     {
 
-        $query = $this->db->query("SELECT a.reserva_id, a.fecha_reserva,a.id_prod, b.nombre as nombreprod , b.precio, a.cantidad,a.id_cli,c.rut,c.nombre , a.fecha_limite,a.reserva_estado FROM bd_local.reserva a, bd_local.producto b, bd_local.cliente c WHERE a.id_cli=c.id and a.id_prod=b.id and a.id_cli='".$id_session."'");
+        $query = $this->db->query("SELECT a.reserva_id, a.fecha_reserva,a.id_prod, b.nombre as nombreprod , b.precio, a.cantidad,a.id_cli,c.rut,c.nombre , a.fecha_limite,a.reserva_estado FROM bd_local.reserva a, bd_local.producto b, bd_local.cliente c WHERE a.id_cli=c.id and a.reserva_estado in ('Reservado','Finalizado')  and a.id_prod=b.id and  a.id_cli='".$id_session."'ORDER BY a.reserva_id DESC ");
 
         $results = $query->getResult();
         // si hay resultados

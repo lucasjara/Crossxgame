@@ -16,6 +16,7 @@ class Clientecuenta extends BaseController
     	   $Model_reserva = new Model_reserva($db);
          $respuesta = $Model_registro->obtenerClienteIngresado($id_session);
        foreach ($respuesta as $row) {
+            $datos['id'] = $row->id;
        	    $datos['rut'] = $row->rut;
             $datos['nombre'] = $row->nombre;
             $datos['apellido'] = $row->apellido;
@@ -38,16 +39,16 @@ class Clientecuenta extends BaseController
     public function updateCliente()
     {
       $request = \Config\Services::request();
-      $Model_productos = new Model_productos($db);
+      $Model_registro = new Model_registro($db);
 
         $data = array('nombre'=>$request->getPostGet('nombre'),
-              'stock'=>$request->getPostGet('stock'),
-              'precio'=>$request->getPostGet('precio'),
-              'descripcion'=>$request->getPostGet('descripcion'),
-              'id_depto'=>$request->getPostGet('id_depto'),
-              'img'=>"nn.jpg");
+                      'apellido'=>$request->getPostGet('apellido'),
+                      'rut'=>$request->getPostGet('rut'),
+                      'email'=>$request->getPostGet('email'),
+                      'comuna_id'=>$request->getPostGet('comuna'),
+                      'direccion'=>$request->getPostGet('direccion'));
 
-        $Model_productos->update($request->getPostGet('id'),$data);
+        $Model_registro->update($request->getPostGet('id'),$data);
         $this->response->setContentType('Content-Type: application/json');
         echo (json_encode('1'));  
   }

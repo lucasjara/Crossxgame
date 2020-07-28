@@ -27,7 +27,7 @@
                             <div class="form-group">
                             <label for="inputAddress" >Region</label>
                             <select id="selectRegion" onchange="ShowSelected();" class="form-control" style="border-radius: 1em">
-                                <option value="0" selected>Seleccione Region...</option>
+                                <option value="0" selected="">Seleccione Region...</option>
                                 <?php
                                 print_r($arrProfesiones);
                                 foreach ($arrProfesiones as $i => $region_nombre)
@@ -51,9 +51,10 @@
                         </div>
                         </form>
                     </div>
+                  
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="button" id="btnModificar" name="btnModificar" onclick="ActualizarDatos($session->get('Codigo'))" class="btn btn-primary">Modificar</button>
+                        <button type="button" id="btnModificar" name="btnModificar" onclick="ActualizarDatos(<?php echo $id?>)" class="btn btn-primary">Modificar</button>
                     </div>
                 </div>
             </div>
@@ -203,8 +204,8 @@
               apellido: $("#txtApellidoModificar").val(),
               rut: $("#txtRutModificar").val(),
               comuna: $("#selectComuna").val(),  
-              direccion: $("#direccionModificar").val(),  
-              email: $("#email").val() 
+              direccion: $("#txtDireccionModificar").val(),  
+              email: $("#txtEmailModificar").val() 
             };
             var request = envia_ajax_servidor('/Crossxgame/public/Clientecuenta/updateCliente', array2);
             request.done(function (data){

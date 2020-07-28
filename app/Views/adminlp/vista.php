@@ -9,14 +9,10 @@
     </div>
   <div style="padding-left: 60%" class="col-xl-12 col-lg-5">
     <form id="formBusquedaAdmin" class="header-search-form" method="POST">
-      <input type="text" name="txtBuscadorAdmin" id="txtBuscadorAdmin" placeholder="Busca un articulo....">
+      <input type="text" name="txtBuscadorAdmin" id="txtBuscadorAdmin" placeholder="Busca un articulo por su Nombre....">
       <button type="button" id="btnBuscarAdmin" name="btnBuscarAdmin"><i class="flaticon-search"></i></button>
     </form>
   </div>
-    <!-- <form  class="contact-form" id="myForm"  enctype="multipart/form-data" >
-      <input class="form-control mr-sm-2" type="text"     placeholder="Search" id="txtbuscar" aria-label="Search">
-      
-    </form> -->
     <h2>Productos</h2>
     <div class="table-responsive">
       <table class="table table-striped table-sm" id="tabla-producto">

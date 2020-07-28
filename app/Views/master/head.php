@@ -191,7 +191,7 @@
                             <li><a href="#">Billeteras</a></li>
                         </ul>
                     </li>
-                    <li><a href="/Crossxgame/public/Categoria">Servicios Tecnicos</a>
+                    <li><a href="#">Servicios Tecnicos</a>
                         <ul class="sub-menu">
                             <li><a href="#">Servicios PS4</a></li>
                             <li><a href="#">Servicios PS3</a></li>

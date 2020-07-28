@@ -245,7 +245,7 @@
                console.log(data.Estado);
                 if(data.Estado == "1"){
                     if(data.Rol =="admin"){
-                    window.location = "/Crossxgame/public/Admin";
+                    window.location = "/Crossxgame/public/adminindex";
                     }else{
                         location.reload();
                     }

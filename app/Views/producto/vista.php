@@ -20,15 +20,12 @@ $idp=base64_decode($_GET["id"]);
 				<div class="col-lg-6 product-details">
 					<?php echo "<h1 class='p-title'  > nombre ".$nombre; ?></h1>
 					<h2 class="p-price"><?php echo "precio ".$precio; ?></h2>
+					<h2 class="p-price"><?php echo "Categoria ".$descripcion_depto; ?></h2>	
 					<h2 class="p-stock">Disponibilidad: <span class="p-title" > <?php echo $stock; ?></span></h2>
-
-
 
 					<div class="quantity">
 						<p>Cantidad</p>
 						
-
-
 						<?php echo "<div class='pro-qty'> <input type='number' id='cantidad' value='0' disabled  max='".$stock."' > </div>"; 
 						?>
 					</div>

@@ -81,9 +81,9 @@
             <option selected=''>Seleccione Departamento...</option>
             ";
             //-------------------------------ACA esta el cagazo----------------------------------------------------
-            //foreach ($arrayDepto as $i => $des){
-              //echo '<option value="',$i,'">',$des,'</option>';    
-            //}
+            foreach ($arrayDepto as $i => $des){
+              echo '<option value="',$i,'">',$des,'</option>';    
+            }
             echo "
             </select>
             </div>
@@ -183,7 +183,9 @@
             var request = envia_ajax_servidor('/Crossxgame/public/Admin/updateProducto', array2);
             request.done(function (data){
               console.log(data);
+              location.reload();
             });
+            //location.reload();
           }
 
           $("#btnBuscarAdmin").on("click", function(){

@@ -16,6 +16,7 @@ class Adminlp extends BaseController
              if($nombre !="" && $nombre !=null){
                     $Model_productos = new Model_productos($db);
                     $productos = $Model_productos->BuscarProducto($nombre);
+                    $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
                     $datos['productos']= $productos;
                     $productos = array('productos'=>$productos); 
                     return $this->vistaarray('adminlp/vista',$datos);

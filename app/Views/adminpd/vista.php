@@ -136,7 +136,6 @@
               location.reload(true);
         });   
 }else{
-
 alert("Campo Vacio");
 }
 

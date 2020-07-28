@@ -153,6 +153,7 @@
             };
             var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
             request.done(function (data){
+               alert("Datos Registrados con exito");
             });
           });
           function eliminar($iddata) { 
@@ -182,8 +183,8 @@
             };
             var request = envia_ajax_servidor('/Crossxgame/public/Admin/updateProducto', array2);
             request.done(function (data){
-              console.log(data);
-              location.reload();
+               alert("Datos Actualizados con exito");
+              location.reload(true);
             });
             //location.reload();
           }

@@ -208,6 +208,7 @@ echo "</tr>";
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
     //   limpiarFormulario();
         request.done(function (data){
+           alert("Datos Registrados con exito");
            location.reload(true);
         });
     });

@@ -22,7 +22,7 @@
 								</div>
 								<div class="form-group">
 									<label for="inputEmail4">Rut</label>
-									<input id="txtRutModificar" name="rutModificar" type="text" class="form-control" placeholder="Rut" value="<?php echo $rut?>">
+									<input id="txtRutModificar" name="rutModificar" type="text" class="form-control" placeholder="Rut" value="<?php echo $rut?>" disabled>
 								</div>
 								<div class="form-group">
 									<label for="inputAddress" >Region</label>

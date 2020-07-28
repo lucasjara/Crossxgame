@@ -31,7 +31,7 @@ class AdminOrdenes extends BaseController
       $Model_reserva->update($request->getPostGet('reserva_id'),$data);
 
      $this->response->setContentType('Content-Type: application/json');
-        echo (json_encode('1'));  
+    echo (json_encode('1'));  
 
     }
 

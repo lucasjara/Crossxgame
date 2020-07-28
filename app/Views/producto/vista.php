@@ -18,10 +18,11 @@ $idp=base64_decode($_GET["id"]);
 					</div>
 				</div>
 				<div class="col-lg-6 product-details">
-					<?php echo "<h1 class='p-title'  > nombre ".$nombre; ?></h1>
-					<h2 class="p-price"><?php echo "precio ".$precio; ?></h2>
-					<h2 class="p-price"><?php echo "Categoria ".$descripcion_depto; ?></h2>	
+					<?php echo "<h1 class='p-title'  >".$nombre; ?></h1>
+					<h2 class="p-price"><?php echo "$".$precio; ?> CLP</h2>
+					<h2 class="p-title"><?php echo "".$descripcion_depto; ?></h2>	
 					<h2 class="p-stock">Disponibilidad: <span class="p-title" > <?php echo $stock; ?></span></h2>
+
 
 					<div class="quantity">
 						<p>Cantidad</p>
@@ -38,8 +39,10 @@ $idp=base64_decode($_GET["id"]);
 
 
 					}
-					?>				
-
+					?>		
+					</br>		
+						</br>	
+<div class="p-stock">NOTA: Stock desfasado en 20 minutos.</div>
 
 					<!-- Modal -->
 					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,9 +67,10 @@ $idp=base64_decode($_GET["id"]);
 					</div>
 					<!--end Modal-->
 					
-
 					<div id="accordion" class="accordion-area">
+
 						<div class="panel">
+
 							<div class="panel-header" id="headingOne">
 								<button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Informacion</button>
 							</div>

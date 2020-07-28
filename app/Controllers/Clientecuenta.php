@@ -23,7 +23,8 @@ class Clientecuenta extends BaseController
             $datos['email'] = $row->email;
             $datos['comuna_nombre'] = $row->comuna_nombre; 
             $datos['direccion'] = $row->direccion; 
-            $datos['f_nacimiento'] = $row->f_nacimiento; 
+            $datos['f_nacimiento'] = $row->f_nacimiento;
+            $datos['contrasenia'] = $row->contrasenia; 
         //$datos['contrasenia'] = $row->contrasenia;  
        }
 

@@ -49,6 +49,14 @@
                                 <label for="inputEmail4">Email</label>
                                 <input id="txtEmailModificar" name="emailModificar" type="email" class="form-control" placeholder="Email" value="<?php echo $email ?>">
                         </div>
+                        <div class="form-group">
+                                <label for="inputEmail4">Password</label>
+                                <input id="txtContraseñaMod" name="contraseñaMod" type="Password" class="form-control" placeholder="Modificar Contraseña" value="">
+                        </div>
+                        <div class="form-group">
+                                <label for="inputEmail4">Confirmar Password</label>
+                                <input id="txtContraseñaConf" name="contraseñaConf" type="Password" class="form-control" placeholder="Repetir Nueva Contraseña" value="">
+                        </div>
                         </form>
                     </div>
                   

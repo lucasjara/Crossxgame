@@ -10,9 +10,9 @@
 					echo '<div class="col-lg-3 col-sm-4">';
 						echo'<div class="product-item">';
 							echo'<div class="pi-pic">';		
-								echo'<img src="public/crossxgame/img/product/'.$producto->img.'">';
+								echo'<a href=producto?id='. base64_encode($producto->id).'><img src="public/crossxgame/img/product/'.$producto->img.'"> </a>';
 									echo'<div class="pi-links">';
-										echo'	<a href="#" class="add-card"><i class="flaticon-bag"></i><span>Reservar</span></a>';
+										
 									echo'</div>';
 								echo'	</div>';
 							echo'<div class="pi-text">';
@@ -23,9 +23,11 @@
 					echo'</div>';
 				};
 			?>
-						<div class="text-center w-100 pt-3">
-							<button class="site-btn sb-line sb-dark">Ver más</button>
-						</div>
+
+
+
+
+						
 					</div>
 				</div>
 			</div>

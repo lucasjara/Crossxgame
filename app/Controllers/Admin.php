@@ -11,8 +11,6 @@ class Admin extends BaseController
     $Rol = $session->get('Rol');
     if($Rol == 'admin'){
         $Model_productos = new Model_productos($db);
-        $productos = $Model_productos->obtenerUltimoProducto();
-		    $productos = $Model_productos->obtenerUltimoProducto();
 		    $productos = $Model_productos->obtenerUltimoProducto();
         $datos['arrayDepto'] = $Model_productos->ObtenerDepto();
         $datos['productos'] = $productos;

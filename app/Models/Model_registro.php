@@ -78,4 +78,13 @@ class Model_registro extends Model
         }
         return $results;
     }
+    public function obtenerClienteIngresado($id_session)
+    {
+        // armamos la consulta
+        $query = $this->db->query("SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia, a.estado FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id and a.id='".$id_session."'");
+
+        $results = $query->getResult();
+        // si hay resultados
+        return $results;
+    }
 }

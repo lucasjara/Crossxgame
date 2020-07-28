@@ -60,17 +60,25 @@
                                     <i class="flaticon-profile"></i>
                                     <!--aqui pon el modal mijo!!!!-->
                                     <?php
-                                    if (isset($id) && $id != "") {
+                                        $rol = session()->get('Rol');
+                                        if (isset($id) && $id != "") {
                                     ?>
                                         <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
-                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente">--Mi cuenta</a>        
-                                       <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
                                     <?php
-                                    } else {
+                                        if ($rol == "admin") {
+                                    ?>
+                                        <a type="button" id="btnAdmin" href="/Crossxgame/public/admin" name="btnAdmin">--Modo Admin</a> 
+                                    <?php
+                                        }
+                                    ?>
+                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente" href="/Crossxgame/public/clientecuenta" >--Mi cuenta</a>        
+                                        <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
+                                    <?php
+                                        } else {
                                     ?>
                                         <a data-toggle="modal" data-target="#ModalLogin">Ingresar o Crear cuenta</a>
                                     <?php
-                                    }
+                                        }
                                     ?>
                                 </div>
                             <form class="contact-form" id="miFormLogin">
@@ -263,4 +271,5 @@
              
                $("#formBusqueda").submit(); 
          });
+
     </script>

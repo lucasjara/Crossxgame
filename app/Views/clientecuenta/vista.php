@@ -16,24 +16,63 @@
 					
 				<div class="col-lg-12 order- order-lg-1">
 					<form class="checkout-form">
-						<div class="cf-title"><h2 style="color: white;">Mi cuenta</h2><a ><h4 style="color: white;">Editar</h4></a></div>
+						<div class="cf-title"><h2 style="color: white;">Mi cuenta</h2></div>
+
+						
 						<div class="row col-md-7">
 							<div class="col-md-12 payment-list">
-								<li>Rut: <label id="rut" ></label></li>
-								<li>Nombre: <label id="rut" >juan unito</label></li>
-								<li>Apellido: <label id="rut" >peres pepito</label></li>
-								<li>ciudad: <label id="rut" >temuco</label></li>
-								<li>Direccion: <label id="rut" >calle falza 123</label></li>
-								<li>correo: <label id="rut" >juanunitoperespepito@gmail.com</label></li>
-								<li>Fecha Nacimiento: <label id="rut" >1995-05-25</label></li>
-								<li>Numero celular: <label id="rut" >+569 9999999</label></li>
+								<li>Rut: <label><?php echo $rut?></label></li>
+								<li>Nombre: <label><?php echo $nombre?></label></li>
+								<li>Apellido: <label><?php echo $apellido?></label></li>
+								<li>ciudad: <label><?php echo $comuna_nombre?></label></li>
+								<li>Direccion: <label><?php echo $direccion?></label></li>
+								<li>correo: <label><?php echo $email ?></label></li>
+								<li>Fecha de Nacimiento: <label><?php echo $f_nacimiento?></label></li>
 													
 							</div>
 						</div>
 						<div class="cf-title">Mis Pedidos</div>
-						<div class="row shipping-btns">
-							<div class="col-6">
-								<h4>Usted no tiene ningun pedido a la fecha.</h4>
+						<div class="">
+							<div >
+								<table>
+									<thead>
+										<tr>
+											<th>
+												Fecha de Reserva
+											</th>
+											<th>
+												Nombre de Producto
+											</th>
+											<th>
+												Cantidad
+											</th>	
+											<th>
+												Fecha Limite
+											</th>
+											<th>
+												Estado
+											</th>
+											<th>
+												Opciones
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php 
+										foreach ($reserva as $r) {
+										echo"<tr>";
+											echo"<td>".$r->fecha_reserva."</td>";
+											echo"<td>".$r->nombreprod."</td>";
+											echo"<td>".$r->cantidad."</td>";
+											echo"<td>".$r->fecha_limite."</td>";
+											echo"<td>".$r->reserva_estado."</td>";
+											echo"<td></td>";
+										echo"</tr>";
+										}
+										?>
+									</tbody>
+								</table>
+								
 							</div>
 							
 						</div>

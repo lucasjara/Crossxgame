@@ -143,16 +143,18 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 	$fecha = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()) );
 	$fechal = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()+2) );
 
+
 	$("#btnReserva").on("click",function(){
 		
 
-		if($("#cantidad").val()=="0"){
+
+		if(parseInt($("#cantidad").val())==0){
 
 			alert("No puede Reservar 0 Productos.");
 
-		}else if($("#cantidad").val()>($("#stock").val()+1)){
+		}else if(parseInt($("#cantidad").val())>parseInt(($("#stock").val()+1))){
 
-			alert("No puede Reservar más de "+$("#stock").val()+" Productos.");
+			alert("No puede Reservar más de "+parseInt($("#stock").val())+" Productos.");
 
 		}else{
 			

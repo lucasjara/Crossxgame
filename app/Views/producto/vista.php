@@ -109,17 +109,11 @@ $idp=base64_decode($_GET["id"]);
 		</div>
 	</section>
 </body>
-
-
 <script>
 	var f = new Date();
 	//document.getElementById("demo1").innerHTML = (f.getDate()+1)+ "-" + (f.getMonth() +1) + "-" + f.getFullYear();
 document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth() +1) + "-" + f.getFullYear();
 </script>
-
-
-
-
 <script>
 	var d = new Date();
 	var n = d.getHours();
@@ -137,17 +131,11 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 		});
 		return variable;
 	}
-
-
 	$cliente=<?php echo session()->get('Codigo');?>;
 	$fecha = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()) );
 	$fechal = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()+2) );
-
-
 	$("#btnReserva").on("click",function(){
 		
-
-
 		if(parseInt($("#cantidad").val())==0){
 
 		alert("No puede Reservar 0 Productos.");
@@ -156,8 +144,7 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 
 			alert("No puede Reservar más de "+parseInt($("#stock").val())+" Productos.");
 
-		}else{
-			
+		}else{	
 			var array = {
 				fecha_reserva: $fecha,
 				id_prod: $("#code").val(),
@@ -167,14 +154,11 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 				reserva_estado:$("#txtdatos").val(),
 				stock:parseInt($("#stock").val()-$("#cantidad").val())
 			};
-
 			var request = envia_ajax_servidor('/Crossxgame/public/producto/ReservarProducto', array);
 			alert("Usted a reservado  "+$("#cantidad").val()+" Productos.");
   		  request.done(function (data){
     	 location.reload(true);	
-    });
-  		 
+    });  		 
 }
-
 });
 </script>

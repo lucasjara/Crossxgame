@@ -67,7 +67,7 @@
                                     <?php
                                         if ($rol == "admin") {
                                     ?>
-                                        <a type="button" id="btnAdmin" href="/Crossxgame/public/admin" name="btnAdmin">--Modo Admin</a> 
+                                        <a type="button" id="btnAdmin" href="/Crossxgame/public/adminindex" name="btnAdmin">--Modo Admin</a> 
                                     <?php
                                         }
                                     ?>

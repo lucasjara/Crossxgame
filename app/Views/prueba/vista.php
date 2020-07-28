@@ -6,10 +6,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-7 text-white">
-                        <span>Estreno del Mes</span>
+                       <!-- <span>Estreno del Mes</span>
                         <h2>The Last of Us Part II en PS4</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                        <a href="#" class="site-btn sb-line">Ver Más...</a>
+                        <a href="#" class="site-btn sb-line">Ver Más...</a>-->
                     </div>
                 </div>
             </div>
@@ -26,10 +26,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-7 text-white">
-                        <span>Estreno anterior</span>
+                        <!--<span>Estreno anterior</span>
                         <h2>Resident Evil 3 Remake</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                        <a href="#" class="site-btn sb-line">Ver Más...</a>
+                        <a href="#" class="site-btn sb-line">Ver Más...</a>-->
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ $idp=base64_decode($_GET["id"]);
 						
 
 
-						<?php echo "<div class='pro-qty'> <input type='number' id='cantidad' value='".$stock."' disabled  max='".$stock."' > </div>"; 
+						<?php echo "<div class='pro-qty'> <input type='number' id='cantidad' value='0' disabled  max='".$stock."' > </div>"; 
 						?>
 					</div>
 					<?php
@@ -169,9 +169,9 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 			var request = envia_ajax_servidor('/Crossxgame/public/producto/ReservarProducto', array);
 			alert("Usted a reservado  "+$("#cantidad").val()+" Productos.");
   		  request.done(function (data){
-    	console.log(data);	
+    	 location.reload(true);	
     });
-  		  location.reload();
+  		 
 }
 
 });

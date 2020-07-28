@@ -127,8 +127,6 @@
     function limpiarFormulario() {
     document.getElementById("miForm").reset();
   }
-
-    
     $("#btnRegistrar").on("click",function(){
         var rol = $("#selectRol").val();
         var array = {

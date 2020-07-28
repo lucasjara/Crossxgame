@@ -1,64 +1,64 @@
 <!-----------------------------------------Modal--------------------------------------------------->
 <form class="contact-form" id="miFormActualizacion">
-	<div class="modal fade" id="Modalmodificación" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						<form>
-							<div class="form-group">
-								<label for="inputPassword4">Nombre</label>
-								<input id="txtContraseñaModal" name="contraseñaLogin" type="password" class="form-control" placeholder="Contraseña">
-							</div>
-							<div class="form-group">
-								<label for="inputPassword4">Apellido</label>
-								<input id="txtContraseñaModal" name="contraseñaLogin" type="password" class="form-control" placeholder="Contraseña">
-							</div>
-							<div class="form-group">
-								<label for="inputEmail4">Rut</label>
-								<input id="txtEmailModal" name="emailLogin" type="email" class="form-control" placeholder="Email">
-							</div>
-							<div class="form-group">
-								<label for="inputAddress" >Region</label>
-								<select id="selectRegion" onchange="ShowSelected();" class="form-control" style="border-radius: 1em">
-									<option value="0" selected>Seleccione Region...</option>
-									<?php
-                                //print_r($arrProfesiones);
-                                //foreach ($arrProfesiones as $i => $region_nombre)
-                                  //  echo '<option values="',$i,'">',$region_nombre,'</option>';
-                                // ?>
+    <div class="modal fade" id="Modalmodificación" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputPassword4">Nombre</label>
+                                <input id="txtNombreModificar" name="nombreModificar" type="text" class="form-control" placeholder="Nombre" value="<?php echo $nombre?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword4">Apellido</label>
+                                <input id="txtApellidoModificar" name="apellidoModificar" type="text" class="form-control" placeholder="Apellido" value="<?php echo $apellido?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail4">Rut</label>
+                                <input id="txtRutModificar" name="rutModificar" type="text" class="form-control" placeholder="Rut" value="<?php echo $rut?>">
+                            </div>
+                            <div class="form-group">
+                            <label for="inputAddress" >Region</label>
+                            <select id="selectRegion" onchange="ShowSelected();" class="form-control" style="border-radius: 1em">
+                                <option value="0" selected>Seleccione Region...</option>
+                                <?php
+                                print_r($arrProfesiones);
+                                foreach ($arrProfesiones as $i => $region_nombre)
+                                    echo '<option values="',$i,'">',$region_nombre,'</option>';
+                                 ?>
                             </select>
                         </div>
                         <div class="form-group">
-                        	<label for="inputAddress">Comuna</label>
-                        	<select id="selectComuna" class="form-control" style="border-radius: 1em">
-                        		<option selected="">Seleccione Comuna...</option>
-                        	</select>
+                            <label for="inputAddress">Comuna</label>
+                            <select id="selectComuna" class="form-control" style="border-radius: 1em">
+                                <option selected="">Seleccione Comuna...</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                        	<label for="inputEmail4">Dirección</label>
-                        	<input id="txtEmailModal" name="emailLogin" type="email" class="form-control" placeholder="Email">
+                                <label for="inputEmail4">Dirección</label>
+                                <input id="txtDireccionModificar" name="direccionModificar" type="text" class="form-control" placeholder="Direccion" value="<?php echo $direccion?>">
                         </div>
                         <div class="form-group">
-                        	<label for="inputEmail4">Email</label>
-                        	<input id="txtEmailModal" name="emailLogin" type="email" class="form-control" placeholder="Email">
+                                <label for="inputEmail4">Email</label>
+                                <input id="txtEmailModificar" name="emailModificar" type="email" class="form-control" placeholder="Email" value="<?php echo $email ?>">
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                	<button type="button" id="btnModificar" name="btnModificar" class="btn btn-primary">Modificar</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="btnModificar" name="btnModificar" onclick="ActualizarDatos($session->get('Codigo'))" class="btn btn-primary">Modificar</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </form>
 <!-----------------------------------------Modal Final--------------------------------------------->
 <!-- checkout section  -->
@@ -185,3 +185,55 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+		function envia_ajax_servidor(url, data) {
+            var variable = $.ajax({
+              url: url,
+              method: 'POST',
+              data: data,
+              'dataSrc': 'data',
+              dataType: 'json'
+            });
+            return variable;
+          }
+		function ActualizarDatos($data) {    
+            var array2 = {     
+              id: $data, 
+              nombre: $("#txtNombreModificar").val(),
+              apellido: $("#txtApellidoModificar").val(),
+              rut: $("#txtRutModificar").val(),
+              comuna: $("#selectComuna").val(),  
+              direccion: $("#direccionModificar").val(),  
+              email: $("#email").val() 
+            };
+            var request = envia_ajax_servidor('/Crossxgame/public/Clientecuenta/updateCliente', array2);
+            request.done(function (data){
+               alert("Datos Actualizados con exito");
+              location.reload(true);
+            });
+            //location.reload();
+          }
+	</script>
+	<script type="text/javascript">
+	function ShowSelected(){
+          var combo = document.getElementById("selectRegion").selectedIndex; 
+          if(combo != ''){
+              $.ajax({
+                  url:"/Crossxgame/public/Registro/ObtenerComuna",
+                  method:"POST",
+                  data:{combo:combo},
+                  success:function(data){  
+                      var comunas = "<option value='0'>Seleccionar comuna</option>";
+                     for (var i = 0; i < data.length; i++) {
+                          var id = data[i].comuna_id;
+                          var nombre = data[i].comuna_nombre;
+                          comunas = comunas.concat("<option value='"+id+"'>"+nombre+"</option>");
+                     }
+                     $('#selectComuna').html(comunas);
+                  }               
+              });
+          }else{
+              $('#selectComuna').html('<option value="">Select State</option>');
+          }    
+       }
+      </script>

@@ -87,4 +87,7 @@ class Model_registro extends Model
         // si hay resultados
         return $results;
     }
+    public function modificarCliente(){
+        
+    }
 }

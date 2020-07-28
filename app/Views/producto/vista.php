@@ -152,7 +152,7 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 
 		alert("No puede Reservar 0 Productos.");
 
-		}else if(parseInt($("#cantidad").val())parseInt(($("#stock").val()))){
+		}else if(parseInt($("#cantidad").val())>parseInt(($("#stock").val()))){
 
 			alert("No puede Reservar más de "+parseInt($("#stock").val())+" Productos.");
 

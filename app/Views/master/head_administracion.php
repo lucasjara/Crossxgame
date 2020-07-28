@@ -41,7 +41,7 @@
       
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" type="button" href="/Crossxgame/public/prueba">Cerrar Sesion</a>
+          <a class="nav-link" type="button" href="/Crossxgame/public/prueba">Volver</a>
         </li>
       </ul>
     </nav>

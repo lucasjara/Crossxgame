@@ -110,6 +110,8 @@
 
 
  <script type="text/javascript">
+
+
     function envia_ajax_servidor(url, data) {
     var variable = $.ajax({
         url: url,
@@ -120,15 +122,27 @@
     });
     return variable;
     }
+    
     $("#btnRegistrar").on("click",function(){
+
+    if($("#txtdeptonombre").val()!=""){
+
         var array = {
             descripcion_depto: $("#txtdeptonombre").val()           
         };
         var request = envia_ajax_servidor('/Crossxgame/public/Adminpd/guardarDepto', array);
         request.done(function (data){
+           alert("Datos Registrados con exito");
               location.reload(true);
-        });       
+        });   
+}else{
+
+alert("Campo Vacio");
+}
+
+
     });
+
 function Eliminardatos($data) {   
 var array2 = {     
         id_depto: $data       
@@ -138,14 +152,25 @@ var array2 = {
            location.reload(true);
         });   
     }
-function ActualizarDatos($data) {    
-var array2 = {     
+
+function ActualizarDatos($data) {  
+
+if($("#txtdeptonombre"+$data).val()!=""){
+  var array2 = {     
         id_depto: $data ,  
        descripcion_depto: $('#txtnewdepto'+$data).val()    
            };
         var request = envia_ajax_servidor('/Crossxgame/public/Adminpd/updateDepto', array2);
             request.done(function (data){
+           alert("Datos Actualizados");
            location.reload(true);
         });
-    }
+    
+  }else{
+
+alert("Rellene el Campo");
+
+  }
+}
+
 </script>

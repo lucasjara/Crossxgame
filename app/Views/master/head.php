@@ -67,12 +67,12 @@
                                     <?php
                                         if ($rol == "admin") {
                                     ?>
-                                        <a type="button" id="btnAdmin" href="/Crossxgame/public/adminindex" name="btnAdmin">--Modo Admin</a> 
+                                        <a type="button" id="btnAdmin" href="/Crossxgame/public/adminindex" name="btnAdmin">| Modo Admin</a> 
                                     <?php
                                         }
                                     ?>
-                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente" href="/Crossxgame/public/clientecuenta" >--Mi cuenta</a>        
-                                        <a type="button" id="btnCerrarSesion" name="btnCerrarSesion">--Cerrar Sesión</a> 
+                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente" href="/Crossxgame/public/clientecuenta" >| Mi cuenta</a>        
+                                        <a type="button" id="btnCerrarSesion" href="" name="btnCerrarSesion">| Cerrar Sesión</a> 
                                     <?php
                                         } else {
                                     ?>

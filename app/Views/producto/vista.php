@@ -150,9 +150,9 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 
 		if(parseInt($("#cantidad").val())==0){
 
-			alert("No puede Reservar 0 Productos.");
+		alert("No puede Reservar 0 Productos.");
 
-		}else if(parseInt($("#cantidad").val())>parseInt(($("#stock").val()+1))){
+		}else if(parseInt($("#cantidad").val())parseInt(($("#stock").val()))){
 
 			alert("No puede Reservar más de "+parseInt($("#stock").val())+" Productos.");
 
@@ -165,7 +165,7 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 				id_cli: $cliente,
 				fecha_limite:$fechal,
 				reserva_estado:$("#txtdatos").val(),
-				stock:$("#stock").val()-$("#cantidad").val()
+				stock:parseInt($("#stock").val()-$("#cantidad").val())
 			};
 
 			var request = envia_ajax_servidor('/Crossxgame/public/producto/ReservarProducto', array);

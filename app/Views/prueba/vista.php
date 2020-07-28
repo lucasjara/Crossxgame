@@ -61,7 +61,14 @@
 
                         echo "<div class='card-footer'> <div
                         class='float-left'>";
-                        echo "<small><b href='asdas' >" . $ps4->nombre . "</b></small> </div> <div
+                        echo "<small><b href='' >" ;
+                        if(strlen($ps4->nombre)<22){
+                         echo substr($ps4->nombre,0, 22);
+                        }else{
+
+                            echo substr($ps4->nombre,0, 22)."..";
+                        }
+                        echo "</b></small> </div> <div
                         class='float-right'>";
                         echo  "<b>$" . $ps4->precio . "</b> </div> </div> </div> </div>";
                     } ?>
@@ -83,7 +90,14 @@
 
                         echo "<div class='card-footer'> <div
                         class='float-left'>";
-                        echo "<small><b>".$switch->nombre."</b></small> </div> <div
+                        echo "<small><b>";
+                       if(strlen($switch->nombre)<22){
+                         echo substr($switch->nombre,0, 22);
+                        }else{
+
+                            echo substr($switch->nombre,0, 22)."..";
+                        }
+                        echo "</b></small> </div> <div
                         class='float-right'>";
                         echo  "<b>$" . $switch->precio . "</b> </div> </div> </div> </div>";
                     } ?>
@@ -107,7 +121,15 @@
 
                         echo "<div class='card-footer'> <div
                         class='float-left'>";
-                        echo "<small><b >" . $xbox->nombre . "</b></small> </div> <div
+                        echo "<small><b value='".$xbox->nombre."'>" ;
+                        if(strlen($xbox->nombre)<22){
+                         echo substr($xbox->nombre,0, 22);
+                        }else{
+
+                            echo substr($xbox->nombre,0, 22)."..";
+                        }
+
+                        echo  "</b></small> </div> <div
                         class='float-right'>";
                         echo  "<b>$" . $xbox->precio . "</b> </div> </div> </div> </div>";
                     } ?>
@@ -160,7 +182,14 @@
 
                         echo "<div class='card-footer'> <div
                         class='float-left'>";
-                        echo "<small><b href='asdas' >" . $Acc->nombre . "</b></small> </div> <div
+                        echo "<small><b href='asdas' >" ;
+                         if(strlen($Acc->nombre)<22){
+                         echo substr($Acc->nombre,0, 22);
+                        }else{
+
+                            echo substr($Acc->nombre,0, 22)."..";
+                        }
+                        echo  "</b></small> </div> <div
                         class='float-right'>";
                         echo  "<b>$" . $Acc->precio . "</b> </div> </div> </div> </div>";
                     } ?>
@@ -196,7 +225,7 @@
             </div>
             <div class="card-body">
                 <div class="product-slider owl-carousel">
-                    <?php
+                   <?php
                     foreach ($prodfiguras as $figuras) {
                         echo "<div class='product-item'style='margin:0px;'> <div
                         class='card'> <a href='producto?id=" . base64_encode($figuras->id) . "'><img class='card-img-top'
@@ -204,7 +233,14 @@
                         image cap'></a>";
                         echo "<div class='card-footer'> <div
                         class='float-left'>";
-                        echo "<small><b href='asdas' >" . $figuras->nombre . "</b></small> </div> <div
+                        echo "<small><b href='asdas'>";
+                         if(strlen($figuras->nombre)<22){
+                         echo substr($figuras->nombre,0, 22);
+                        }else{
+
+                            echo substr($figuras->nombre,0, 22)."..";
+                        }
+                        echo "</b></small> </div> <div
                         class='float-right'>";
                         echo  "<b>$" . $figuras->precio . "</b> </div> </div> </div> </div>";
                     } ?>

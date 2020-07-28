@@ -26,6 +26,8 @@ class Adminpd extends BaseController
    				 );
 
     	$Model_depto->insert($data);
+      $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));  
     }
 
 
@@ -39,6 +41,9 @@ class Adminpd extends BaseController
     'descripcion_depto'=>$request->getPostGet('descripcion_depto'));
    
       $Model_depto->update($request->getPostGet('id_depto'),$data);
+
+      $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));  
     }
 
 }

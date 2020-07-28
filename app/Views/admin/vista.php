@@ -208,7 +208,7 @@ echo "</tr>";
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
     //   limpiarFormulario();
         request.done(function (data){
-            console.log(data);
+           location.reload(true);
         });
     });
  // $("#btnConfirmar").on("click",function(){
@@ -233,7 +233,7 @@ var array2 = {
            };
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/updateProducto', array2);
             request.done(function (data){
-            console.log(data);
+              location.reload(true);
         });
     }
 </script>

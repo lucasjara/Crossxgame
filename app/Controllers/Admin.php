@@ -52,6 +52,8 @@ class Admin extends BaseController
      'img'=>"nn.jpg");
 
    $Model_productos->insert($data);
+   $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));  
  }
  public function eliminarProducto()
  {
@@ -79,6 +81,8 @@ public function updateProducto()
    'img'=>"nn.jpg");
 
   $Model_productos->update($request->getPostGet('id'),$data);
+  $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));  
   }
 }
 

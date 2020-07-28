@@ -9,7 +9,10 @@ class Producto extends BaseController
   public function index()
   {
     $request = \Config\Services::request();
-    $idP = base64_decode($request->getPostGet('id'));
+ 
+   $idP = base64_decode($request->getPostGet('id'));
+
+    
     if ($idP != "") {
       $modelo = new Model_productos($db);
       $respuesta = $modelo->IDProducto($idP);

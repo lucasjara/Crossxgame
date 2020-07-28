@@ -22,8 +22,10 @@ class Resultado extends BaseController
         	return $this->vista2('resultado/vista',$datos);
         	
 		}else{
-			echo "murio";
-		}
+			
+            return redirect()->to('error');
+		
+        }
 		
     }
 }

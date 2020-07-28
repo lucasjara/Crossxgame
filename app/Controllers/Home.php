@@ -7,13 +7,13 @@ class Home extends BaseController
 {
 	public function index()
 	{	
-		$Model_productos = new Model_productos($db);
-		$productos = $Model_productos->findAll();
-		$productos = array('productos'=>$productos);	
 		
+		$productos = "";
+		if($productos != ""){
 			return view('welcome_message',$productos);
+			}else{
+			return redirect()->to('error');
+
+			}
 	}
-
-	
-
 }

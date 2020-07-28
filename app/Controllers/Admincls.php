@@ -7,17 +7,21 @@ class Admincls extends BaseController
 {
 	public function index()
 	{	
-	$Model_registro = new Model_registro($db);
+      $session = \Config\Services::session();
+      $Rol = $session->get('Rol');
+    if($Rol == 'admin'){
+      $Model_registro = new Model_registro($db);
 
-    $cliente = $Model_registro->obtenerCliente();
+      $cliente = $Model_registro->obtenerCliente();
 
+      $datos['cliente'] = $cliente;
 
-    $datos['cliente'] = $cliente;
+      $cliente = array('cliente'=>$cliente);  
 
-    $cliente = array('cliente'=>$cliente);  
-
-
- 		return $this->vistaarray('Admincls/vista',$datos);	
+  	  return $this->vistaarray('Admincls/vista',$datos);	
+    }else{
+      return redirect()->to('prueba');
+    } 
 	}
 	
    public function cambiarEstado()

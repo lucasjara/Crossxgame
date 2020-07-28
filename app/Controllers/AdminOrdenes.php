@@ -7,19 +7,18 @@ class AdminOrdenes extends BaseController
 {
   public function index()
   { 
-
-  $Model_reserva = new Model_reserva($db);
-
-    $reserva = $Model_reserva->obtenerReserva();
-
-    $datos['reserva'] = $reserva;
-
-    $reserva = array('reserva'=>$reserva);  
-
-  return $this->vistaarray('adminordenes/vista',$datos);
+      $session = \Config\Services::session();
+      $Rol = $session->get('Rol');
+    if($Rol == 'admin'){
+      $Model_reserva = new Model_reserva($db);
+      $reserva = $Model_reserva->obtenerReserva();
+      $datos['reserva'] = $reserva;
+      $reserva = array('reserva'=>$reserva);  
+      return $this->vistaarray('adminordenes/vista',$datos);
+    }else{
+      return redirect()->to('prueba');
+    }
   }
-
-
 
     public function ActualizarEstado()
     {
@@ -27,10 +26,9 @@ class AdminOrdenes extends BaseController
 
       $Model_reserva = new Model_reserva($db);
     
-   	 $data = array(
-    'reserva_estado'=>$request->getPostGet('reserva_estado'));
+   	  $data = array('reserva_estado'=>$request->getPostGet('reserva_estado'));
 
-    $Model_reserva->update($request->getPostGet('reserva_id'),$data);
+      $Model_reserva->update($request->getPostGet('reserva_id'),$data);
 
      $this->response->setContentType('Content-Type: application/json');
         echo (json_encode('1'));  

@@ -7,14 +7,12 @@ class Admincl extends BaseController
 {
 	public function index()
 	{	
-
-
-	
-	return $this->vista_administracion('admincl/vista');
+		$session = \Config\Services::session();
+    	$Rol = $session->get('Rol');
+    	if($Rol == 'admin'){	
+			return $this->vista_administracion('admincl/vista');
+		}else{
+			return redirect()->to('prueba');
+		}
 	}
-
-
-
-	
-
 }

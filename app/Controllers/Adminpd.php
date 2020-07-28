@@ -8,12 +8,16 @@ class Adminpd extends BaseController
 
     public function index()
     {
-		$Model_depto = new Model_depto($db);
-		$datos = $Model_depto->findAll();
-		$datos = array('departamento'=>$datos);	
-    
- 		return $this->vistaarray('adminpd/vista',$datos);	
-       
+      $session = \Config\Services::session();
+      $Rol = $session->get('Rol');
+      if($Rol == 'admin'){    
+		    $Model_depto = new Model_depto($db);
+		    $datos = $Model_depto->findAll();
+		    $datos = array('departamento'=>$datos);	
+ 		    return $this->vistaarray('adminpd/vista',$datos);	
+      }else{
+        return redirect()->to('prueba');
+      } 
     }
 	
 	public function guardarDepto()

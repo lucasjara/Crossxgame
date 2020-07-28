@@ -50,8 +50,6 @@ class Producto extends BaseController
     $Model_productos->update($id,$data2);
     $this->response->setContentType('Content-Type: application/json');
         echo (json_encode('1'));  
-
   }
-
 }
 ?>

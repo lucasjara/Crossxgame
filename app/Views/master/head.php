@@ -259,8 +259,15 @@
                         }
                     }else if(data.Estado == "0"){
                         alert("Su cuenta esta deshabilitada");
+                         var request = envia_ajax_servidor('/Crossxgame/public/Login/CerrarSistema');
+                        request.done(function (data){
+            
+                         });
+                 
+
                     }else{
                         alert("Usuario no encontrado");
+
                     }
                  });
                 });

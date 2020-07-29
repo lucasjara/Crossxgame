@@ -46,6 +46,15 @@ class Model_depto extends Model
 
        return $results;
     }
+
+
+       public function ContadorDepto(){
+        // armamos la consulta
+        $query = $this->db->query('SELECT * FROM bd_local.departamento');
+        $results = $query->getResult();
+        // si hay resultados
+       return $results;
+    }
  
 
 

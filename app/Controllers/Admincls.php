@@ -17,6 +17,7 @@ class Admincls extends BaseController
       $datos['cliente'] = $cliente;
 
       $cliente = array('cliente'=>$cliente);  
+      
 
   	  return $this->vistaarray('Admincls/vista',$datos);	
     }else{

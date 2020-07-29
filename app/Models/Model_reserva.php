@@ -37,6 +37,16 @@ class Model_reserva extends Model
         // si hay resultados
         return $results;
     }
+      public function  ContadorReserva()
+    {
+
+        $query = $this->db->query("SELECT * FROM bd_local.reserva WHERE reserva_estado='Reservado'");
+
+        $results = $query->getResult();
+        // si hay resultados
+        return $results;
+    }
+   
 
 
 }

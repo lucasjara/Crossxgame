@@ -87,7 +87,13 @@ class Model_registro extends Model
         // si hay resultados
         return $results;
     }
-    public function modificarCliente(){
-        
+    public function ContadorCliente(){
+             $query = $this->db->query('SELECT a.id, a.nombre, a.apellido, a.rut, a.email, b.comuna_nombre, a.direccion, a.f_nacimiento, a.contrasenia, a.estado FROM  bd_local.cliente a, bd_local.comuna b WHERE a.comuna_id=b.comuna_id and a.rol="cliente"');
+
+        $results = $query->getResult();
+        // si hay resultados
+        return $results;
+
+
     }
 }

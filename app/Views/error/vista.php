@@ -8,7 +8,7 @@
 	<br>
 <div class="alert alert-danger" role="alert">
   <h4 class="alert-heading">UPS!</h4>
-  <p>Error 404, La página que buscas no existe.</p>
+  <p>Error 404, La página que buscas no existe o no esta disponible en este momento.</p>
   <hr>
   <p class="mb-0">Clickea <a href="/Crossxgame/public/prueba">Aquí</a> para volver a la Página Principal.</p>
 

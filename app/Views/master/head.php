@@ -244,11 +244,15 @@
                         emailLogin: $("#txtEmailModal").val(),
                         contraseñaLogin: $("#txtContraseñaModal").val()
                     };
+
                     var request = envia_ajax_servidor('/Crossxgame/public/Login/LoginSistema', array);
+
                     request.done(function(data) {
                      console.log(data.Estado);
                      if(data.Estado == "1"){
+
                         if(data.Rol =="admin"){
+
                             window.location = "/Crossxgame/public/adminindex";
                         }else{
                             location.reload();
@@ -258,7 +262,7 @@
                     }else{
                         alert("Usuario no encontrado");
                     }
-                });
+                 });
                 });
 
                 $("#btnCerrarSesion").on("click", function() {

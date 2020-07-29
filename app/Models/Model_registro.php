@@ -68,7 +68,7 @@ class Model_registro extends Model
             }
 
             if (password_verify($password, $arrDatos)) {
-
+                
             } else {
                 $results = "No verifico";
             }

@@ -16,3 +16,4 @@ class Admincl extends BaseController
 		}
 	}
 }
+?>

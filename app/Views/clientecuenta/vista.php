@@ -107,6 +107,8 @@
 									<p><?php echo $f_nacimiento?></p>
 
 									<h4><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalmodificación">Editar Datos</button></h4>
+									<p></p>
+									<h4><button type="button" class="btn btn-danger" onclick="bajaCuenta(<?php echo $id?>)">Dar de baja cuenta</button></h4>
 								</div>
 							</div>
 						</br>
@@ -277,7 +279,7 @@
 
 	    var array2 = {
 
-	      reserva_id: $data,  
+	     reserva_id: $data,  
 	     reserva_estado: 'Cancelado'    
 	    };
 
@@ -290,4 +292,16 @@
 	     
 	  }	    
 
+	  function bajaCuenta($data){
+	  	var	array2={
+	  		id: $data,
+	  		estado:'0'
+	  	};
+	  	var request = envia_ajax_servidor('/Crossxgame/public/Admincls/cambiarEstado', array2);
+	  	request.done(function (data){
+	    	alert("Cliente dado de baja.");
+	    location.reload(true);
+	      
+	    });
+	  }
 	</script>

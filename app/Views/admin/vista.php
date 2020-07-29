@@ -38,7 +38,7 @@
                           <div class="form-group col-md-6">
                                 <label for="inputAddress">Departamento</label>
                                 <select id="selectDepto" class="form-control" style="border-radius: 1em">
-                                <option selected="">Seleccione Departamento...</option>
+                                <option selected="" value="0">Seleccione Departamento...</option>
                               <?php
                                 foreach ($arrayDepto as $i => $descripcion)
                                   echo '<option value="',$i,'">',$descripcion,'</option>';    
@@ -205,13 +205,15 @@ echo "</tr>";
             id_depto: $("#selectDepto").val(),  
             img: $("#inputGroupFile01").val()
         };
-        if(array['nombre']!="" && array['nombre']!=null && array['stock']!="" && array['stock']!=null && array['precio']!="" && array['precio']!=null && array['descripcion']!="" && array['descripcion']!=null && array['id_depto']!="" && array['id_depto']!=null){
-        var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
-    //   limpiarFormulario();
-        request.done(function (data){
+        if(array['nombre']!="" && array['nombre']!=null && array['stock']!="" && array['stock']!=null && array['precio']!="" && array['precio']!=null && array['descripcion']!="" && array['descripcion']!=null && array['id_depto']!="0"){
+          //if(array['img'] == null && array['img'] == "" ){
+           alert("Hoo!! veo que no estas registrando producto con imagen, por el momento se registrara con una imagen por defecto."); 
+           var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
+           request.done(function (data){
            alert("Datos Registrados con exito");
            location.reload(true);
-        });
+          });
+        //}
       }else{
         alert("No debe dejar campos vacios");
       }

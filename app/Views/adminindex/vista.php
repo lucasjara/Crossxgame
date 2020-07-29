@@ -14,10 +14,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<form>
+				<form enctype="multipart/form-data" method="POST" action="AdminIndex/store">
 				<span class="container">Imagen N°1 Visor</span></br>
-				<input type="file">
-				<input type="button" value="Subir Imagen">
+				<input type="file" name="imagen1">
+				<input type="submit" value="Subir Imagen">
 				</form>
 			</div>
 			<div class="col">

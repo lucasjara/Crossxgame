@@ -26,13 +26,14 @@ class Admin extends BaseController
    $request = \Config\Services::request();
 
    $Model_productos = new Model_productos($db);
+   $imagen = $this->request->getFile('ImagenProducto');
 
    $data = array('nombre'=>$request->getPostGet('nombre'),
      'stock'=>$request->getPostGet('stock'),
      'precio'=>$request->getPostGet('precio'),
      'descripcion'=>$request->getPostGet('descripcion'),
      'id_depto'=>$request->getPostGet('id_depto'),
-     'img'=>"nn.jpg");
+     'img'=>$imagen);
 
    $Model_productos->insert($data);
    $this->response->setContentType('Content-Type: application/json');

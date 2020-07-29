@@ -84,7 +84,6 @@
 							<p>Productos</p>
 						</div>
 					</div>
-
 					<div class="column">
 						<div class="card">
 							<p><i class="fa fa-tags"></i></p>

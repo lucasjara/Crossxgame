@@ -12,7 +12,7 @@
       <button type="button" id="btnBuscarAdmincliente" name="btnBuscarAdmincliente"><i class="flaticon-search"></i></button>
     </form>
     </div>
-        <h2>Ordenes</h2>
+        <h2>Clientes</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm" id="tabla-producto">
             <thead>

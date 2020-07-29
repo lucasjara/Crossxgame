@@ -24,7 +24,7 @@
             </div>
             <div class="col-6 col-md-4">
                 <div class="footer-widget about-widget">
-                    <h2>HACERCA DE NOSOTROS</h2>
+                    <h2>ACERCA DE NOSOTROS</h2>
                     <ul>
  
                         <li><a href="">inicio</a></li>

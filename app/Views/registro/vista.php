@@ -141,12 +141,23 @@
             estado: "1",
             rol: rol,
         };
-        var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
-       
-        request.done(function (data){
-             limpiarFormulario();
+        var password = $("#txtContraseña").val();
+        var passwordConf = $("#txtRepetirContraseña").val();
+        if(array['nombre'] !="" && array['nombre'] != null && array['apellido'] !="" && array['apellido'] != null && array['rut'] !="" && array['rut'] != null && array['email'] !="" && array['email'] != null && array['comuna'] !="0" && array['direccion'] !="" && array['direccion'] != null && array['contrasenia'] !="" && array['contrasenia'] != null ){
+            if(password == passwordConf){
+                var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
+                alert("Se ha registrado exitosamente");
+                request.done(function (data){
+
+                window.location = "/Crossxgame/public/prueba";
             
-        });
+            });
+        }else{
+            alert("Las contraseñas deben ser iguales");
+        }
+    }else{
+        alert("No se deben dejar campos vacios");
+    }
     });
 </script>
 

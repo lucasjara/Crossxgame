@@ -35,6 +35,8 @@ class Registro extends BaseController
                    );
  
       $Model_registro->insert($data); 
+      $this->response->setContentType('Content-Type: application/json');
+        echo (json_encode('1'));
     }
     
     function ObtenerComuna(){

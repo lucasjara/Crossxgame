@@ -16,6 +16,7 @@ class Login extends BaseController
         if ($id_session != "" && $id_session != null ) {
             echo "Conectados";
         } else {
+            session_destroy();
             echo "Desconectados";
         }
         // $this->index();

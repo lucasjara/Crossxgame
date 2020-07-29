@@ -47,8 +47,9 @@
                            </div>
                           <div class="form-group col-md-6">
                             <label for="inputAddress">imagen</label>
+                           
                                   <div class="custom-file">
-                                  <input type="file" id="ImagenProducto" name="ImagenProducto">
+                                  <input type="file" class="custom-file-input"  id="customFileLang" lang="es">
                                   <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
                             </div>
                         </div>
@@ -201,7 +202,7 @@ echo "</tr>";
             precio: $("#txtprecio").val(),
             descripcion: $("#txtdescripcion").val(),  
             id_depto: $("#selectDepto").val(),  
-            
+            img: $("#inputGroupFile01").val()
         };
 
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);

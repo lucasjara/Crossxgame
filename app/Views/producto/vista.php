@@ -1,4 +1,5 @@
 <?php
+
 $idp=base64_decode($_GET["id"]);
 ?>
 
@@ -40,80 +41,81 @@ $idp=base64_decode($_GET["id"]);
 
 					}
 					?>		
-					</br>		
-						</br>	
-<div class="p-stock">NOTA: Stock desfasado en 20 minutos.</div>
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">¿Desea reservar el producto?</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									La reserva del producto estara habilitada por 24 hrs a partir desde ahora, Reserva Disponible hasta el día<a id="demo1" class="modal-body"></a>a las<a id="hora" class="modal-body"></a>Para mas Informacion valla al apartado "Detalles de reserva".
-								</div>
-								<div class="modal-footer">
-									<button type="button" id="btnReserva" class="btn btn-primary">Reservar Producto</button>
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-								</div>
-							</div>
+				</br>		
+			</br>	
+			<div class="p-stock">NOTA: Stock desfasado en 20 minutos.</div>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">¿Desea reservar el producto?</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
 						</div>
-					</div>
-					<!--end Modal-->
-					
-					<div id="accordion" class="accordion-area">
-
-						<div class="panel">
-
-							<div class="panel-header" id="headingOne">
-								<button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Informacion</button>
-							</div>
-							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-								<div class="panel-body">
-									<?php echo "".$descripcion; ?>
-								</div>
-							</div>
+						<div class="modal-body">
+							La reserva del producto estara habilitada por 24 hrs a partir desde ahora, Reserva Disponible hasta el día<a id="demo1" class="modal-body"></a>a las<a id="hora" class="modal-body"></a>Para mas Informacion valla al apartado "Detalles de reserva".
 						</div>
-						<div class="panel">
-							<div class="panel-header" id="headingTwo">
-								<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Detalles de reserva </button>
-							</div>
-							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-								<div class="panel-body">
-									
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integer bibendum sodales arcu id te mpus. Ut consectetur lacus leo, non scelerisque nulla euismod nec.</p>
-								</div>
-							</div>
+						<div class="modal-footer">
+							<button type="button" id="btnReserva" class="btn btn-primary">Reservar Producto</button>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
 						</div>
-
-					</div>
-					<div class="social-sharing">
-						<a href=""><i class="fa fa-google-plus"></i></a>
-						<a href=""><i class="fa fa-pinterest"></i></a>
-						<a href=""><i class="fa fa-facebook"></i></a>
-						<a href=""><i class="fa fa-twitter"></i></a>
-						<a href=""><i class="fa fa-youtube"></i></a>
-						<?php	echo "<input type=text id='code' value='".$idp."'";?>  
-						<?php echo "style='visibility:hidden'>";?>	
-						<?php	echo "<input type=text id='stock' value='".$stock."'";?>  
-						<?php echo "style='visibility:hidden'>";?>	
-
 					</div>
 				</div>
 			</div>
+			<!--end Modal-->
+
+			<div id="accordion" class="accordion-area">
+
+				<div class="panel">
+
+					<div class="panel-header" id="headingOne">
+						<button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Informacion</button>
+					</div>
+					<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="panel-body">
+							<?php echo "".$descripcion; ?>
+							</br>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-header" id="headingTwo">
+						<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Detalles de reserva </button>
+					</div>
+					<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="panel-body">
+
+							Las Reservas de Productos Pueden hacerse las 24hrs del día los 7 días  de la semana,Requerda que la página algunos minutos de desfase, Por esto el administrador puede cancelar el pedido dentro de 20 minutos a partir de que realizaste la reserva, para mayor informacion puede dirigirte en la barra del menu al apartado de "Contactanos".
+							</br>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="social-sharing">
+				<a href=""><i class="fa fa-google-plus"></i></a>
+				<a href=""><i class="fa fa-pinterest"></i></a>
+				<a href=""><i class="fa fa-facebook"></i></a>
+				<a href=""><i class="fa fa-twitter"></i></a>
+				<a href=""><i class="fa fa-youtube"></i></a>
+				<?php	echo "<input type=text id='code' value='".$idp."'";?>  
+				<?php echo "style='visibility:hidden'>";?>	
+				<?php	echo "<input type=text id='stock' value='".$stock."'";?>  
+				<?php echo "style='visibility:hidden'>";?>	
+
+			</div>
 		</div>
-	</section>
+	</div>
+</div>
+</section>
 </body>
 <script>
 	var f = new Date();
 	//document.getElementById("demo1").innerHTML = (f.getDate()+1)+ "-" + (f.getMonth() +1) + "-" + f.getFullYear();
-document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth() +1) + "-" + f.getFullYear();
+	document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth() +1) + "-" + f.getFullYear();
 </script>
 <script>
 	var d = new Date();
@@ -132,14 +134,15 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 		});
 		return variable;
 	}
-	$cliente=<?php echo session()->get('Codigo');?>;
+	$cliente="<?php echo session()->get('Codigo');?>";
 	$fecha = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()) );
 	$fechal = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()+2) );
 	$("#btnReserva").on("click",function(){
-		
-		if(parseInt($("#cantidad").val())==0){
+	if($cliente==""){
+		alert("Debe Registrarse para Reservar");
+	}else if(parseInt($("#cantidad").val())==0){
 
-		alert("No puede Reservar 0 Productos.");
+			alert("No puede Reservar 0 Productos.");
 
 		}else if(parseInt($("#cantidad").val())>parseInt(($("#stock").val()))){
 
@@ -157,9 +160,9 @@ document.getElementById("demo1").innerHTML =(f.getDate()+2)+ "-" + (f.getMonth()
 			};
 			var request = envia_ajax_servidor('/Crossxgame/public/producto/ReservarProducto', array);
 			alert("Usted a reservado  "+$("#cantidad").val()+" Productos.");
-  		  request.done(function (data){
-    	 location.reload(true);	
-    });  		 
-}
-});
+			request.done(function (data){
+				location.reload(true);	
+			});  		 
+		}
+	});
 </script>

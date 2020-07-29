@@ -207,6 +207,8 @@ echo "</tr>";
         };
         if(array['nombre']!="" && array['nombre']!=null && array['stock']!="" && array['stock']!=null && array['precio']!="" && array['precio']!=null && array['descripcion']!="" && array['descripcion']!=null && array['id_depto']!="0"){
           //if(array['img'] == null && array['img'] == "" ){
+            if(array['nombre'].length < '21' && array['nombre'].length > '2'){
+              if(array['descripcion'].length > '9' && array['descripcion'].length < '301'){
            alert("Hoo!! veo que no estas registrando producto con imagen, por el momento se registrara con una imagen por defecto."); 
            var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
            request.done(function (data){
@@ -214,6 +216,12 @@ echo "</tr>";
            location.reload(true);
           });
         //}
+      }else{
+        alert("La descripción no puede superar la cantidad de 300 caracteres y no sean menos de 10");
+      }
+      }else{
+        alert("El nombre no puede superar la cantidad de 20 caracteres y no sean menos de 3");
+      }
       }else{
         alert("No debe dejar campos vacios");
       }

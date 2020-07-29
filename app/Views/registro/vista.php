@@ -144,21 +144,45 @@
         var password = $("#txtContraseña").val();
         var passwordConf = $("#txtRepetirContraseña").val();
         if(array['nombre'] !="" && array['nombre'] != null && array['apellido'] !="" && array['apellido'] != null && array['rut'] !="" && array['rut'] != null && array['email'] !="" && array['email'] != null && array['comuna'] !="0" && array['direccion'] !="" && array['direccion'] != null && array['contrasenia'] !="" && array['contrasenia'] != null ){
-            if(password == passwordConf){
-                var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
-                alert("Se ha registrado exitosamente");
-                request.done(function (data){
+            if(array['nombre'].length < '21' && array['nombre'].length > '4'){
+                if(array['apellido'].length < '21' && array['apellido'].length > '1'){
+                    if(array['rut'].length < '13' && array['rut'].length > '6'){
+                        if(array['direccion'].length < '31' && array['direccion'].length > '4'){
+                            if(array['contrasenia'].length < '21' && array['contrasenia'].length > '4'){
+                                if(array['email'].length < '41'){
+                                    if(password == passwordConf){
+                                        var request = envia_ajax_servidor('/Crossxgame/public/Registro/guardar', array);
+                                        alert("Se ha registrado exitosamente");
+                                        request.done(function (data){
 
-                window.location = "/Crossxgame/public/prueba";
+                                        window.location = "/Crossxgame/public/prueba";
             
-            });
+                                        });
+                                    }else{
+                                    alert("Las contraseñas deben ser iguales");
+                                    }
+                                }else{
+                                alert("El email debe cumplir con un máximo de 40 caracteres");
+                                }
+                            }else{
+                                alert("Debe ingresar una contraseña de un máximo de 20 caracteres y con un mínimo de 5");
+                            }    
+                        }else{
+                            alert("La dirección no puede superar la cantidad 30 caracteres y no sean menos de 5 ");
+                        }
+                    }else{
+                         alert("El rut debe poseer un mínimo de 7 y un máximo de 12");
+                    }
+                }else{
+                    alert("El apellido no puede superar la cantidad 20 caracteres y no sean menos de 2");
+                }
+            }else{
+                 alert("El nombre no puede superar la cantidad 20 caracteres y no sean menos de 5");
+            }
         }else{
-            alert("Las contraseñas deben ser iguales");
-        }
-    }else{
-        alert("No se deben dejar campos vacios");
-    }
-    });
+             alert("No se deben dejar campos vacios");
+         }
+        });
 </script>
 
 

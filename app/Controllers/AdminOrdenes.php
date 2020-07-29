@@ -10,11 +10,22 @@ class AdminOrdenes extends BaseController
       $session = \Config\Services::session();
       $Rol = $session->get('Rol');
     if($Rol == 'admin'){
+      $request = \Config\Services::request();
+      $rut = $request->getPostGet('rut');
+
+      if($rut !="" && $rut !=null){
+      $Model_reserva = new Model_reserva($db);
+      $reserva = $Model_reserva->BuscarReservaCliente($rut);
+      $datos['reserva'] = $reserva;
+      $reserva = array('reserva'=>$reserva); 
+      return $this->vistaarray('adminordenes/vista',$datos);
+    }else{
       $Model_reserva = new Model_reserva($db);
       $reserva = $Model_reserva->obtenerReserva();
       $datos['reserva'] = $reserva;
       $reserva = array('reserva'=>$reserva);  
       return $this->vistaarray('adminordenes/vista',$datos);
+    }
     }else{
       return redirect()->to('prueba');
     }

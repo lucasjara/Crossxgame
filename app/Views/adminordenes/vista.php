@@ -9,9 +9,14 @@
         </div>
       </div>
 
-      <form  class="contact-form" id="myForm"  enctype="multipart/form-data" >
+      <div style="padding-left: 60%" class="col-xl-12 col-lg-5">
+    <form id="formBusquedaAdmincliente" class="header-search-form" method="POST">
+      <input type="text" name="txtBuscadorAdmincliente" id="txtBuscadorAdmincliente" placeholder="Busca reservas por rut de cliente....">
+      <button type="button" id="btnBuscarAdmincliente" name="btnBuscarAdmincliente"><i class="flaticon-search"></i></button>
+    </form>
+    </div>
+      
 
-      </form>
       <h2>Ordenes</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm" id="tabla-producto">
@@ -145,4 +150,10 @@
     });
  
   }
+
+  $("#btnBuscarAdmincliente").on("click", function(){
+              $("#formBusquedaAdmincliente").attr("action", "AdminOrdenes" + "?rut="+$("#txtBuscadorAdmincliente").val());
+             
+               $("#formBusquedaAdmincliente").submit(); 
+         });
 </script>

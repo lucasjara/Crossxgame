@@ -10,6 +10,16 @@ class Admincls extends BaseController
       $session = \Config\Services::session();
       $Rol = $session->get('Rol');
     if($Rol == 'admin'){
+      $request = \Config\Services::request();
+      $rut = $request->getPostGet('rut');
+      if($rut !="" && $rut !=null){
+        $Model_registro = new Model_registro($db);
+        $cliente = $Model_registro->BuscarCliente($rut);
+        $datos['cliente'] = $cliente;
+        $cliente = array('cliente'=>$cliente);
+        return $this->vistaarray('Admincls/vista',$datos); 
+      }else{
+        
       $Model_registro = new Model_registro($db);
 
       $cliente = $Model_registro->obtenerCliente();
@@ -17,9 +27,8 @@ class Admincls extends BaseController
       $datos['cliente'] = $cliente;
 
       $cliente = array('cliente'=>$cliente);  
-      
-
-  	  return $this->vistaarray('Admincls/vista',$datos);	
+  	  return $this->vistaarray('Admincls/vista',$datos);
+      }	
     }else{
       return redirect()->to('prueba');
     } 

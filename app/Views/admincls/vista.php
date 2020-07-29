@@ -6,10 +6,12 @@
             </div>      
           </div>
         </div>
-
-        <form  class="contact-form" id="myForm"  enctype="multipart/form-data" >
-
-        </form>
+    <div style="padding-left: 60%" class="col-xl-12 col-lg-5">
+    <form id="formBusquedaAdmincliente" class="header-search-form" method="POST">
+      <input type="text" name="txtBuscadorAdmincliente" id="txtBuscadorAdmincliente" placeholder="Busca un cliente por su rut....">
+      <button type="button" id="btnBuscarAdmincliente" name="btnBuscarAdmincliente"><i class="flaticon-search"></i></button>
+    </form>
+    </div>
         <h2>Ordenes</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm" id="tabla-producto">
@@ -125,4 +127,9 @@
          location.reload(true);
         });
       }
+      $("#btnBuscarAdmincliente").on("click", function(){
+              $("#formBusquedaAdmincliente").attr("action", "Admincls" + "?rut="+$("#txtBuscadorAdmincliente").val());
+             
+               $("#formBusquedaAdmincliente").submit(); 
+         });
     </script>

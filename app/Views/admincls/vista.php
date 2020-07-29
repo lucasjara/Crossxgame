@@ -124,7 +124,5 @@
         request.done(function (data){
          location.reload(true);
         });
-
-        
       }
     </script>

@@ -1,3 +1,4 @@
+	
 		<!-----------------------------------------Modal--------------------------------------------------->
 		<form class="contact-form" id="miFormActualizacion">
 			<div class="modal fade" id="Modalmodificación" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -59,7 +60,6 @@
 									</div>
 								</form>
 							</div>
-
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
 								<button type="button" id="btnModificar" name="btnModificar" onclick="ActualizarDatos(<?php echo $id?>)" class="btn btn-primary">Modificar</button>

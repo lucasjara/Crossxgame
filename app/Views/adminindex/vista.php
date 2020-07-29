@@ -50,7 +50,7 @@
 
 		</div>
 		<div class="container">
-			<body>
+			
 
 				<h4>Resumen</h4>
 
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 		</div>
-	</br>	</br>	</br>	</br>	</br>	</br>	</br>	</br>
+	</br>	</br>	</br>	</br>	</br>	</br>	</br>	</br></br>	</br>	</br>
 </br>
 </main>
 </div>

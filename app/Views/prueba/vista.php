@@ -204,7 +204,7 @@
             <br>
             <br>
             <br>
-            <div class="banner set-bg" data-setbg="public/crossxgame/img/banner.jpg">
+            <div class="banner set-bg" data-setbg="public/crossxgame/img/banner-mid.jpg">
                 <div class="tag-new">Nuevo</div>
                 <br>
                 <br>

@@ -16,7 +16,7 @@
 									echo'</div>';
 								echo'	</div>';
 							echo'<div class="pi-text">';
-								echo"<h6>".$producto->precio."</h6>";
+								echo"<h6>$".$producto->precio."</h6>";
 								echo "<p>".$producto->nombre."</p>";
 							echo'	</div>';
 						echo'	</div>';

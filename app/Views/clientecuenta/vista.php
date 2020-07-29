@@ -130,7 +130,11 @@
 
 									<h4><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalmodificación">Editar Datos</button></h4>
 									<p></p>
-									<h4><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" >Dar de baja cuenta</button></h4>
+									<?php
+									if($rol!="admin"){
+									echo "<h4><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#exampleModal' >Dar de baja cuenta</button></h4>";
+									}
+									?>
 								</div>
 							</div>
 						</br>

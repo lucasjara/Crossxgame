@@ -135,8 +135,8 @@ $idp=base64_decode($_GET["id"]);
 		return variable;
 	}
 	$cliente="<?php echo session()->get('Codigo');?>";
-	$fecha = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()) );
-	$fechal = ( f.getFullYear()+ "-" +(f.getMonth() )+ "-" + (f.getDate()+2) );
+	$fecha = ( f.getFullYear()+ "-" +(f.getMonth()+1 )+ "-" + (f.getDate()) );
+	$fechal = ( f.getFullYear()+ "-" +(f.getMonth()+1)+ "-" + (f.getDate()+2) );
 	$("#btnReserva").on("click",function(){
 	if($cliente==""){
 		alert("Debe Registrarse para Reservar");
@@ -154,12 +154,12 @@ $idp=base64_decode($_GET["id"]);
 				id_prod: $("#code").val(),
 				cantidad: $("#cantidad").val(),
 				id_cli: $cliente,
-				fecha_limite:$fechal,
+				fecha_limite: $fechal,
 				reserva_estado:$("#txtdatos").val(),
 				stock:parseInt($("#stock").val()-$("#cantidad").val())
 			};
 			var request = envia_ajax_servidor('/Crossxgame/public/producto/ReservarProducto', array);
-			alert("Usted a reservado  "+$("#cantidad").val()+" Productos.");
+			alert("Usted a reservado  "+$("#cantidad").val()+"Productos.");
 			request.done(function (data){
 				location.reload(true);	
 			});  		 

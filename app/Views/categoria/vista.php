@@ -2,75 +2,26 @@
 	<section class="category-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 order-2 order-lg-1">
-					<div class="filter-widget">
-						<h2 class="fw-title">Categorias</h2>
-						<ul class="category-menu">
-							<li><a href="#">Consola Ps4</a>
-							</li>
-							<li><a href="#">Consola Ps3</a>
-							</li>
-							<li><a href="#">Consola Xbox One</a>
-							</li>
-							<li><a href="#">Consola Xbox 360</a>
-							</li>
-							<li><a href="#">Consola Nintendo Switch</a>
-							</li>
-							<li><a href="#">Consola Nintendo 3Ds</a>
-							</li>	
-						</ul>
-					</div>
-					<div class="filter-widget mb-0">
-						<h2 class="fw-title">Ordenar</h2>
-						<div class="price-range-wrap" >
-							<h4>Precio</h4>
-                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="0" data-max="499990">
-								<div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div>
-								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;">
-								</span>
-								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;">
-								</span>
-							</div>
-							<div class="range-slider">
-                                <div class="price-input">
-                                    <input type="text" id="minamount">
-                                    <input type="text" id="maxamount">
-                                </div>
-                            </div>
-                        </div>
-					</div>
-				</div>
-
-				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
+				<div class="col-lg-12">
 					<div class="row">
-					
-<?php 
-foreach ($productos as $producto ) {
-
-
-						echo '<div class="col-lg-4 col-sm-6">';
+						<?php 
+						foreach ($productos as $producto ) {
+							echo '<div class="col-lg-3 col-sm-4">';
 							echo'<div class="product-item">';
-								echo'<div class="pi-pic">';
-							
-									echo'<img src="public/crossxgame/img/product/'.$producto['img'].'">';
-									echo'<div class="pi-links">';
-									echo'	<a href="#" class="add-card"><i class="flaticon-bag"></i><span>Reservar</span></a>';
-									echo'</div>';
-							echo'	</div>';
-								echo'<div class="pi-text">';
-									echo"<h6>$".$producto['precio']."</h6>";
-								echo "<p>".$producto['nombre']."</p>";
-							echo'	</div>';
-						echo'	</div>';
-						echo'</div>';
-						
-				
+							echo'<div class="pi-pic">';		
+							echo'<a href=producto?id='. base64_encode($producto->id).'><img src="public/crossxgame/img/product/'.$producto->img.'"> </a>';
+							echo'<div class="pi-links">';
 
-}
-?>
-						<div class="text-center w-100 pt-3">
-							<button class="site-btn sb-line sb-dark">Ver más</button>
-						</div>
+							echo'</div>';
+							echo'	</div>';
+							echo'<div class="pi-text">';
+							echo"<h6>".$producto->precio."</h6>";
+							echo "<p>".$producto->nombre."</p>";
+							echo'	</div>';
+							echo'	</div>';
+							echo'</div>';
+							};
+						?>
 					</div>
 				</div>
 			</div>

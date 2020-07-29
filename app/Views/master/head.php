@@ -32,7 +32,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<![endif]-->
 
 </head>
 
@@ -56,31 +56,31 @@
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="user-panel">
-                                <div class="up-item">
-                                    <i class="flaticon-profile"></i>
-                                    <!--aqui pon el modal mijo!!!!-->
-                                    <?php
-                                        $rol = session()->get('Rol');
-                                        if (isset($id) && $id != "") {
+                            <div class="up-item">
+                                <i class="flaticon-profile"></i>
+                                <!--aqui pon el modal mijo!!!!-->
+                                <?php
+                                $rol = session()->get('Rol');
+                                if (isset($id) && $id != "") {
                                     ?>
-                                        <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
+                                    <a data-toggle="modal">Saludos </a> <a style="font-weight: bold;"><?php echo session()->get('Nombre');?></a>
                                     <?php
-                                        if ($rol == "admin") {
-                                    ?>
+                                    if ($rol == "admin") {
+                                        ?>
                                         <a type="button" id="btnAdmin" href="/Crossxgame/public/adminindex" name="btnAdmin">| Modo Admin</a> 
-                                    <?php
-                                        }
+                                        <?php
+                                    }
                                     ?>
-                                        <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente" href="/Crossxgame/public/clientecuenta" >| Mi cuenta</a>        
-                                        <a type="button" id="btnCerrarSesion" href="" name="btnCerrarSesion">| Cerrar Sesión</a> 
+                                    <a type="button" id="btnMiCuentaCliente" name="btnMiCuentaCliente" href="/Crossxgame/public/clientecuenta" >| Mi cuenta</a>        
+                                    <a type="button" id="btnCerrarSesion" href="" name="btnCerrarSesion">| Cerrar Sesión</a> 
                                     <?php
-                                        } else {
+                                } else {
                                     ?>
-                                        <a data-toggle="modal" data-target="#ModalLogin">Ingresar o Crear cuenta</a>
+                                    <a data-toggle="modal" data-target="#ModalLogin">Ingresar o Crear cuenta</a>
                                     <?php
-                                        }
-                                    ?>
-                                </div>
+                                }
+                                ?>
+                            </div>
                             <form class="contact-form" id="miFormLogin">
                                 <!-- Modal -->
                                 <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -106,170 +106,174 @@
                                                         <div class="up-item">
                                                             <i class="breadcrumb-item">
                                                                 <a href="/Crossxgame/public/registro">Crear cuenta </a></i>
-                                                        </div>
+                                                            </div>
 
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" id="btnIngresar" name="btnIngresar" class="btn btn-primary">Ingresar</button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                        <button type="button" id="btnIngresar" name="btnIngresar" class="btn btn-primary">Ingresar</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <nav class="main-navbar">
-            <div class="container">
-                <!-- menu -->
-                <ul class="main-menu">
-                    <li><a href="/Crossxgame/public/prueba">Inicio</a></li>
-                    <li><a href="/Crossxgame/public/Categoria">Consolas</a>
-                        <ul class="sub-menu">
-                            <li><a href="/Crossxgame/public/producto">Consola PS4</a></li>
-                            <li><a href="#">Consola PS3</a></li>
-                            <li><a href="#">Consola PSP</a></li>
-                            <li><a href="#">Consola Switch</a></li>
-                            <li><a href="#">Consola Wii</a></li>
-                            <li><a href="#">Consola 3DS</a></li>
-                            <li><a href="#">Consola DS</a></li>
-                            <li><a href="#">Consola Xbox One</a></li>
-                            <li><a href="#">Consola Xbox 360</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/Crossxgame/public/Categoria">Accesorios</a>
-                        <ul class="sub-menu">
-                            <li><a href="/Crossxgame/public/producto">Accesorios PS4</a></li>
-                            <li><a href="#">Accesorios PS3</a></li>
-                            <li><a href="#">Accesorios PSP</a></li>
-                            <li><a href="#">Accesorios PS Vita</a></li>
-                            <li><a href="#">Accesorios Switch</a></li>
-                            <li><a href="#">Accesorios Wii</a></li>
-                            <li><a href="#">Accesorios Wii U</a></li>
-                            <li><a href="#">Accesorios 3DS</a></li>
-                            <li><a href="#">Accesorios DS</a></li>
-                            <li><a href="#">Accesorios Xbox One</a></li>
-                            <li><a href="#">Accesorios Xbox 360</a></li>
-                        </ul>
-                    </li>
+            <nav class="main-navbar">
+                <div class="container">
+                    <!-- menu -->
+                    <ul class="main-menu">
+                        <li><a href="/Crossxgame/public/prueba">Inicio</a></li>
+                        <li><a href="">Consolas</a>
+                            <ul class="sub-menu">
+                                <li><a href="/Crossxgame/public/categoria?id_depto=35">Consola PS4</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=36">Consola PS3</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=37">Consola Switch</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=41">Consola Xbox One</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=39">Consola Xbox 360</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Consola PSP</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Consola Wii</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=40">Consola 3DS</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Consola DS</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="">Accesorios</a>
+                            <ul class="sub-menu">
+                                <li><a href="/Crossxgame/public/categoria?id_depto=28">Accesorios PS4</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=29">Accesorios PS3</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=32">Accesorios Switch</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=30">Accesorios Xbox One</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Accesorios Xbox 360</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Accesorios PSP</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Accesorios PS Vita</a></li>
+                                
+                                <li><a href="/Crossxgame/public/categoria?id_depto=33">Accesorios Wii</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Accesorios Wii U</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Accesorios 3DS</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Accesorios DS</a></li>
+                                
+                            </ul>
+                        </li>
 
-                    <li><a href="/Crossxgame/public/Categoria">Juegos Nuevos</a>
-                        <ul class="sub-menu">
-                            <li><a href="/Crossxgame/public/producto">Juegos PS4</a></li>
-                            <li><a href="#">Juegos PS3</a></li>
-                            <li><a href="#">Juegos PSP</a></li>
-                            <li><a href="#">Juegos PS Vita</a></li>
-                            <li><a href="#">Juegos Switch</a></li>
-                            <li><a href="#">Juegos Wii</a></li>
-                            <li><a href="#">Juegos Wii U</a></li>
-                            <li><a href="#">Juegos 3DS</a></li>
-                            <li><a href="#">Juegos DS</a></li>
-                            <li><a href="#">Juegos Xbox One</a></li>
-                            <li><a href="#">Juegos Xbox 360</a></li>
+                        <li><a href="">Juegos Nuevos</a>
+                            <ul class="sub-menu">
+                                <li><a href="/Crossxgame/public/categoria?id_depto=1">Juegos PS4</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=3">Juegos PS3</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=5">Juegos Switch</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=7">Juegos Xbox One</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=9">Juegos Xbox 360</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=44">Juegos PS Vita</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=46">Juegos psp</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=48">Juegos Wii</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=50">Juegos Wii U</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=52">Juegos 3DS</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=54">Juegos DS</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="">Juegos usados</a>
+                            <ul class="sub-menu">
+                                <li><a href="/Crossxgame/public/categoria?id_depto=2">Juegos PS4</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=4">Juegos PS3</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=6">Juegos Switch</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=8">Juegos Xbox One</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=10">Juegos Xbox 360</a></li> 
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Juegos PSP</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Juegos PS Vita</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Juegos Wii</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Juegos Wii U</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Juegos 3DS</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Juegos DS</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="">Figuras y otros</a>
+                            <ul class="sub-menu">
+                                <li><a href="/Crossxgame/public/categoria?id_depto=21">Funko Pop</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Mug</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=34">Figuras</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">Poleras</a></li>
+                                <li><a href="/Crossxgame/public/categoria?id_depto=0">llaveros y otros</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Servicios Tecnicos</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Servicios PS4</a></li>
+                                <li><a href="#">Servicios PS3</a></li>
+                                <li><a href="#">Servicios PSP</a></li>
+                                <li><a href="#">Servicios PS Vita</a></li>
+                                <li><a href="#">Servicios Switch</a></li>
+                                <li><a href="#">Servicios Wii</a></li>
+                                <li><a href="#">Servicios Wii U</a></li>
+                                <li><a href="#">Servicios 3DS</a></li>
+                                <li><a href="#">Servicios DS</a></li>
+                                <li><a href="#">Servicios Xbox One</a></li>
+                                <li><a href="#">Servicios Xbox 360</a></li>
+                            </ul>
+                            <li><a href="/Crossxgame/public/contacto">Contactanos</a>
+                            </li>
                         </ul>
-                    </li>
-                    <li><a href="/Crossxgame/public/Categoria">Juegos usados</a>
-                        <ul class="sub-menu">
-                            <li><a href="/Crossxgame/public/producto">Juegos PS4</a></li>
-                            <li><a href="#">Juegos PS3</a></li>
-                            <li><a href="#">Juegos PSP</a></li>
-                            <li><a href="#">Juegos PS Vita</a></li>
-                            <li><a href="#">Juegos Switch</a></li>
-                            <li><a href="#">Juegos Wii</a></li>
-                            <li><a href="#">Juegos Wii U</a></li>
-                            <li><a href="#">Juegos 3DS</a></li>
-                            <li><a href="#">Juegos DS</a></li>
-                            <li><a href="#">Juegos Xbox One</a></li>
-                            <li><a href="#">Juegos Xbox 360</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/Crossxgame/public/Categoria">Figuras y otros
-                            <!--    <span class="new">New</span> --></a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Funko Pop</a></li>
-                            <li><a href="#">Mug</a></li>
-                            <li><a href="#">Figuras</a></li>
-                            <li><a href="#">Poleras</a></li>
-                            <li><a href="#">Billeteras</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Servicios Tecnicos</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Servicios PS4</a></li>
-                            <li><a href="#">Servicios PS3</a></li>
-                            <li><a href="#">Servicios PSP</a></li>
-                            <li><a href="#">Servicios PS Vita</a></li>
-                            <li><a href="#">Servicios Switch</a></li>
-                            <li><a href="#">Servicios Wii</a></li>
-                            <li><a href="#">Servicios Wii U</a></li>
-                            <li><a href="#">Servicios 3DS</a></li>
-                            <li><a href="#">Servicios DS</a></li>
-                            <li><a href="#">Servicios Xbox One</a></li>
-                            <li><a href="#">Servicios Xbox 360</a></li>
-                        </ul>
-                    <li><a href="/Crossxgame/public/contacto">Contactanos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Header section end -->
-    <script type="text/javascript">
-        function envia_ajax_servidor(url, data) {
-            var variable = $.ajax({
-                url: url,
-                method: 'POST',
-                data: data,
-                'dataSrc': 'data',
-                dataType: 'json'
-            })
-            return variable;
-        }
-
-        function limpiarFormulario() {
-            document.getElementById("miFormLogin").reset();
-        }
-        $("#btnIngresar").on("click", function() {
-            var array = {
-                emailLogin: $("#txtEmailModal").val(),
-                contraseñaLogin: $("#txtContraseñaModal").val()
-            };
-            var request = envia_ajax_servidor('/Crossxgame/public/Login/LoginSistema', array);
-            request.done(function(data) {
-               console.log(data.Estado);
-                if(data.Estado == "1"){
-                    if(data.Rol =="admin"){
-                    window.location = "/Crossxgame/public/adminindex";
-                    }else{
-                        location.reload();
-                    }
-                }else if(data.Estado == "0"){
-                    alert("Su cuenta esta deshabilitada");
-                }else{
-                    alert("Usuario no encontrado");
+                    </div>
+                </nav>
+            </header>
+            <!-- Header section end -->
+            <script type="text/javascript">
+                function envia_ajax_servidor(url, data) {
+                    var variable = $.ajax({
+                        url: url,
+                        method: 'POST',
+                        data: data,
+                        'dataSrc': 'data',
+                        dataType: 'json'
+                    })
+                    return variable;
                 }
-            });
-        });
 
-        $("#btnCerrarSesion").on("click", function() {
-            var request = envia_ajax_servidor('/Crossxgame/public/Login/CerrarSistema');
-            request.done(function(data) {
+                function limpiarFormulario() {
+                    document.getElementById("miFormLogin").reset();
+                }
+                $("#btnIngresar").on("click", function() {
+                    var array = {
+                        emailLogin: $("#txtEmailModal").val(),
+                        contraseñaLogin: $("#txtContraseñaModal").val()
+                    };
+                    var request = envia_ajax_servidor('/Crossxgame/public/Login/LoginSistema', array);
+                    request.done(function(data) {
+                     console.log(data.Estado);
+                     if(data.Estado == "1"){
+                        if(data.Rol =="admin"){
+                            window.location = "/Crossxgame/public/adminindex";
+                        }else{
+                            location.reload();
+                        }
+                    }else if(data.Estado == "0"){
+                        alert("Su cuenta esta deshabilitada");
+                    }else{
+                        alert("Usuario no encontrado");
+                    }
+                });
+                });
+
+                $("#btnCerrarSesion").on("click", function() {
+                    var request = envia_ajax_servidor('/Crossxgame/public/Login/CerrarSistema');
+                    request.done(function(data) {
                 //limpiarFormulario();
                 console.log(data);
                 //Recargar la pagina cuando hace el login
                 location.reload();
             });
-        });
-         $("#btnBuscar").on("click", function(){
-              $("#formBusqueda").attr("action", "resultado" + "?nombre="+$("#txtBuscador").val());
-             
-               $("#formBusqueda").submit(); 
-         });
+                });
+                $("#btnBuscar").on("click", function(){
+                  $("#formBusqueda").attr("action", "resultado" + "?nombre="+$("#txtBuscador").val());
+                  
+                  $("#formBusqueda").submit(); 
+              });
 
-    </script>
+          </script>

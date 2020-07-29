@@ -11,11 +11,26 @@ class Categoria extends BaseController
     public function index()
     {
 
+    	$request = \Config\Services::request();
+    	$id_depto = $request->getPostGet('id_depto');
+
     	$Model_productos = new Model_productos($db);
+    	
+    	$productos = $Model_productos->BuscarDepto($id_depto);
+		if ($productos !="" && $productos !=null) {
+			
+			$datos['productos']= $productos;
+
+			$productos = array('productos'=>$productos);	
+			//var_dump($datos);
+        	 return $this->vista2('Categoria/vista',$datos);
+        	
+		}else{
+			
+            return redirect()->to('error');
 		
-		$productos = $Model_productos->findAll();
-		$productos = array('productos'=>$productos);	
+        }	
 		
-        return $this->vista2('Categoria/vista',$productos);
+       
     }
 }

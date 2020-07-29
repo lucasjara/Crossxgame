@@ -122,5 +122,11 @@ class Model_productos extends Model
        //var_dump($results);
        return $results;
      }
+        public function BuscarDepto($id_depto){
+       $query = $this->db->query("SELECT a.id,a.nombre,a.precio,a.stock,a.descripcion,b.descripcion_depto, a.img from bd_local.producto a , bd_local.departamento b where a.id_depto=b.id_depto and  a.id_depto='".$id_depto."'");
+       $results = $query->getResult();
+       //var_dump($results);
+       return $results;
+     }
 
 }

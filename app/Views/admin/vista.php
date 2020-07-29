@@ -196,6 +196,7 @@ echo "</tr>";
     }
 
     $("#btnRegistrar").on("click",function(){
+
         var array = {
             nombre: $("#txtnombre").val(),
             stock: $("#txtstock").val(),
@@ -204,13 +205,16 @@ echo "</tr>";
             id_depto: $("#selectDepto").val(),  
             img: $("#inputGroupFile01").val()
         };
-
+        if(array['nombre']!="" && array['nombre']!=null && array['stock']!="" && array['stock']!=null && array['precio']!="" && array['precio']!=null && array['descripcion']!="" && array['descripcion']!=null && array['id_depto']!="" && array['id_depto']!=null){
         var request = envia_ajax_servidor('/Crossxgame/public/Admin/guardarProducto', array);
     //   limpiarFormulario();
         request.done(function (data){
            alert("Datos Registrados con exito");
            location.reload(true);
         });
+      }else{
+        alert("No debe dejar campos vacios");
+      }
     });
  // $("#btnConfirmar").on("click",function(){
  //  var array2 = 
